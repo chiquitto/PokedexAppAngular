@@ -1,0 +1,5414 @@
+@font-face {
+    font-family: 'Flexo-Thin';
+    src: url("../fonts/285B7A_0_0.eot");
+    src: url("../fonts/285B7A_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/285B7A_0_0.woff") format("woff"), url("../fonts/285B7A_0_0.ttf") format("truetype")
+}
+@font-face {
+    font-family: 'Flexo-Regular';
+    src: url("../fonts/285B7A_1_0.eot");
+    src: url("../fonts/285B7A_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/285B7A_1_0.woff") format("woff"), url("../fonts/285B7A_1_0.ttf") format("truetype")
+}
+@font-face {
+    font-family: 'Flexo-Medium';
+    src: url("../fonts/285B7A_2_0.eot");
+    src: url("../fonts/285B7A_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/285B7A_2_0.woff") format("woff"), url("../fonts/285B7A_2_0.ttf") format("truetype")
+}
+@font-face {
+    font-family: 'Flexo-Light';
+    src: url("../fonts/285B7A_3_0.eot");
+    src: url("../fonts/285B7A_3_0.eot?#iefix") format("embedded-opentype"), url("../fonts/285B7A_3_0.woff") format("woff"), url("../fonts/285B7A_3_0.ttf") format("truetype")
+}
+@font-face {
+    font-family: 'Flexo-Demi';
+    src: url("../fonts/285B7A_4_0.eot");
+    src: url("../fonts/285B7A_4_0.eot?#iefix") format("embedded-opentype"), url("../fonts/285B7A_4_0.woff") format("woff"), url("../fonts/285B7A_4_0.ttf") format("truetype")
+}
+@font-face {
+    font-family: 'Flexo-Bold';
+    src: url("../fonts/285B7A_5_0.eot");
+    src: url("../fonts/285B7A_5_0.eot?#iefix") format("embedded-opentype"), url("../fonts/285B7A_5_0.woff") format("woff"), url("../fonts/285B7A_5_0.ttf") format("truetype")
+}
+.bounce {
+    position: relative
+}
+.kss-modifier-block,
+.kss-modifier-example {
+    clear: both;
+    width: 100%
+}
+.kss-modifier-block .banner h1,
+.kss-modifier-block .banner h2,
+.kss-modifier-block .banner h3,
+.kss-modifier-block .content-block h1,
+.kss-modifier-block .content-block h2,
+.kss-modifier-block .content-block h3,
+.kss-modifier-block .color-block h1,
+.kss-modifier-block .color-block h2,
+.kss-modifier-block .color-block h3,
+.kss-modifier-example .banner h1,
+.kss-modifier-example .banner h2,
+.kss-modifier-example .banner h3,
+.kss-modifier-example .content-block h1,
+.kss-modifier-example .content-block h2,
+.kss-modifier-example .content-block h3,
+.kss-modifier-example .color-block h1,
+.kss-modifier-example .color-block h2,
+.kss-modifier-example .color-block h3 {
+    margin: 0.5em 0.5em 0 1em
+}
+.kss-modifier-block .banner p,
+.kss-modifier-block .content-block p,
+.kss-modifier-block .color-block p,
+.kss-modifier-example .banner p,
+.kss-modifier-example .content-block p,
+.kss-modifier-example .color-block p {
+    margin: 0.5em 0.5em 0 1.5em
+}
+.kss-modifier-block .banner,
+.kss-modifier-example .banner {
+    border-radius: 5px
+}
+.kss-modifier-block .banner.banner-left,
+.kss-modifier-block .banner.banner-right,
+.kss-modifier-example .banner.banner-left,
+.kss-modifier-example .banner.banner-right {
+    border-radius: 5px;
+    padding-bottom: 0
+}
+html.nintendo .kss-modifier-block .banner.banner-left,
+html.nintendo .kss-modifier-block .banner.banner-right,
+html.nintendo .kss-modifier-example .banner.banner-left,
+html.nintendo .kss-modifier-example .banner.banner-right {
+    border-radius: 0
+}
+.kss-modifier-block .banner.banner-left p,
+.kss-modifier-block .banner.banner-right p,
+.kss-modifier-example .banner.banner-left p,
+.kss-modifier-example .banner.banner-right p {
+    margin: 0.5em 0.5em 0 1.25em
+}
+.kss-modifier-block .banner.banner-left:last-child,
+.kss-modifier-block .banner.banner-right:last-child,
+.kss-modifier-example .banner.banner-left:last-child,
+.kss-modifier-example .banner.banner-right:last-child {
+    margin-bottom: 1em
+}
+.kss-modifier-block .banner.banner-left .banner-wrapper,
+.kss-modifier-block .banner.banner-right .banner-wrapper,
+.kss-modifier-example .banner.banner-left .banner-wrapper,
+.kss-modifier-example .banner.banner-right .banner-wrapper {
+    width: 60%;
+    position: relative
+}
+.kss-modifier-block .banner.banner-left img,
+.kss-modifier-block .banner.banner-right img,
+.kss-modifier-example .banner.banner-left img,
+.kss-modifier-example .banner.banner-right img {
+    border-radius: 5px 0 0 5px;
+    width: 40%;
+    margin-bottom: 0;
+    max-width: 132px
+}
+html.nintendo .kss-modifier-block .banner.banner-left img,
+html.nintendo .kss-modifier-block .banner.banner-right img,
+html.nintendo .kss-modifier-example .banner.banner-left img,
+html.nintendo .kss-modifier-example .banner.banner-right img {
+    border-radius: 0
+}
+.kss-modifier-block .banner.banner-left img,
+.kss-modifier-example .banner.banner-left img {
+    border-radius: 0 5px 5px 0;
+    float: right
+}
+html.nintendo .kss-modifier-block .banner.banner-left img,
+html.nintendo .kss-modifier-example .banner.banner-left img {
+    border-radius: 0
+}
+.kss-modifier-block .banner.banner-right .banner-wrapper h1,
+.kss-modifier-block .banner.banner-right .banner-wrapper h2,
+.kss-modifier-block .banner.banner-right .banner-wrapper h3,
+.kss-modifier-example .banner.banner-right .banner-wrapper h1,
+.kss-modifier-example .banner.banner-right .banner-wrapper h2,
+.kss-modifier-example .banner.banner-right .banner-wrapper h3 {
+    margin-top: 1em
+}
+.kss-modifier-block .notch-bottom-center,
+.kss-modifier-block .notch-bottom-right,
+.kss-modifier-block .notch-bottom-left,
+.kss-modifier-block .notch-bottom-center-small,
+.kss-modifier-block .notch-bottom-right-small,
+.kss-modifier-block .notch-bottom-left-small,
+.kss-modifier-example .notch-bottom-center,
+.kss-modifier-example .notch-bottom-right,
+.kss-modifier-example .notch-bottom-left,
+.kss-modifier-example .notch-bottom-center-small,
+.kss-modifier-example .notch-bottom-right-small,
+.kss-modifier-example .notch-bottom-left-small {
+    margin-top: 0.25em;
+    top: auto;
+    bottom: -9px
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #212121
+}
+h1 {
+    font-size: 175%;
+    text-transform: none;
+    margin: 0 0 1em 0
+}
+h2 {
+    font-size: 137.5%;
+    line-height: 125%;
+    text-transform: none;
+    font-family: "Flexo-Medium", arial, sans-serif;
+    margin: 0.75em 0
+}
+body.ru h2 {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+h3,
+h4,
+h5,
+h6 {
+    font-size: 125%;
+    line-height: 125%;
+    text-transform: none;
+    margin: 0.5em 0;
+    font-family: "Flexo-Medium", arial, sans-serif
+}
+body.ru h3,
+body.ru h4,
+body.ru h5,
+body.ru h6 {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+p {
+    color: #919191;
+    font-family: "Roboto", arial, sans-serif;
+    font-size: 100%;
+    font-weight: 500;
+    line-height: 125%;
+    margin: 0.5em 0
+}
+.color-block h1,
+.banner h1,
+.base-banner h1,
+.color-block h2,
+.banner h2,
+.base-banner h2,
+.color-block h3,
+.banner h3,
+.base-banner h3 {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    margin: 0.75em 0.5em 0 1em
+}
+body.ru .color-block h1,
+body.ru .banner h1,
+body.ru .base-banner h1,
+body.ru .color-block h2,
+body.ru .banner h2,
+body.ru .base-banner h2,
+body.ru .color-block h3,
+body.ru .banner h3,
+body.ru .base-banner h3 {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.color-block h1:first-child:last-child,
+.banner h1:first-child:last-child,
+.base-banner h1:first-child:last-child,
+.color-block h2:first-child:last-child,
+.banner h2:first-child:last-child,
+.base-banner h2:first-child:last-child,
+.color-block h3:first-child:last-child,
+.banner h3:first-child:last-child,
+.base-banner h3:first-child:last-child {
+    margin-bottom: 0.75em
+}
+.color-block p,
+.banner p,
+.base-banner p,
+.color-block a,
+.banner a,
+.base-banner a {
+    margin: 0.5em 0.5em 0 1em
+}
+.color-block p:last-child,
+.banner p:last-child,
+.base-banner p:last-child,
+.color-block a:last-child,
+.banner a:last-child,
+.base-banner a:last-child {
+    margin-bottom: 0.75em
+}
+.color-block p:first-child:last-child,
+.banner p:first-child:last-child,
+.base-banner p:first-child:last-child,
+.color-block a:first-child:last-child,
+.banner a:first-child:last-child,
+.base-banner a:first-child:last-child {
+    margin-bottom: 0.5em
+}
+.color-block h1,
+.banner h1,
+.base-banner h1 {
+    font-size: 175%;
+    margin-top: 0.5em;
+    text-transform: none
+}
+.color-block h2,
+.banner h2,
+.base-banner h2 {
+    font-size: 137.5%;
+    line-height: 125%;
+    text-transform: none;
+    font-family: "Flexo-Medium", arial, sans-serif
+}
+body.ru .color-block h2,
+body.ru .banner h2,
+body.ru .base-banner h2 {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.color-block h3,
+.banner h3,
+.base-banner h3 {
+    font-size: 137.5%;
+    line-height: 125%;
+    text-transform: none;
+    font-family: "Flexo-Medium", arial, sans-serif
+}
+body.ru .color-block h3,
+body.ru .banner h3,
+body.ru .base-banner h3 {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.color-block p,
+.banner p,
+.base-banner p {
+    font-family: "Roboto", arial, sans-serif;
+    font-size: 100%;
+    font-weight: 500;
+    line-height: 125%;
+    margin-left: 1.25em
+}
+.color-block a,
+.banner a,
+.base-banner a {
+    font-size: 112.5%;
+    line-height: 112.5%;
+    font-family: "Flexo-Medium", arial, sans-serif
+}
+body.ru .color-block a,
+body.ru .banner a,
+body.ru .base-banner a {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.content-block {
+    float: left;
+    margin: 1em 0 0 0;
+    position: relative
+}
+.content-block img {
+    border-radius: 5px 5px 0 0;
+    float: left;
+    width: 100%
+}
+html.nintendo .content-block img {
+    border-radius: 0
+}
+.hover.content-block {
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+html.nintendo .hover.content-block {
+    border-radius: 0
+}
+.mosaic .content-block {
+    opacity: 0
+}
+html.nintendo .mosaic .content-block {
+    opacity: 1
+}
+.content-block.no-margin {
+    margin: 0
+}
+.content-hero .content-hero-wrapper {
+    float: left;
+    position: relative;
+    width: 100%
+}
+.content-hero .wrapper {
+    bottom: 0;
+    display: block;
+    position: absolute;
+    left: auto;
+    right: 0
+}
+.content-hero .wrapper img {
+    border-radius: 0;
+    height: 60px;
+    width: 42px
+}
+.content-hero .wrapper img.RP,
+.content-hero .wrapper img.ESRB-no-descriptor {
+    height: 60px;
+    width: 42px
+}
+.content-hero .wrapper img.ESRB {
+    height: 73px;
+    width: 148px
+}
+.content-hero .wrapper img.PEGI {
+    height: 80px;
+    width: 65px
+}
+.content-hero .wrapper img.USK {
+    height: 80px;
+    width: 80px
+}
+.content-hero.content-rating .content-hero-wrapper+.banner {
+    position: relative
+}
+.content-hero.content-rating .content-hero-wrapper+.banner h1,
+.content-hero.content-rating .content-hero-wrapper+.banner h2,
+.content-hero.content-rating .content-hero-wrapper+.banner p {
+    clear: both;
+    float: left;
+    max-width: 68%
+}
+img.banner-hero-image {
+    border-radius: 0;
+    width: 100%
+}
+.content-block-full {
+    clear: both;
+    display: block;
+    width: 100%
+}
+.content-block-half {
+    width: 48.4375%
+}
+.content-block-half-first {
+    margin-right: 3.125%;
+    width: 48.4375%
+}
+.page-main-title,
+.section-title {
+    color: #919191;
+    cursor: default;
+    font-size: 187.5%;
+    line-height: 125%;
+    text-transform: none;
+    font-family: "Flexo-Regular", arial, sans-serif
+}
+body.ru .page-main-title,
+body.ru .section-title {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: normal
+}
+.page-main-title {
+    margin: 0;
+    margin-left: 7.2525%;
+    color: #212121;
+    font-size: 175%
+}
+@media (min-width: 1px) and (max-width: 460px) {
+    .page-main-title {
+        margin: 1em 0 0 0;
+        text-align: center
+    }
+}
+@media (min-width: 461px) and (max-width: 720px) {
+    .page-main-title {
+        margin: 1em 0 0 0;
+        text-align: center
+    }
+}
+.section-title {
+    margin: 0.5em 0
+}
+.section-title.no-margin {
+    margin-top: 0;
+    margin-bottom: 0
+}
+.section-title.no-padding {
+    padding: 0
+}
+.section-title span.icon,
+.section-title span.arrow-right.button:after,
+.section-title body.custom-form-elements label.radio-as-toggle-button input+span.arrow-right:after,
+body.custom-form-elements label.radio-as-toggle-button .section-title input+span.arrow-right:after,
+.section-title span.arrow-left.button:before,
+.section-title body.custom-form-elements label.radio-as-toggle-button input+span.arrow-left:before,
+body.custom-form-elements label.radio-as-toggle-button .section-title input+span.arrow-left:before {
+    color: #e6bc2f;
+    font-size: 38px;
+    padding-right: 15px
+}
+.avatar-builder-header .section-title span.icon,
+.avatar-builder-header .section-title span.arrow-right.button:after,
+.avatar-builder-header .section-title body.custom-form-elements label.radio-as-toggle-button input+span.arrow-right:after,
+body.custom-form-elements label.radio-as-toggle-button .avatar-builder-header .section-title input+span.arrow-right:after,
+.avatar-builder-header .section-title span.arrow-left.button:before,
+.avatar-builder-header .section-title body.custom-form-elements label.radio-as-toggle-button input+span.arrow-left:before,
+body.custom-form-elements label.radio-as-toggle-button .avatar-builder-header .section-title input+span.arrow-left:before {
+    color: #ee6b2f
+}
+.color-block,
+.banner,
+.base-banner {
+    float: left;
+    width: 100%
+}
+.color-block {
+    border-radius: 5px 5px 0 0
+}
+html.nintendo .color-block {
+    border-radius: 0
+}
+.color-block h3 {
+    padding-bottom: 4em
+}
+@media (min-width: 1px) and (max-width: 460px) {
+    .content-block,
+    .content-block.no-margin {
+        float: left;
+        margin-right: -100%;
+        width: 89.12%;
+        margin-left: 5.4425%
+    }
+    .content-hero {
+        margin-left: 0;
+        width: 100%
+    }
+    .content-block-half,
+    .content-block-half-first {
+        clear: both;
+        margin-top: 1em
+    }
+    .section-title.no-margin {
+        margin-top: 0.5em;
+        margin-left: 0.5em
+    }
+}
+@media (min-width: 461px) and (max-width: 720px) {
+    .content-block,
+    .content-block.no-margin {
+        float: left;
+        margin-right: -100%;
+        width: 89.12%;
+        margin-left: 5.4425%
+    }
+    .content-hero {
+        margin-left: 0;
+        width: 100%
+    }
+    .content-block-half,
+    .content-block-half-first {
+        clear: both;
+        margin-top: 1em
+    }
+    .section-title.no-margin {
+        margin-top: 0.5em;
+        margin-left: 0.5em
+    }
+}
+.banner,
+.base-banner {
+    border-radius: 5px;
+    float: left;
+    padding-bottom: 0.5em;
+    width: 100%
+}
+html.nintendo .banner,
+html.nintendo .base-banner {
+    border-radius: 0
+}
+.banner .banner-wrapper,
+.base-banner .banner-wrapper {
+    float: left
+}
+.banner .notch-bottom-center,
+.base-banner .notch-bottom-center {
+    bottom: -10px;
+    top: auto
+}
+.banner a {
+    display: block;
+    text-align: center
+}
+.base-banner a.no-margin {
+    margin: 0
+}
+.content-hero .banner,
+.banner:nth-child(2) {
+    border-radius: 0 0 5px 5px
+}
+html.nintendo .content-hero .banner,
+html.nintendo .banner:nth-child(2) {
+    border-radius: 0
+}
+.banner.banner-white {
+    border-radius: 0
+}
+.banner .disclaimer {
+    color: #919191;
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 400;
+    font-size: 85%;
+    line-height: 120%;
+    margin: 0.5em;
+    word-spacing: 1px
+}
+body.de .banner-white {
+    width: 90%
+}
+body.de .template-f .banner-white {
+    width: 75%
+}
+.banner.banner-left,
+.banner.banner-right {
+    border-radius: 5px;
+    padding-bottom: 0
+}
+html.nintendo .banner.banner-left,
+html.nintendo .banner.banner-right {
+    border-radius: 0
+}
+.banner.banner-left .banner-wrapper,
+.banner.banner-right .banner-wrapper {
+    width: 60%;
+    position: relative
+}
+.banner.banner-left img,
+.banner.banner-right img {
+    border-radius: 5px 0 0 5px;
+    width: 40%;
+    margin-bottom: 0;
+    max-width: 132px
+}
+html.nintendo .banner.banner-left img,
+html.nintendo .banner.banner-right img {
+    border-radius: 0
+}
+.banner.banner-left img {
+    border-radius: 0 5px 5px 0;
+    float: right
+}
+html.nintendo .banner.banner-left img {
+    border-radius: 0
+}
+.new-release {
+    background: #fff;
+    text-align: right;
+    padding: 0.5em 0 0.5em 1em;
+    position: absolute
+}
+.new-release h4 {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    color: #919191;
+    font-size: 112.5%;
+    letter-spacing: 1px;
+    margin-top: -3px;
+    margin-bottom: 3px;
+    text-transform: none
+}
+body.ru .new-release h4 {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.banner-left-bottom {
+    border-top-right-radius: 5px !important;
+    bottom: -1px;
+    left: -1px
+}
+.banner-left-top {
+    border-bottom-right-radius: 5px !important;
+    left: -1px;
+    top: -1px
+}
+.banner-right-top {
+    border-bottom-left-radius: 5px !important;
+    right: -1px;
+    top: -1px
+}
+.banner-right-bottom {
+    border-top-left-radius: 5px !important;
+    bottom: -1px;
+    right: -1px
+}
+.notch,
+.notch-left-center,
+.notch-left-outer,
+.notch-left-center-small,
+.notch-left-top-outer,
+.notch-right-outer,
+.notch-bottom-center,
+.notch-bottom-center-small,
+.notch-top-center,
+.notch-top-center-large,
+.notch-top-right,
+.notch-bottom-left,
+.notch-bottom-left-small,
+.notch-bottom-left-half,
+.notch-bottom-right-big,
+.notch-bottom-right,
+.notch-bottom-right-small {
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: #fff;
+    float: left;
+    height: 8px;
+    margin: -6px 0 0 0;
+    position: relative;
+    width: 60%
+}
+.notch:before,
+.notch-left-center:before,
+.notch-left-outer:before,
+.notch-left-center-small:before,
+.notch-left-top-outer:before,
+.notch-right-outer:before,
+.notch-bottom-center:before,
+.notch-bottom-center-small:before,
+.notch-top-center:before,
+.notch-top-center-large:before,
+.notch-top-right:before,
+.notch-bottom-left:before,
+.notch-bottom-left-small:before,
+.notch-bottom-left-half:before,
+.notch-bottom-right-big:before,
+.notch-bottom-right:before,
+.notch-bottom-right-small:before,
+.notch:after,
+.notch-left-center:after,
+.notch-left-outer:after,
+.notch-left-center-small:after,
+.notch-left-top-outer:after,
+.notch-right-outer:after,
+.notch-bottom-center:after,
+.notch-bottom-center-small:after,
+.notch-top-center:after,
+.notch-top-center-large:after,
+.notch-top-right:after,
+.notch-bottom-left:after,
+.notch-bottom-left-small:after,
+.notch-bottom-left-half:after,
+.notch-bottom-right-big:after,
+.notch-bottom-right:after,
+.notch-bottom-right-small:after {
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    top: 0;
+    content: ' ';
+    height: 8px;
+    position: absolute;
+    width: 12px
+}
+.notch:before,
+.notch-left-center:before,
+.notch-left-outer:before,
+.notch-left-center-small:before,
+.notch-left-top-outer:before,
+.notch-right-outer:before,
+.notch-bottom-center:before,
+.notch-bottom-center-small:before,
+.notch-top-center:before,
+.notch-top-center-large:before,
+.notch-top-right:before,
+.notch-bottom-left:before,
+.notch-bottom-left-small:before,
+.notch-bottom-left-half:before,
+.notch-bottom-right-big:before,
+.notch-bottom-right:before,
+.notch-bottom-right-small:before {
+    left: -10px;
+    background: transparent url("../img/chrome/notches/left-notch-bottom-right.png") no-repeat;
+    background-size: 12px 8px
+}
+.notch:after,
+.notch-left-center:after,
+.notch-left-outer:after,
+.notch-left-center-small:after,
+.notch-left-top-outer:after,
+.notch-right-outer:after,
+.notch-bottom-center:after,
+.notch-bottom-center-small:after,
+.notch-top-center:after,
+.notch-top-center-large:after,
+.notch-top-right:after,
+.notch-bottom-left:after,
+.notch-bottom-left-small:after,
+.notch-bottom-left-half:after,
+.notch-bottom-right-big:after,
+.notch-bottom-right:after,
+.notch-bottom-right-small:after {
+    right: -10px;
+    background: transparent url("../img/chrome/notches/right-notch-bottom-right.png") no-repeat;
+    background-size: 12px 8px
+}
+.notch {
+    height: 6px;
+    margin: 0
+}
+.notch:before {
+    background: transparent url("../img/chrome/notches/right-notch-bottom-right.png") no-repeat;
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    top: -2px
+}
+.notch:after {
+    background: transparent url("../img/chrome/notches/left-notch-bottom-right.png") no-repeat;
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    top: -2px
+}
+.notch-left-center {
+    height: 140px;
+    left: 0px;
+    position: absolute;
+    top: 137px;
+    width: 8px;
+    z-index: 5
+}
+.notch-left-center:before {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    left: -2px;
+    top: -10px
+}
+.notch-left-center:after {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    left: -2px;
+    top: 142px
+}
+.notch-left-outer {
+    height: 60%;
+    left: -7px;
+    position: absolute;
+    bottom: 0;
+    width: 8px
+}
+.notch-left-outer:before {
+    display: none
+}
+.notch-left-outer:after {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    left: -2px;
+    top: -9px
+}
+.notch-left-center-small {
+    height: 30%;
+    left: 0px;
+    position: absolute;
+    top: 45%;
+    width: 7px;
+    z-index: 2
+}
+.notch-left-center-small:before {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: -10px;
+    left: -3px
+}
+.notch-left-center-small:after {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 104%;
+    left: -3px
+}
+.notch-left-top-outer {
+    height: 15px;
+    left: -7px;
+    position: absolute;
+    top: 6px;
+    width: 8px
+}
+.notch-left-top-outer:before {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    left: -2px;
+    top: 17px
+}
+.notch-left-top-outer:after {
+    display: none
+}
+.notch-right-outer {
+    height: 60%;
+    right: -8px;
+    position: absolute;
+    bottom: 0;
+    width: 8px
+}
+.notch-right-outer:before {
+    display: none
+}
+.notch-right-outer:after {
+    left: -3px;
+    top: -8px
+}
+.notch-bottom-center {
+    margin-left: 25%;
+    width: 50%
+}
+.notch-bottom-center-small {
+    margin-left: 20%;
+    width: 30%
+}
+.notch-top-center {
+    margin-left: 25%;
+    width: 50%;
+    top: 6px
+}
+.notch-top-center:before {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    left: auto;
+    right: -10px
+}
+.notch-top-center:after {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    left: -10px;
+    right: auto
+}
+.notch-top-center-large {
+    margin-left: 12.5%;
+    width: 75%;
+    top: 6px
+}
+.notch-top-center-large:before {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    left: auto;
+    right: -10px
+}
+.notch-top-center-large:after {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    left: -10px;
+    right: auto
+}
+.notch-top-center-gray {
+    background: #525252;
+    height: 5px;
+    left: 0;
+    margin: 0 40%;
+    position: absolute;
+    top: 0;
+    width: 20%
+}
+.notch-top-center-gray:before,
+.notch-top-center-gray:after {
+    top: 0;
+    content: ' ';
+    height: 5px;
+    position: absolute;
+    width: 8px
+}
+.notch-top-center-gray:before {
+    left: -8px;
+    background: transparent url("../img/chrome/notches/gray-notch-left.png") no-repeat;
+    background-size: 8px 5px
+}
+.notch-top-center-gray:after {
+    right: -8px;
+    background: transparent url("../img/chrome/notches/gray-notch-right.png") no-repeat;
+    background-size: 8px 5px
+}
+.notch-top-left-black {
+    background: #313131;
+    height: 12px;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 50%
+}
+.notch-top-left-black:before,
+.notch-top-left-black:after {
+    top: 0;
+    content: ' ';
+    height: 12px;
+    position: absolute;
+    width: 24px
+}
+.notch-top-left-black:before {
+    content: none
+}
+.notch-top-left-black:after {
+    right: -24px;
+    background: transparent url("../img/chrome/notches/black-notch-top-right.png") no-repeat;
+    background-size: 24px 12px
+}
+.notch-top-right {
+    margin-left: 62.5%;
+    margin-top: -8px;
+    width: 25%;
+    top: 8px
+}
+.notch-top-right:before {
+    background-image: url("../img/chrome/notches/notch-top-left.png")
+}
+.notch-top-right:after {
+    background-image: url("../img/chrome/notches/notch-top-right.png")
+}
+.notch-bottom-center-small {
+    margin-left: 37.5%;
+    width: 25%
+}
+.notch-bottom-left {
+    margin-left: 40%;
+    width: 60%;
+    border-bottom: 2px solid #fff
+}
+.notch-bottom-left:before,
+.notch-bottom-left:after {
+    border-bottom: 2px solid #fff
+}
+.notch-bottom-left-small {
+    margin-left: 12.5%;
+    width: 20%
+}
+.notch-bottom-left-half {
+    margin-left: 50%;
+    width: 50%
+}
+.notch-bottom-right-big {
+    width: 75%;
+    bottom: 0;
+    right: 0;
+    position: absolute
+}
+.notch-bottom-right {
+    border-bottom: 2px solid #fff
+}
+.notch-bottom-right:before,
+.notch-bottom-right:after {
+    border-bottom: 2px solid #fff
+}
+.notch-bottom-right-small {
+    margin-left: 57.5%;
+    width: 30%
+}
+.dog-ear-tl:before {
+    content: ' ';
+    background: url("../img/chrome/dog-ears/default-dog-ear.png") no-repeat 0 0;
+    height: 2em;
+    position: absolute;
+    width: 2em;
+    z-index: 3;
+    left: -1px;
+    top: -1px;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+.dog-ear-tr:before {
+    content: ' ';
+    background: url("../img/chrome/dog-ears/default-dog-ear.png") no-repeat 0 0;
+    height: 2em;
+    position: absolute;
+    width: 2em;
+    z-index: 3;
+    right: -1px;
+    top: -1px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+.dog-ear-bl:before {
+    content: ' ';
+    background: url("../img/chrome/dog-ears/default-dog-ear.png") no-repeat 0 0;
+    height: 2em;
+    position: absolute;
+    width: 2em;
+    z-index: 3;
+    left: -1px;
+    bottom: -1px;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+.dog-ear-br:before {
+    content: ' ';
+    background: url("../img/chrome/dog-ears/default-dog-ear.png") no-repeat 0 0;
+    height: 2em;
+    position: absolute;
+    width: 2em;
+    z-index: 3;
+    right: -1px;
+    bottom: -1px;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+.dog-ear-tl-dashboard:before {
+    content: ' ';
+    background: url("../img/chrome/dog-ears/dog-ear-dashboard.png") no-repeat 0 0;
+    height: 2em;
+    position: absolute;
+    width: 2em;
+    z-index: 3;
+    left: -1px;
+    top: -1px;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+.dog-ear-tr-dashboard:before {
+    content: ' ';
+    background: url("../img/chrome/dog-ears/dog-ear-dashboard.png") no-repeat 0 0;
+    height: 2em;
+    position: absolute;
+    width: 2em;
+    z-index: 3;
+    right: -1px;
+    top: -1px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+.dog-ear-bl-dashboard:before {
+    content: ' ';
+    background: url("../img/chrome/dog-ears/dog-ear-dashboard.png") no-repeat 0 0;
+    height: 2em;
+    position: absolute;
+    width: 2em;
+    z-index: 3;
+    left: -1px;
+    bottom: -1px;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+.dog-ear-br-dashboard:before {
+    content: ' ';
+    background: url("../img/chrome/dog-ears/dog-ear-dashboard.png") no-repeat 0 0;
+    height: 2em;
+    position: absolute;
+    width: 2em;
+    z-index: 3;
+    right: -1px;
+    bottom: -1px;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+@media (min-width: 1px) and (max-width: 460px) {
+    .dog-ear-br:before,
+    .dog-ear-tl:before {
+        background: none
+    }
+}
+@media (min-width: 461px) and (max-width: 720px) {
+    .dog-ear-br:before,
+    .dog-ear-tl:before {
+        background: none
+    }
+}
+.button,
+body.custom-form-elements label.radio-as-toggle-button input+span,
+.simple-filters li {
+    background-color: #ccc;
+    border-radius: 5px;
+    border: none;
+    clear: both;
+    color: #212121;
+    cursor: pointer;
+    font-size: 105%;
+    float: left;
+    line-height: 125%;
+    margin: 1.5625%;
+    padding: 0.75em 1.25em 0.675em;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: none;
+    font-family: "Flexo-Demi", arial, sans-serif
+}
+html.nintendo .button,
+html.nintendo body.custom-form-elements label.radio-as-toggle-button input+span,
+body.custom-form-elements label.radio-as-toggle-button html.nintendo input+span,
+html.nintendo .simple-filters li,
+.simple-filters html.nintendo li {
+    border-radius: 0
+}
+body.ru .button,
+body.ru body.custom-form-elements label.radio-as-toggle-button input+span,
+body.custom-form-elements label.radio-as-toggle-button body.ru input+span,
+body.ru .simple-filters li,
+.simple-filters body.ru li {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: bold
+}
+.button i,
+body.custom-form-elements label.radio-as-toggle-button input+span i,
+.simple-filters li i,
+.button:after,
+body.custom-form-elements label.radio-as-toggle-button input+span:after,
+.simple-filters li:after,
+.button:before,
+body.custom-form-elements label.radio-as-toggle-button input+span:before,
+.simple-filters li:before {
+    line-height: 100%;
+    position: relative;
+    top: -2px
+}
+.button-short.button,
+body.custom-form-elements label.radio-as-toggle-button input+span.button-short,
+.simple-filters li.button-short {
+    padding: 0.5em 0.75em
+}
+.button-inline.button,
+body.custom-form-elements label.radio-as-toggle-button input+span.button-inline,
+.simple-filters li.button-inline {
+    clear: none
+}
+.button:hover,
+body.custom-form-elements label.radio-as-toggle-button input+span:hover,
+.simple-filters li:hover {
+    -webkit-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    text-decoration: none
+}
+.right.button,
+body.custom-form-elements label.radio-as-toggle-button input+span.right,
+.simple-filters li.right {
+    margin-right: 0
+}
+@media (min-width: 1px) and (max-width: 460px) {
+    .right.button,
+    body.custom-form-elements label.radio-as-toggle-button input+span.right,
+    .simple-filters li.right {
+        float: left;
+        margin: 0 1.5625%;
+        padding: 0.75em 0 0.675em;
+        width: 96.875%
+    }
+}
+.left.button,
+body.custom-form-elements label.radio-as-toggle-button input+span.left,
+.simple-filters li.left {
+    margin-left: 0
+}
+@media (min-width: 1px) and (max-width: 460px) {
+    .left.button,
+    body.custom-form-elements label.radio-as-toggle-button input+span.left,
+    .simple-filters li.left {
+        float: left;
+        margin: 0 1.5625%;
+        padding: 0.75em 0 0.675em;
+        width: 96.875%
+    }
+}
+.no-margin.button,
+body.custom-form-elements label.radio-as-toggle-button input+span.no-margin,
+.simple-filters li.no-margin {
+    margin: 0
+}
+.no-arrow.button:after,
+body.custom-form-elements label.radio-as-toggle-button input+span:after,
+.pokedex-filter-header .filter-text-search .button.button-search:after,
+.pokedex-filter-header .filter-text-search body.custom-form-elements label.radio-as-toggle-button input+span.button-search:after,
+body.custom-form-elements label.radio-as-toggle-button .pokedex-filter-header .filter-text-search input+span.button-search:after,
+.pokedex-filter-header .filter-text-search .simple-filters li.button-search:after,
+.simple-filters .pokedex-filter-header .filter-text-search li.button-search:after,
+.simple-filters li.no-arrow:after {
+    content: none
+}
+.arrow-right.button:after,
+body.custom-form-elements label.radio-as-toggle-button input+span.arrow-right:after,
+.simple-filters li.arrow-right:after {
+    font-size: 60%;
+    font-weight: bold;
+    line-height: 100%;
+    margin-left: 1em;
+    vertical-align: middle
+}
+.arrow-left.button:before,
+body.custom-form-elements label.radio-as-toggle-button input+span.arrow-left:before,
+.simple-filters li.arrow-left:before {
+    font-size: 60%;
+    line-height: 100%;
+    margin-right: 1em;
+    vertical-align: middle
+}
+.arrow-left.button:after,
+body.custom-form-elements label.radio-as-toggle-button input+span.arrow-left:after,
+.simple-filters li.arrow-left:after {
+    content: none
+}
+.button .title,
+body.custom-form-elements label.radio-as-toggle-button input+span .title,
+.simple-filters li .title {
+    font-size: 125%
+}
+.button .uppercase,
+body.custom-form-elements label.radio-as-toggle-button input+span .uppercase,
+.simple-filters li .uppercase {
+    clear: both;
+    display: block;
+    float: left;
+    font-size: 75%;
+    line-height: 100%;
+    text-transform: uppercase;
+    width: 100%
+}
+.disabled.button,
+body.custom-form-elements label.radio-as-toggle-button input+span.disabled,
+.simple-filters li.disabled {
+    background-color: #616161;
+    opacity: 0.2;
+    cursor: default
+}
+.disabled.button:hover,
+body.custom-form-elements label.radio-as-toggle-button input+span.disabled:hover,
+.simple-filters li.disabled:hover {
+    background-color: #616161;
+    opacity: 0.2;
+    cursor: default
+}
+html.nintendo .button:after,
+html.nintendo body.custom-form-elements label.radio-as-toggle-button input+span:after,
+body.custom-form-elements label.radio-as-toggle-button html.nintendo input+span:after,
+html.nintendo .simple-filters li:after,
+.simple-filters html.nintendo li:after,
+html.nintendo .button:before,
+html.nintendo body.custom-form-elements label.radio-as-toggle-button input+span:before,
+body.custom-form-elements label.radio-as-toggle-button html.nintendo input+span:before,
+html.nintendo .simple-filters li:before,
+.simple-filters html.nintendo li:before {
+    content: none !important;
+    display: none !important
+}
+.button.right,
+body.custom-form-elements label.radio-as-toggle-button input+span.right,
+.simple-filters li.right {
+    float: right
+}
+.category-tags {
+    background-color: #616161;
+    border-radius: 0 5px 5px 0;
+    clear: both;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 85%;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 0.5em 0.5em 0.5em;
+    padding: 0 1.25em;
+    position: relative;
+    text-align: center;
+    width: auto;
+    font-family: "Flexo-Medium", arial, sans-serif
+}
+html.nintendo .category-tags {
+    border-radius: 0
+}
+body.ru .category-tags {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.category-tags:before {
+    content: "";
+    float: left;
+    height: 0;
+    left: -16px;
+    position: absolute;
+    top: 0;
+    width: 0;
+    border-color: transparent #616161 transparent transparent;
+    border-style: solid;
+    border-width: 16px 16px 16px 0
+}
+.category-tags a {
+    color: #fff;
+    font-size: 100%
+}
+.block-button {
+    display: block;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-size: 100%
+}
+body.custom-form-elements input[type="submit"] {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    font-family: "Roboto", arial, sans-serif
+}
+body.ru body.custom-form-elements input[type="submit"] {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+body.custom-form-elements input[type="text"],
+body.custom-form-elements input[type="password"],
+body.custom-form-elements input[type="email"],
+body.custom-form-elements input[type="date"],
+body.custom-form-elements input[type="number"],
+body.custom-form-elements select,
+body.custom-form-elements textarea,
+body.custom-form-elements .custom-select-wrapper label {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Flexo-Medium", arial, sans-serif;
+    background-color: #313131;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 120%;
+    font-family: "Roboto", arial, sans-serif;
+    line-height: 1.25;
+    padding: 0.5em 0;
+    text-indent: 0.5em;
+    width: 100%
+}
+body.ru body.custom-form-elements input[type="text"],
+body.ru body.custom-form-elements input[type="password"],
+body.ru body.custom-form-elements input[type="email"],
+body.ru body.custom-form-elements input[type="date"],
+body.ru body.custom-form-elements input[type="number"],
+body.ru body.custom-form-elements select,
+body.ru body.custom-form-elements textarea,
+body.ru body.custom-form-elements .custom-select-wrapper label {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+html.nintendo body.custom-form-elements input[type="text"],
+html.nintendo body.custom-form-elements input[type="password"],
+html.nintendo body.custom-form-elements input[type="email"],
+html.nintendo body.custom-form-elements input[type="date"],
+html.nintendo body.custom-form-elements input[type="number"],
+html.nintendo body.custom-form-elements select,
+html.nintendo body.custom-form-elements textarea,
+html.nintendo body.custom-form-elements .custom-select-wrapper label {
+    border-radius: 0
+}
+body.custom-form-elements input[type="text"].alert-error,
+body.custom-form-elements input[type="password"].alert-error,
+body.custom-form-elements input[type="email"].alert-error,
+body.custom-form-elements input[type="date"].alert-error,
+body.custom-form-elements input[type="number"].alert-error,
+body.custom-form-elements select.alert-error,
+body.custom-form-elements textarea.alert-error,
+body.custom-form-elements .custom-select-wrapper label.alert-error {
+    border: 2px solid #E3350D
+}
+body.custom-form-elements input[type="text"] label.styled-select,
+body.custom-form-elements input[type="password"] label.styled-select,
+body.custom-form-elements input[type="email"] label.styled-select,
+body.custom-form-elements input[type="date"] label.styled-select,
+body.custom-form-elements input[type="number"] label.styled-select,
+body.custom-form-elements select label.styled-select,
+body.custom-form-elements textarea label.styled-select,
+body.custom-form-elements .custom-select-wrapper label label.styled-select {
+    font-size: 120%
+}
+body.custom-form-elements input[type="text"][readonly],
+body.custom-form-elements input[type="password"][readonly],
+body.custom-form-elements input[type="email"][readonly],
+body.custom-form-elements input[type="date"][readonly],
+body.custom-form-elements input[type="number"][readonly],
+body.custom-form-elements input[readonly],
+body.custom-form-elements select[disabled] {
+    background: #888
+}
+body.custom-form-elements .input-small input,
+body.custom-form-elements .input-small select {
+    font-size: 90%
+}
+body.custom-form-elements button.button::-moz-focus-inner,
+body.custom-form-elements input.button::-moz-focus-inner {
+    border: 0;
+    font-family: "Roboto", arial, sans-serif;
+    padding: 2px 0 0;
+    margin-top: -0.125em;
+    margin-bottom: -0.125em
+}
+body.custom-form-elements input:disabled,
+body.custom-form-elements textarea:disabled {
+    opacity: 1
+}
+body.custom-form-elements input[type="date"],
+body.custom-form-elements select {
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background: transparent
+}
+body.custom-form-elements select+i {
+    position: relative;
+    right: 0.5em;
+    top: 1.25em
+}
+body.custom-form-elements .disable-custom-select-menu select {
+    -webkit-appearance: menulist;
+    -ms-appearance: menulist;
+    -moz-appearance: menulist;
+    -o-appearance: menulist;
+    appearance: menulist;
+    background: #313131;
+    height: 2.2em
+}
+body.custom-form-elements .disable-custom-select-menu select[disabled] {
+    background: #888
+}
+body.custom-form-elements label.radio-as-toggle-button {
+    float: left;
+    line-height: inherit;
+    font-size: inherit;
+    margin: 20px 3px 20px 3px;
+    clear: none;
+    width: auto
+}
+body.custom-form-elements label.radio-as-toggle-button input {
+    position: absolute;
+    top: -100px
+}
+body.custom-form-elements label.radio-as-toggle-button input+span {
+    float: left;
+    width: 140px
+}
+body.custom-form-elements label.radio-as-toggle-button input+span:after {
+    content: none !important
+}
+body.custom-form-elements label.radio-as-toggle-button.small {
+    font-size: 80%
+}
+body.custom-form-elements label.radio-as-toggle-button.small input+span {
+    width: 105px
+}
+body.custom-form-elements label.radio-as-toggle-button.horz {
+    margin: 20px 2px 20px 2px
+}
+body.custom-form-elements form .row {
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+html.nintendo .styled-select,
+html.touch .styled-select {
+    border-radius: 5px;
+    position: relative;
+    margin: 0;
+    padding-right: 0.5em
+}
+html.nintendo .styled-select select,
+html.touch .styled-select select {
+    padding-right: 20%;
+    line-height: 125%;
+    width: 100%
+}
+@media (min-width: 1px) and (max-width: 460px) {
+    html.nintendo .styled-select,
+    html.touch .styled-select {
+        width: 96.875%;
+        margin: 0 1.5625%;
+        padding-right: 0
+    }
+    html.nintendo .styled-select:after,
+    html.touch .styled-select:after {
+        right: 1em
+    }
+}
+@media (min-width: 461px) and (max-width: 720px) {
+    html.nintendo .styled-select,
+    html.touch .styled-select {
+        width: 96.875%;
+        margin: 0 1.5625%;
+        padding-right: 0
+    }
+    html.nintendo .styled-select:after,
+    html.touch .styled-select:after {
+        right: 1em
+    }
+}
+html.nintendo .styled-select {
+    border-radius: 0 !important
+}
+html.nintendo .styled-select select {
+    padding-right: 0
+}
+.custom-select-wrapper {
+    float: left;
+    position: relative;
+    z-index: 2
+}
+.custom-select-wrapper i.icon,
+.custom-select-wrapper i.arrow-right.button:after,
+.custom-select-wrapper i.arrow-left.button:before,
+.custom-select-wrapper body.custom-form-elements select+i,
+body.custom-form-elements .custom-select-wrapper select+i {
+    display: none
+}
+.custom-select-wrapper .custom-select-menu {
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    z-index: 2
+}
+.custom-select-wrapper .custom-select-menu:focus {
+    outline: none
+}
+.custom-select-wrapper .custom-select-menu label {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 100%;
+    line-height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0.75em 0 0.675em 0;
+    text-indent: 1em;
+    width: 100%;
+    white-space: nowrap
+}
+body.ru .custom-select-wrapper .custom-select-menu label {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+html.nintendo .custom-select-wrapper .custom-select-menu label {
+    border-radius: 0
+}
+.custom-select-wrapper .custom-select-menu label:before {
+    color: #F2F2F2;
+    font-size: 150%;
+    margin-right: 0.5em
+}
+.custom-select-wrapper .custom-select-menu label:after {
+    border-radius: 5px;
+    padding: 1em 0.75em 0.425em 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background-color: inherit
+}
+html.nintendo .custom-select-wrapper .custom-select-menu label:after {
+    border-radius: 0
+}
+.custom-select-wrapper .custom-select-menu label.opened:after {
+    border-radius: 5px 5px 0 0
+}
+html.nintendo .custom-select-wrapper .custom-select-menu label.opened:after {
+    border-radius: 0
+}
+.custom-select-wrapper .custom-select-menu label.button-black,
+.custom-select-wrapper .custom-select-menu label.button-black:after {
+    color: #fff
+}
+.custom-select-wrapper .custom-select-menu label.button-orange,
+.custom-select-wrapper .custom-select-menu label.button-orange:after,
+.custom-select-wrapper .custom-select-menu .pokedex-filter-header .filter-text-search label.button-search,
+.pokedex-filter-header .filter-text-search .custom-select-wrapper .custom-select-menu label.button-search {
+    color: #fff
+}
+.custom-select-wrapper .custom-select-menu label.button-gray,
+.custom-select-wrapper .custom-select-menu label.button-gray:after {
+    color: #fff
+}
+.custom-select-wrapper .custom-select-menu label.button-green,
+.custom-select-wrapper .custom-select-menu label.button-green:after {
+    color: #fff
+}
+.custom-select-wrapper .custom-select-menu .custom-select-scrollbar,
+.custom-select-wrapper .custom-select-menu>ul {
+    border-radius: 0 0 5px 5px;
+    clear: both;
+    background-color: #616161;
+    color: #fff;
+    overflow: hidden;
+    position: absolute;
+    padding: 0;
+    top: 2.5em;
+    width: 100%;
+    z-index: 50
+}
+html.nintendo .custom-select-wrapper .custom-select-menu .custom-select-scrollbar,
+html.nintendo .custom-select-wrapper .custom-select-menu>ul {
+    border-radius: 0
+}
+.custom-select-wrapper .custom-select-menu .custom-select-scrollbar li,
+.custom-select-wrapper .custom-select-menu>ul li {
+    clear: both;
+    cursor: pointer;
+    padding: 0.75em 3.125% 0.675em;
+    width: 93.75%
+}
+.custom-select-wrapper .custom-select-menu .custom-select-scrollbar li:hover,
+.custom-select-wrapper .custom-select-menu>ul li:hover {
+    background-color: #313131
+}
+.custom-select-wrapper .custom-select-menu .custom-select-scrollbar li:hover:last-child,
+.custom-select-wrapper .custom-select-menu>ul li:hover:last-child {
+    border-radius: 0 0 5px 5px
+}
+html.nintendo .custom-select-wrapper .custom-select-menu .custom-select-scrollbar li:hover:last-child,
+html.nintendo .custom-select-wrapper .custom-select-menu>ul li:hover:last-child {
+    border-radius: 0
+}
+input[type="submit"],
+input[type="reset"] {
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: none;
+    text-align: center;
+    cursor: pointer
+}
+input[type="submit"]+span.icon,
+input[type="submit"]+span.arrow-right.button:after,
+body.custom-form-elements label.radio-as-toggle-button input[type="submit"]+span.arrow-right:after,
+input[type="submit"]+span.arrow-left.button:before,
+body.custom-form-elements label.radio-as-toggle-button input[type="submit"]+span.arrow-left:before,
+input[type="reset"]+span.icon,
+input[type="reset"]+span.arrow-right.button:after,
+body.custom-form-elements label.radio-as-toggle-button input[type="reset"]+span.arrow-right:after,
+input[type="reset"]+span.arrow-left.button:before,
+body.custom-form-elements label.radio-as-toggle-button input[type="reset"]+span.arrow-left:before {
+    position: relative;
+    top: -3em;
+    right: 0
+}
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle
+}
+.custom-checkbox>input {
+    position: absolute;
+    top: 0;
+    z-index: 2
+}
+.custom-checkbox>input[type=radio] {
+    opacity: 0
+}
+.custom-checkbox>.box {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: #313131;
+    border-radius: 5px
+}
+html.nintendo .custom-checkbox>.box {
+    border-radius: 0
+}
+.custom-checkbox>.box>.icon,
+.custom-checkbox>.box>.arrow-right.button:after,
+body.custom-form-elements label.radio-as-toggle-button .custom-checkbox>.box>input+span.arrow-right:after,
+.simple-filters .custom-checkbox>.box>li.arrow-right:after,
+.custom-checkbox>.box>.arrow-left.button:before,
+body.custom-form-elements label.radio-as-toggle-button .custom-checkbox>.box>input+span.arrow-left:before,
+.simple-filters .custom-checkbox>.box>li.arrow-left:before,
+body.custom-form-elements .custom-checkbox>.box>select+i,
+.custom-select-wrapper .custom-select-menu .custom-checkbox>.box>label:before,
+.custom-select-wrapper .custom-select-menu .custom-checkbox>.box>label:after,
+.pokedex-pokemon-evolution>div .custom-checkbox>.evolution-profile.box>li:after,
+.pokedex-pokemon-evolution.evolution-five>div .custom-checkbox>.evolution-profile.box>li.first:before,
+.pokedex-pokemon-evolution.evolution-five>div .custom-checkbox>.evolution-profile.box>li.middle:before,
+.pokedex-pokemon-evolution.evolution-six>div .custom-checkbox>.evolution-profile.box>li.middle:before {
+    display: none;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #4dad5b;
+    border-radius: 5px
+}
+html.nintendo .custom-checkbox>.box>.icon,
+html.nintendo .custom-checkbox>.box>.arrow-right.button:after,
+html.nintendo body.custom-form-elements label.radio-as-toggle-button .custom-checkbox>.box>input+span.arrow-right:after,
+body.custom-form-elements label.radio-as-toggle-button html.nintendo .custom-checkbox>.box>input+span.arrow-right:after,
+html.nintendo .simple-filters .custom-checkbox>.box>li.arrow-right:after,
+.simple-filters html.nintendo .custom-checkbox>.box>li.arrow-right:after,
+html.nintendo .custom-checkbox>.box>.arrow-left.button:before,
+html.nintendo body.custom-form-elements label.radio-as-toggle-button .custom-checkbox>.box>input+span.arrow-left:before,
+body.custom-form-elements label.radio-as-toggle-button html.nintendo .custom-checkbox>.box>input+span.arrow-left:before,
+html.nintendo .simple-filters .custom-checkbox>.box>li.arrow-left:before,
+.simple-filters html.nintendo .custom-checkbox>.box>li.arrow-left:before,
+html.nintendo body.custom-form-elements .custom-checkbox>.box>select+i,
+body.custom-form-elements html.nintendo .custom-checkbox>.box>select+i,
+html.nintendo .custom-select-wrapper .custom-select-menu .custom-checkbox>.box>label:before,
+.custom-select-wrapper .custom-select-menu html.nintendo .custom-checkbox>.box>label:before,
+html.nintendo .custom-select-wrapper .custom-select-menu .custom-checkbox>.box>label:after,
+.custom-select-wrapper .custom-select-menu html.nintendo .custom-checkbox>.box>label:after,
+html.nintendo .pokedex-pokemon-evolution>div .custom-checkbox>.evolution-profile.box>li:after,
+.pokedex-pokemon-evolution>div html.nintendo .custom-checkbox>.evolution-profile.box>li:after,
+html.nintendo .pokedex-pokemon-evolution.evolution-five>div .custom-checkbox>.evolution-profile.box>li.first:before,
+.pokedex-pokemon-evolution.evolution-five>div html.nintendo .custom-checkbox>.evolution-profile.box>li.first:before,
+html.nintendo .pokedex-pokemon-evolution.evolution-five>div .custom-checkbox>.evolution-profile.box>li.middle:before,
+.pokedex-pokemon-evolution.evolution-five>div html.nintendo .custom-checkbox>.evolution-profile.box>li.middle:before,
+html.nintendo .pokedex-pokemon-evolution.evolution-six>div .custom-checkbox>.evolution-profile.box>li.middle:before,
+.pokedex-pokemon-evolution.evolution-six>div html.nintendo .custom-checkbox>.evolution-profile.box>li.middle:before {
+    border-radius: 0
+}
+.custom-checkbox>input:checked+.box>.icon,
+.custom-checkbox>input:checked+.box>.arrow-right.button:after,
+body.custom-form-elements label.radio-as-toggle-button .custom-checkbox>input:checked+.box>input+span.arrow-right:after,
+.simple-filters .custom-checkbox>input:checked+.box>li.arrow-right:after,
+.custom-checkbox>input:checked+.box>.arrow-left.button:before,
+body.custom-form-elements label.radio-as-toggle-button .custom-checkbox>input:checked+.box>input+span.arrow-left:before,
+.simple-filters .custom-checkbox>input:checked+.box>li.arrow-left:before,
+body.custom-form-elements .custom-checkbox>input:checked+.box>select+i,
+.custom-select-wrapper .custom-select-menu .custom-checkbox>input:checked+.box>label:before,
+.custom-select-wrapper .custom-select-menu .custom-checkbox>input:checked+.box>label:after,
+.pokedex-pokemon-evolution>div .custom-checkbox>input:checked+.evolution-profile.box>li:after,
+.pokedex-pokemon-evolution.evolution-five>div .custom-checkbox>input:checked+.evolution-profile.box>li.first:before,
+.pokedex-pokemon-evolution.evolution-five>div .custom-checkbox>input:checked+.evolution-profile.box>li.middle:before,
+.pokedex-pokemon-evolution.evolution-six>div .custom-checkbox>input:checked+.evolution-profile.box>li.middle:before {
+    display: block
+}
+.in-row-select {
+    float: left;
+    margin-left: 2em
+}
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: absolute;
+    outline: none;
+    left: 0;
+    top: 0;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border: none;
+    margin: 0;
+    opacity: 0;
+    z-index: 2
+}
+.checkbox-label-pill {
+    background-color: #212121;
+    display: block;
+    cursor: pointer;
+    font-size: 1.125em;
+    text-transform: none;
+    height: 2em;
+    line-height: 2em;
+    padding: 0 2em;
+    border-radius: 1em;
+    position: relative
+}
+html.nintendo .checkbox-label-pill {
+    border-radius: 0
+}
+.checkbox-label-pill::after {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    right: .15em;
+    top: .15em;
+    height: 1.7em;
+    width: 1.7em;
+    position: absolute;
+    background-color: #313131;
+    border: 2px solid #616161;
+    border-radius: 50%
+}
+html.nintendo .checkbox-label-pill::after {
+    border-radius: 0
+}
+:checked+.checkbox-label-pill::after {
+    background-color: #ee6b2f;
+    border: none
+}
+.label-control {
+    position: relative;
+    cursor: pointer
+}
+.label-control input,
+.label-control button {
+    background: transparent;
+    text-indent: -9999px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0
+}
+.form-wrapper label i.icon,
+.form-wrapper label i.arrow-right.button:after,
+.form-wrapper label i.arrow-left.button:before,
+.form-wrapper label body.custom-form-elements select+i,
+body.custom-form-elements .form-wrapper label select+i {
+    font-size: 50%;
+    vertical-align: top
+}
+@font-face {
+    font-family: "icons";
+    src: url("../fonts/icons-600849ce3953532b12ab3ab45476d06c.eot?584a9232f247387510ad322302f69ce7");
+    src: url("../fonts/icons-600849ce3953532b12ab3ab45476d06c.eot?#iefix") format("embedded-opentype"), url("../fonts/icons-600849ce3953532b12ab3ab45476d06c.woff?584a9232f247387510ad322302f69ce7") format("woff"), url("../fonts/icons-600849ce3953532b12ab3ab45476d06c.ttf?584a9232f247387510ad322302f69ce7") format("truetype"), url("../fonts/icons-600849ce3953532b12ab3ab45476d06c.svg?584a9232f247387510ad322302f69ce7#icons") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+.icon,
+.arrow-right.button:after,
+body.custom-form-elements label.radio-as-toggle-button input+span.arrow-right:after,
+.simple-filters li.arrow-right:after,
+.arrow-left.button:before,
+body.custom-form-elements label.radio-as-toggle-button input+span.arrow-left:before,
+.simple-filters li.arrow-left:before,
+body.custom-form-elements select+i,
+.custom-select-wrapper .custom-select-menu label:before,
+.custom-select-wrapper .custom-select-menu label:after,
+.pokedex-pokemon-evolution>div .evolution-profile>li:after,
+.pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first:before,
+.pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:before,
+.pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle:before {
+    font-family: "icons";
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+.icon_add:before {
+    content: "\f101"
+}
+.icon_alert:before {
+    content: "\f102"
+}
+.icon_arrow_sm_down:before,
+body.custom-form-elements select+i,
+.custom-select-wrapper .custom-select-menu label:after {
+    content: "\f103"
+}
+.icon_arrow_sm_left:before,
+.arrow-left.button:before,
+body.custom-form-elements label.radio-as-toggle-button input+span.arrow-left:before,
+.simple-filters li.arrow-left:before {
+    content: "\f104"
+}
+.icon_arrow_sm_right:before,
+.arrow-right.button:after,
+body.custom-form-elements label.radio-as-toggle-button input+span.arrow-right:after,
+.simple-filters li.arrow-right:after {
+    content: "\f105"
+}
+.icon_arrow_sm_up:before,
+.custom-select-wrapper .custom-select-menu label.opened:after {
+    content: "\f106"
+}
+.icon_badges:before {
+    content: "\f107"
+}
+.icon_body:before {
+    content: "\f108"
+}
+.icon_cards:before {
+    content: "\f109"
+}
+.icon_cautionsymbol:before {
+    content: "\f10a"
+}
+.icon_check:before {
+    content: "\f10b"
+}
+.icon_checkmark:before {
+    content: "\f10c"
+}
+.icon_clothing:before {
+    content: "\f10d"
+}
+.icon_create_avatar:before {
+    content: "\f10e"
+}
+.icon_download:before {
+    content: "\f10f"
+}
+.icon_event:before {
+    content: "\f110"
+}
+.icon_eye_closed:before {
+    content: "\f111"
+}
+.icon_eye_open:before {
+    content: "\f112"
+}
+.icon_female_symbol:before {
+    content: "\f113"
+}
+.icon_filter_height_large:before {
+    content: "\f114"
+}
+.icon_filter_height_medium:before {
+    content: "\f115"
+}
+.icon_filter_height_small:before {
+    content: "\f116"
+}
+.icon_filter_weight_large:before {
+    content: "\f117"
+}
+.icon_filter_weight_medium:before {
+    content: "\f118"
+}
+.icon_filter_weight_small:before {
+    content: "\f119"
+}
+.icon_friends:before {
+    content: "\f11a"
+}
+.icon_gender:before {
+    content: "\f11b"
+}
+.icon_hamburger:before {
+    content: "\f11c"
+}
+.icon_journal:before {
+    content: "\f11d"
+}
+.icon_joystick:before {
+    content: "\f11e"
+}
+.icon_male_symbol:before {
+    content: "\f11f"
+}
+.icon_messages:before {
+    content: "\f120"
+}
+.icon_minus:before {
+    content: "\f121"
+}
+.icon_multiply:before {
+    content: "\f122"
+}
+.icon_notepage:before {
+    content: "\f123"
+}
+.icon_plus:before {
+    content: "\f124"
+}
+.icon_points_champ:before {
+    content: "\f125"
+}
+.icon_points_game:before {
+    content: "\f126"
+}
+.icon_pokeball:before {
+    content: "\f127"
+}
+.icon_pokedex_added:before {
+    content: "\f128"
+}
+.icon_pokemontv:before {
+    content: "\f129"
+}
+.icon_prize_bronze:before {
+    content: "\f12a"
+}
+.icon_prize_gold:before {
+    content: "\f12b"
+}
+.icon_prize_silver:before {
+    content: "\f12c"
+}
+.icon_refresh:before {
+    content: "\f12d"
+}
+.icon_remove:before {
+    content: "\f12e"
+}
+.icon_search:before {
+    content: "\f12f"
+}
+.icon_settings:before {
+    content: "\f130"
+}
+.icon_videogame:before {
+    content: "\f131"
+}
+.icon_wrench:before {
+    content: "\f132"
+}
+.button-black,
+.custom-select-wrapper .custom-select-menu label.button-black:after {
+    background-color: #313131;
+    color: #fff
+}
+.button-black:hover,
+.custom-select-wrapper .custom-select-menu label.button-black:hover:after,
+.button-black.active,
+.custom-select-wrapper .custom-select-menu label.active.button-black:after {
+    background-color: #282828
+}
+.category-tags-black {
+    background-color: #313131;
+    color: #fff
+}
+.category-tags-black:before {
+    border-color: transparent #313131 transparent transparent
+}
+.category-tags-black:hover {
+    background-color: #282828
+}
+.category-tags-black:hover:before {
+    border-color: transparent #282828 transparent transparent
+}
+.button-blue,
+body.custom-form-elements label.radio-as-toggle-button input+span {
+    background-color: #1b53ba;
+    color: #fff
+}
+.button-blue:hover,
+body.custom-form-elements label.radio-as-toggle-button input+span:hover,
+.button-blue.active,
+body.custom-form-elements label.radio-as-toggle-button input+span.active {
+    background-color: #1847d7
+}
+.category-tags-blue {
+    background-color: #1b53ba;
+    color: #fff
+}
+.category-tags-blue:before {
+    border-color: transparent #1b53ba transparent transparent
+}
+.category-tags-blue:hover {
+    background-color: #1847d7
+}
+.category-tags-blue:hover:before {
+    border-color: transparent #1847d7 transparent transparent
+}
+.button-brown {
+    background-color: #2e1a13;
+    color: #fff
+}
+.button-brown:hover,
+.button-brown.active {
+    background-color: #fff
+}
+.category-tags-brown {
+    background-color: #2e1a13;
+    color: #fff
+}
+.category-tags-brown:before {
+    border-color: transparent #2e1a13 transparent transparent
+}
+.category-tags-brown:hover {
+    background-color: #fff
+}
+.category-tags-brown:hover:before {
+    border-color: transparent #fff transparent transparent
+}
+.button-darkgray {
+    background-color: #616161;
+    color: #fff
+}
+.button-darkgray:hover,
+.button-darkgray.active {
+    background-color: #313131
+}
+.category-tags-darkgray {
+    background-color: #616161;
+    color: #fff
+}
+.category-tags-darkgray:before {
+    border-color: transparent #616161 transparent transparent
+}
+.category-tags-darkgray:hover {
+    background-color: #313131
+}
+.category-tags-darkgray:hover:before {
+    border-color: transparent #313131 transparent transparent
+}
+.button-gray,
+.custom-select-wrapper .custom-select-menu label.button-gray:after,
+.simple-filters li {
+    background-color: #a4a4a4;
+    color: #fff
+}
+.button-gray:hover,
+.custom-select-wrapper .custom-select-menu label.button-gray:hover:after,
+.simple-filters li:hover,
+.button-gray.active,
+.custom-select-wrapper .custom-select-menu label.active.button-gray:after,
+.simple-filters li.active {
+    background-color: #30a7d7
+}
+.category-tags-gray {
+    background-color: #a4a4a4;
+    color: #fff
+}
+.category-tags-gray:before {
+    border-color: transparent #a4a4a4 transparent transparent
+}
+.category-tags-gray:hover {
+    background-color: #30a7d7
+}
+.category-tags-gray:hover:before {
+    border-color: transparent #30a7d7 transparent transparent
+}
+.button-green,
+.custom-select-wrapper .custom-select-menu label.button-green:after {
+    background-color: #4dad5b;
+    color: #fff
+}
+.button-green:hover,
+.custom-select-wrapper .custom-select-menu label.button-green:hover:after,
+.button-green.active,
+.custom-select-wrapper .custom-select-menu label.active.button-green:after {
+    background-color: #369143
+}
+.category-tags-green {
+    background-color: #4dad5b;
+    color: #fff
+}
+.category-tags-green:before {
+    border-color: transparent #4dad5b transparent transparent
+}
+.category-tags-green:hover {
+    background-color: #369143
+}
+.category-tags-green:hover:before {
+    border-color: transparent #369143 transparent transparent
+}
+.button-green-odd {
+    background-color: #3d8a48;
+    color: #fff
+}
+.button-green-odd:hover,
+.button-green-odd.active {
+    background-color: #369143
+}
+.category-tags-green-odd {
+    background-color: #3d8a48;
+    color: #fff
+}
+.category-tags-green-odd:before {
+    border-color: transparent #3d8a48 transparent transparent
+}
+.category-tags-green-odd:hover {
+    background-color: #369143
+}
+.category-tags-green-odd:hover:before {
+    border-color: transparent #369143 transparent transparent
+}
+.button-lightblue {
+    background-color: #30a7d7;
+    color: #fff
+}
+.button-lightblue:hover,
+.button-lightblue.active {
+    background-color: #1b82b1
+}
+.category-tags-lightblue {
+    background-color: #30a7d7;
+    color: #fff
+}
+.category-tags-lightblue:before {
+    border-color: transparent #30a7d7 transparent transparent
+}
+.category-tags-lightblue:hover {
+    background-color: #1b82b1
+}
+.category-tags-lightblue:hover:before {
+    border-color: transparent #1b82b1 transparent transparent
+}
+.button-lightgray {
+    background-color: #F2F2F2;
+    color: #fff
+}
+.button-lightgray:hover,
+.button-lightgray.active {
+    background-color: #d0d0d0
+}
+.category-tags-lightgray {
+    background-color: #F2F2F2;
+    color: #fff
+}
+.category-tags-lightgray:before {
+    border-color: transparent #F2F2F2 transparent transparent
+}
+.category-tags-lightgray:hover {
+    background-color: #d0d0d0
+}
+.category-tags-lightgray:hover:before {
+    border-color: transparent #d0d0d0 transparent transparent
+}
+.button-orange,
+body.custom-form-elements label.radio-as-toggle-button input:checked+span,
+body.custom-form-elements label.radio-as-toggle-button input+span:hover,
+.custom-select-wrapper .custom-select-menu label.button-orange:after,
+.pokedex-filter-header .filter-text-search .button-search {
+    background-color: #ee6b2f;
+    color: #fff
+}
+.button-orange:hover,
+body.custom-form-elements label.radio-as-toggle-button input+span:hover,
+.custom-select-wrapper .custom-select-menu label.button-orange:hover:after,
+.pokedex-filter-header .filter-text-search .button-search:hover,
+.button-orange.active,
+body.custom-form-elements label.radio-as-toggle-button input:checked+span.active,
+body.custom-form-elements label.radio-as-toggle-button input+span.active:hover,
+.custom-select-wrapper .custom-select-menu label.active.button-orange:after,
+.pokedex-filter-header .filter-text-search .active.button-search {
+    background-color: #da471b
+}
+.category-tags-orange {
+    background-color: #ee6b2f;
+    color: #fff
+}
+.category-tags-orange:before {
+    border-color: transparent #ee6b2f transparent transparent
+}
+.category-tags-orange:hover {
+    background-color: #da471b
+}
+.category-tags-orange:hover:before {
+    border-color: transparent #da471b transparent transparent
+}
+.button-pink {
+    background-color: #ff90c4;
+    color: #fff
+}
+.button-pink:hover,
+.button-pink.active {
+    background-color: #ff2a8e
+}
+.category-tags-pink {
+    background-color: #ff90c4;
+    color: #fff
+}
+.category-tags-pink:before {
+    border-color: transparent #ff90c4 transparent transparent
+}
+.category-tags-pink:hover {
+    background-color: #ff2a8e
+}
+.category-tags-pink:hover:before {
+    border-color: transparent #ff2a8e transparent transparent
+}
+.button-red {
+    background-color: #E3350D;
+    color: #fff
+}
+.button-red:hover,
+.button-red.active {
+    background-color: #b32a0a
+}
+.category-tags-red {
+    background-color: #E3350D;
+    color: #fff
+}
+.category-tags-red:before {
+    border-color: transparent #E3350D transparent transparent
+}
+.category-tags-red:hover {
+    background-color: #b32a0a
+}
+.category-tags-red:hover:before {
+    border-color: transparent #b32a0a transparent transparent
+}
+.button-white,
+.pokedex-filter-header .filter-text-search #searchInput,
+.pokedex-filter-header .filter-text-search .twitter-typeahead {
+    background-color: #fff;
+    color: #212121
+}
+.button-white:hover,
+.pokedex-filter-header .filter-text-search #searchInput:hover,
+.pokedex-filter-header .filter-text-search .twitter-typeahead:hover,
+.button-white.active,
+.pokedex-filter-header .filter-text-search .active#searchInput,
+.pokedex-filter-header .filter-text-search .active.twitter-typeahead {
+    background-color: #fff
+}
+.category-tags-white {
+    background-color: #fff;
+    color: #212121
+}
+.category-tags-white:before {
+    border-color: transparent #fff transparent transparent
+}
+.category-tags-white:hover {
+    background-color: #fff
+}
+.category-tags-white:hover:before {
+    border-color: transparent #fff transparent transparent
+}
+.button-yellow {
+    background-color: #e6bc2f;
+    color: #fff
+}
+.button-yellow:hover,
+.button-yellow.active {
+    background-color: #daa31c
+}
+.category-tags-yellow {
+    background-color: #e6bc2f;
+    color: #fff
+}
+.category-tags-yellow:before {
+    border-color: transparent #e6bc2f transparent transparent
+}
+.category-tags-yellow:hover {
+    background-color: #daa31c
+}
+.category-tags-yellow:hover:before {
+    border-color: transparent #daa31c transparent transparent
+}
+body.custom-form-elements input.input-black {
+    background-color: #313131;
+    color: #fff;
+    border: 3px solid #616161
+}
+body.custom-form-elements input.input-black:hover,
+body.custom-form-elements input.input-black.active {
+    background-color: #282828
+}
+body.custom-form-elements input.input-blue {
+    background-color: #1b53ba;
+    color: #fff;
+    border: 3px solid #616161
+}
+body.custom-form-elements input.input-blue:hover,
+body.custom-form-elements input.input-blue.active {
+    background-color: #1847d7
+}
+body.custom-form-elements input.input-brown {
+    background-color: #2e1a13;
+    color: #fff;
+    border: 3px solid #616161
+}
+body.custom-form-elements input.input-brown:hover,
+body.custom-form-elements input.input-brown.active {
+    background-color: #fff
+}
+body.custom-form-elements input.input-darkgray {
+    background-color: #616161;
+    color: #fff;
+    border: 3px solid #616161
+}
+body.custom-form-elements input.input-darkgray:hover,
+body.custom-form-elements input.input-darkgray.active {
+    background-color: #313131
+}
+body.custom-form-elements input.input-gray {
+    background-color: #a4a4a4;
+    color: #fff;
+    border: 3px solid #616161
+}
+body.custom-form-elements input.input-gray:hover,
+body.custom-form-elements input.input-gray.active {
+    background-color: #30a7d7
+}
+body.custom-form-elements input.input-green {
+    background-color: #4dad5b;
+    color: #fff;
+    border: 3px solid #616161
+}
+body.custom-form-elements input.input-green:hover,
+body.custom-form-elements input.input-green.active {
+    background-color: #369143
+}
+body.custom-form-elements input.input-green-odd {
+    background-color: #3d8a48;
+    color: #fff;
+    border: 3px solid #616161
+}
+body.custom-form-elements input.input-green-odd:hover,
+body.custom-form-elements input.input-green-odd.active {
+    background-color: #369143
+}
+body.custom-form-elements input.input-lightblue {
+    background-color: #30a7d7;
+    color: #fff;
+    border: 3px solid #616161
+}
+body.custom-form-elements input.input-lightblue:hover,
+body.custom-form-elements input.input-lightblue.active {
+    background-color: #1b82b1
+}
+body.custom-form-elements input.input-lightgray {
+    background-color: #F2F2F2;
+    color: #fff;
+    border: 3px solid #616161
+}
+body.custom-form-elements input.input-lightgray:hover,
+body.custom-form-elements input.input-lightgray.active {
+    background-color: #d0d0d0
+}
+body.custom-form-elements input.input-orange {
+    background-color: #ee6b2f;
+    color: #fff;
+    border: 3px solid #616161
+}
+body.custom-form-elements input.input-orange:hover,
+body.custom-form-elements input.input-orange.active {
+    background-color: #da471b
+}
+body.custom-form-elements input.input-pink {
+    background-color: #ff90c4;
+    color: #fff;
+    border: 3px solid #616161
+}
+body.custom-form-elements input.input-pink:hover,
+body.custom-form-elements input.input-pink.active {
+    background-color: #ff2a8e
+}
+body.custom-form-elements input.input-red {
+    background-color: #E3350D;
+    color: #fff;
+    border: 3px solid #616161
+}
+body.custom-form-elements input.input-red:hover,
+body.custom-form-elements input.input-red.active {
+    background-color: #b32a0a
+}
+body.custom-form-elements input.input-white {
+    background-color: #fff;
+    color: #212121;
+    border: 3px solid #616161
+}
+body.custom-form-elements input.input-white:hover,
+body.custom-form-elements input.input-white.active {
+    background-color: #fff
+}
+body.custom-form-elements input.input-yellow {
+    background-color: #e6bc2f;
+    color: #fff;
+    border: 3px solid #616161
+}
+body.custom-form-elements input.input-yellow:hover,
+body.custom-form-elements input.input-yellow.active {
+    background-color: #daa31c
+}
+.pokedex-filter-header {
+    *zoom: 1;
+    background: #313131;
+    float: left;
+    width: 100%
+}
+.pokedex-filter-header:before,
+.pokedex-filter-header:after {
+    content: "";
+    display: table
+}
+.pokedex-filter-header:after {
+    clear: both
+}
+.pokedex-filter-header>div {
+    background: none;
+    display: block;
+    margin: 0 auto;
+    overflow: visible;
+    max-width: 1024px;
+    width: 100%
+}
+@media only screen and (min-width: 768px) and (max-width: 768px) and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .pokedex-filter-header>div {
+        max-width: 736px
+    }
+}
+body.static .pokedex-filter-header>div {
+    width: 1024px
+}
+.pokedex-filter-header>div>p {
+    margin-left: 7.2525%;
+    color: #fff;
+    clear: both;
+    float: left;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+    width: 90%
+}
+.pokedex-filter-header .filter-text-search {
+    float: left;
+    margin-right: -100%;
+    width: 27.46%;
+    margin-left: 7.2525%;
+    margin-top: 2em;
+    position: relative
+}
+.pokedex-filter-header .filter-text-search label {
+    font-family: "Flexo-Regular", arial, sans-serif;
+    float: left;
+    font-size: 167.5%;
+    text-transform: none;
+    width: 100%
+}
+body.ru .pokedex-filter-header .filter-text-search label {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: normal
+}
+.pokedex-filter-header .filter-text-search #searchInput {
+    float: left;
+    margin-right: -100%;
+    width: 72.5425%;
+    border: 3px solid #616161;
+    clear: both;
+    color: #313131;
+    margin-top: 0.325em;
+    background-color: #fff;
+    border-radius: 5px
+}
+html.nintendo .pokedex-filter-header .filter-text-search #searchInput {
+    border-radius: 0
+}
+.pokedex-filter-header .filter-text-search .twitter-typeahead {
+    float: left;
+    margin-right: -100%;
+    width: 72.5425%;
+    border: 3px solid #616161;
+    clear: both;
+    margin-top: 0.325em;
+    background-color: #fff;
+    border-radius: 5px
+}
+html.nintendo .pokedex-filter-header .filter-text-search .twitter-typeahead {
+    border-radius: 0
+}
+.pokedex-filter-header .filter-text-search .twitter-typeahead #searchInput {
+    background-color: transparent;
+    border: none;
+    color: #313131;
+    margin: 0;
+    width: 100%
+}
+.pokedex-filter-header .filter-text-search .button-search {
+    float: left;
+    margin-right: -100%;
+    width: 20.2%;
+    margin-left: 79.8025%;
+    background-image: url("../img/chrome/forms/input-search-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    clear: none;
+    text-indent: -9999px;
+    height: 48px;
+    position: relative;
+    top: 2px
+}
+.filter-action {
+    float: right;
+    clear: both;
+    margin-top: 2.75em;
+    width: 100%
+}
+.filter-action a {
+    clear: none;
+    float: right;
+    font-size: 125%
+}
+.pokedex-filter-toggle {
+    overflow: visible;
+    padding: 0
+}
+.filter-toggle-span {
+    float: left;
+    margin-right: -100%;
+    width: 41.96%;
+    margin-left: 29.0225%;
+    background-color: #616161;
+    height: 16px;
+    cursor: pointer;
+    position: relative
+}
+.filter-toggle-span span {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    background-color: #616161;
+    display: block;
+    float: left;
+    font-size: 100%;
+    line-height: 150%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -1em;
+    text-transform: none;
+    text-align: center;
+    width: 100%
+}
+body.ru .filter-toggle-span span {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.filter-toggle-span span i {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-left: 0.5em;
+    height: 20px;
+    width: 20px
+}
+html.nintendo .filter-toggle-span span i {
+    border-radius: 0
+}
+.filter-toggle-span span i:before {
+    color: #212121;
+    font-size: 85%;
+    line-height: 135%
+}
+.fluid .filter-toggle-span span i.hidden-mobile {
+    display: inline-block !important
+}
+.filter-toggle-span:before,
+.filter-toggle-span:after {
+    background: transparent url("../img/chrome/notches/large-notch-darkgray.png") no-repeat;
+    background-size: 38px 18px;
+    content: " ";
+    height: 18px;
+    left: -36px;
+    position: absolute;
+    width: 38px;
+    top: -2px;
+    -webkit-transform: scaleY(-1);
+    -ms-transform: scaleY(-1);
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV"
+}
+.filter-toggle-span:after {
+    left: auto;
+    right: -36px;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+@media (min-width: 461px) and (max-width: 720px) {
+    .filter-action {
+        float: none
+    }
+    .filter-action a {
+        float: right;
+        width: 45%;
+        font-size: 110%;
+        box-sizing: border-box;
+        padding-left: .8em;
+        padding-right: .8em
+    }
+    .filter-action a:last-child {
+        float: left
+    }
+}
+@media (min-width: 1px) and (max-width: 460px) {
+    .pokedex-filter-header>div p.subtitle {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%;
+        margin-top: 0.5em;
+        margin-bottom: 1.5em
+    }
+    .pokedex-filter-header .filter-text-search {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%
+    }
+    .pokedex-filter-header .filter-text-search .twitter-typeahead {
+        float: left;
+        margin-right: -100%;
+        width: 70.98%
+    }
+    .pokedex-filter-header .filter-text-search i {
+        bottom: -4px
+    }
+    .filter-toggle-span {
+        float: left;
+        margin-right: -100%;
+        width: 70.98%;
+        margin-left: 14.5125%
+    }
+    .fluid .filter-toggle-span span i.hidden-mobile {
+        display: none !important
+    }
+}
+@media (min-width: 461px) and (max-width: 720px) {
+    .pokedex-filter-header>div p.subtitle {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%;
+        margin-top: 0.5em;
+        margin-bottom: 1.5em
+    }
+    .pokedex-filter-header .filter-text-search {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%
+    }
+    .pokedex-filter-header .filter-text-search .twitter-typeahead {
+        float: left;
+        margin-right: -100%;
+        width: 70.98%
+    }
+    .pokedex-filter-header .filter-text-search i {
+        bottom: -4px
+    }
+    .filter-toggle-span {
+        float: left;
+        margin-right: -100%;
+        width: 70.98%;
+        margin-left: 14.5125%
+    }
+    .fluid .filter-toggle-span span i.hidden-mobile {
+        display: none !important
+    }
+}
+@media (min-width: 1px) and (max-width: 460px) {
+    .filter-action {
+        float: none
+    }
+    .filter-action a {
+        float: none;
+        width: auto;
+        font-size: 110%;
+        box-sizing: border-box;
+        display: block
+    }
+    .filter-action a:last-child {
+        margin-top: 3.125%
+    }
+}
+.pokedex-header .custom-select-wrapper {
+    width: 100%
+}
+.pokedex-header .styled-select {
+    border-radius: 5px;
+    width: 98.4375%
+}
+html.nintendo .pokedex-header .styled-select {
+    border-radius: 0
+}
+.pokedex-header .styled-select:before {
+    display: none
+}
+.pokedex-header .styled-select i {
+    display: none
+}
+html.touch .pokedex-header .styled-select {
+    width: 98.4375%
+}
+html.touch .pokedex-header .styled-select:before {
+    display: block;
+    font-size: 125%;
+    position: absolute;
+    top: 0.675em;
+    left: 0.75em
+}
+html.touch .pokedex-header .styled-select i {
+    display: block
+}
+html.touch .pokedex-header .styled-select select {
+    text-indent: 2.25em
+}
+.pokedex-filter {
+    clear: both;
+    background: #616161;
+    border-color: #212121;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    overflow: hidden;
+    width: 100%
+}
+.pokedex-filter .custom-select-wrapper {
+    width: 100%
+}
+.pokedex-filter .styled-select {
+    border-radius: 5px;
+    width: 98.4375%
+}
+html.nintendo .pokedex-filter .styled-select {
+    border-radius: 0
+}
+.pokedex-filter .styled-select:before {
+    display: none
+}
+.pokedex-filter .styled-select i {
+    display: none
+}
+.pokedex-filter .styled-select select {
+    text-indent: 2.25em
+}
+html.touch .pokedex-filter .styled-select {
+    width: 98.4375%
+}
+html.touch .pokedex-filter .styled-select i {
+    display: block
+}
+html.touch .pokedex-filter .styled-select select {
+    text-indent: 2.25em
+}
+.pokedex-filter-title {
+    margin-left: 1.5625%;
+    padding-left: 0
+}
+.pokedex-filter-wrapper {
+    background: none;
+    display: block;
+    margin: 1em auto;
+    max-width: 1024px;
+    overflow: hidden;
+    height: 0px
+}
+@media only screen and (min-width: 768px) and (max-width: 768px) and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .pokedex-filter-wrapper {
+        max-width: 736px
+    }
+}
+body.static .pokedex-filter-wrapper {
+    width: 1024px
+}
+.pokedex-filter-wrapper h2,
+.pokedex-filter-wrapper h3 {
+    color: #fff;
+    font-size: 167.5%
+}
+.pokedex-filter-wrapper h2 {
+    float: left;
+    margin-right: -100%;
+    width: 49.22%
+}
+.pokedex-filter-wrapper .custom-select-wrapper {
+    width: 100%
+}
+.pokedex-filter-wrapper .custom-select-wrapper ul {
+    background-color: #a4a4a4
+}
+.pokedex-filter-wrapper .custom-select-wrapper ul li {
+    color: #212121
+}
+.pokedex-filter-wrapper .custom-select-wrapper ul li:hover {
+    color: #4dad5b
+}
+.pokedex-filter-wrapper .custom-select-wrapper .custom-select-menu .custom-select-scrollbar {
+    background-color: #a4a4a4
+}
+html.no-touch .pokedex-filter-wrapper .custom-select-wrapper .custom-select-menu .custom-select-scrollbar .viewport::-webkit-scrollbar-thumb {
+    background-color: #313131
+}
+html.no-touch .pokedex-filter-wrapper .custom-select-wrapper .custom-select-menu .custom-select-scrollbar .viewport::-webkit-scrollbar-button {
+    background-image: url("../img/chrome/scrollbar_bg_dark.png")
+}
+html.no-touch .pokedex-filter-wrapper .custom-select-wrapper .custom-select-menu .custom-select-scrollbar .viewport .scroll-control--decr,
+html.no-touch .pokedex-filter-wrapper .custom-select-wrapper .custom-select-menu .custom-select-scrollbar .viewport .scroll-control--incr {
+    background-image: url("../img/chrome/scrollbar_bg_dark.png")
+}
+html.no-touch .pokedex-filter-wrapper .custom-select-wrapper .custom-select-menu .custom-select-scrollbar .viewport .scroll-control--incr {
+    bottom: 10px;
+    background-position: 0 -14px
+}
+.simple-filters-wrapper {
+    background: none;
+    display: block;
+    margin: 1em auto;
+    overflow: hidden;
+    max-width: 1024px;
+    width: 100%
+}
+body.static .simple-filters-wrapper {
+    width: 1024px
+}
+.simple-filters {
+    float: left;
+    margin-right: -100%;
+    width: 85.49%;
+    margin-left: 7.2525%;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em
+}
+.simple-filters li {
+    margin-left: 0.78125%;
+    margin-right: 0;
+    display: none;
+    padding: 0.75em 0.675em;
+    clear: none !important
+}
+.simple-filters li.active-simple-filter {
+    display: block
+}
+.simple-filters li:after {
+    content: none
+}
+.simple-filters li span {
+    font-size: 85%
+}
+.simple-filters li .filter {
+    color: #212121;
+    text-transform: none
+}
+.simple-filters li .value {
+    color: #fff
+}
+.simple-filters li .icon,
+.simple-filters li .arrow-right.button:after,
+.simple-filters li body.custom-form-elements label.radio-as-toggle-button input+span.arrow-right:after,
+body.custom-form-elements label.radio-as-toggle-button .simple-filters li input+span.arrow-right:after,
+.simple-filters li li.arrow-right:after,
+.simple-filters li .arrow-left.button:before,
+.simple-filters li body.custom-form-elements label.radio-as-toggle-button input+span.arrow-left:before,
+body.custom-form-elements label.radio-as-toggle-button .simple-filters li input+span.arrow-left:before,
+.simple-filters li li.arrow-left:before,
+.simple-filters li body.custom-form-elements select+i,
+body.custom-form-elements .simple-filters li select+i,
+.simple-filters li .custom-select-wrapper .custom-select-menu label:before,
+.custom-select-wrapper .custom-select-menu .simple-filters li label:before,
+.simple-filters li .custom-select-wrapper .custom-select-menu label:after,
+.custom-select-wrapper .custom-select-menu .simple-filters li label:after,
+.simple-filters li .pokedex-pokemon-evolution>div .evolution-profile>li:after,
+.pokedex-pokemon-evolution>div .simple-filters li .evolution-profile>li:after,
+.simple-filters li .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first:before,
+.pokedex-pokemon-evolution.evolution-five>div .simple-filters li .evolution-profile>li.first:before,
+.simple-filters li .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:before,
+.pokedex-pokemon-evolution.evolution-five>div .simple-filters li .evolution-profile>li.middle:before,
+.simple-filters li .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle:before,
+.pokedex-pokemon-evolution.evolution-six>div .simple-filters li .evolution-profile>li.middle:before {
+    background-color: #313131;
+    border-radius: 2px;
+    height: 22px;
+    margin-left: 0.5em;
+    line-height: 22px;
+    width: 22px
+}
+html.nintendo .simple-filters li .icon,
+html.nintendo .simple-filters li .arrow-right.button:after,
+html.nintendo .simple-filters li body.custom-form-elements label.radio-as-toggle-button input+span.arrow-right:after,
+body.custom-form-elements label.radio-as-toggle-button html.nintendo .simple-filters li input+span.arrow-right:after,
+html.nintendo .simple-filters li li.arrow-right:after,
+html.nintendo .simple-filters li .arrow-left.button:before,
+html.nintendo .simple-filters li body.custom-form-elements label.radio-as-toggle-button input+span.arrow-left:before,
+body.custom-form-elements label.radio-as-toggle-button html.nintendo .simple-filters li input+span.arrow-left:before,
+html.nintendo .simple-filters li li.arrow-left:before,
+html.nintendo .simple-filters li body.custom-form-elements select+i,
+body.custom-form-elements html.nintendo .simple-filters li select+i,
+html.nintendo .simple-filters li .custom-select-wrapper .custom-select-menu label:before,
+.custom-select-wrapper .custom-select-menu html.nintendo .simple-filters li label:before,
+html.nintendo .simple-filters li .custom-select-wrapper .custom-select-menu label:after,
+.custom-select-wrapper .custom-select-menu html.nintendo .simple-filters li label:after,
+html.nintendo .simple-filters li .pokedex-pokemon-evolution>div .evolution-profile>li:after,
+.pokedex-pokemon-evolution>div html.nintendo .simple-filters li .evolution-profile>li:after,
+html.nintendo .simple-filters li .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first:before,
+.pokedex-pokemon-evolution.evolution-five>div html.nintendo .simple-filters li .evolution-profile>li.first:before,
+html.nintendo .simple-filters li .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:before,
+.pokedex-pokemon-evolution.evolution-five>div html.nintendo .simple-filters li .evolution-profile>li.middle:before,
+html.nintendo .simple-filters li .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle:before,
+.pokedex-pokemon-evolution.evolution-six>div html.nintendo .simple-filters li .evolution-profile>li.middle:before {
+    border-radius: 0
+}
+.filter-help {
+    float: left;
+    margin-right: -100%;
+    width: 49.22%;
+    margin-left: 50.7825%
+}
+.filter-help span {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    color: #fff;
+    font-size: 90%;
+    float: left;
+    margin-top: 1.75em;
+    margin-right: 3.125%;
+    text-transform: none
+}
+body.ru .filter-help span {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.range-filter-wrapper {
+    clear: both;
+    display: block;
+    margin: 0 3.125% 1.5em;
+    width: 93.75%
+}
+.rangeTitle {
+    float: left;
+    margin-right: -100%;
+    width: 56.47%;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    text-transform: none
+}
+.rangeValues {
+    float: left;
+    margin-right: -100%;
+    width: 34.71%;
+    margin-left: 65.2925%;
+    font-family: "Flexo-Medium", arial, sans-serif;
+    color: #fff;
+    font-size: 175%;
+    margin-top: 0.325em;
+    margin-bottom: 1em;
+    text-align: right
+}
+body.ru .rangeValues {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.pokedex-filter-tw-list {
+    float: left;
+    height: 370px;
+    width: 100%
+}
+.pokedex-filter-tw-list li {
+    float: left;
+    height: 28px;
+    margin-bottom: 12px;
+    width: 50%
+}
+.pokedex-filter-tw-list li span {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    cursor: pointer;
+    float: left;
+    height: 28px;
+    margin: 0 0.75em 0 0;
+    text-align: center
+}
+body.ru .pokedex-filter-tw-list li span {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.pokedex-filter-tw-list li .pill {
+    border: 2px solid #a4a4a4;
+    border-radius: 5px;
+    line-height: 28px;
+    max-width: 110px;
+    width: 50%
+}
+html.nintendo .pokedex-filter-tw-list li .pill {
+    border-radius: 0
+}
+.pokedex-filter-tw-list li .type-filter,
+.pokedex-filter-tw-list li .weakness-filter {
+    font-family: "Flexo-Bold", arial, sans-serif;
+    background: #F2F2F2;
+    border-radius: 14px;
+    color: #313131;
+    line-height: 30px;
+    width: 28px
+}
+body.ru .pokedex-filter-tw-list li .type-filter,
+body.ru .pokedex-filter-tw-list li .weakness-filter {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: bold
+}
+html.nintendo .pokedex-filter-tw-list li .type-filter,
+html.nintendo .pokedex-filter-tw-list li .weakness-filter {
+    border-radius: 0
+}
+.pokedex-filter-tw-list li .type-filter.active-filter,
+.pokedex-filter-tw-list li .weakness-filter.active-filter {
+    background: #30a7d7
+}
+.pokedex-filter-tw-list li .weakness-filter {
+    margin-right: 0
+}
+.pokedex-filter-height-list,
+.pokedex-filter-weight-list {
+    float: left;
+    height: 80px;
+    margin-bottom: 0.5em;
+    width: 100%
+}
+.pokedex-filter-height-list li,
+.pokedex-filter-weight-list li {
+    float: left;
+    margin-right: -100%;
+    width: 27.46%;
+    background-color: #F2F2F2;
+    border-radius: 12px;
+    color: #313131;
+    cursor: pointer;
+    height: 100%;
+    margin: 0 1.5625%;
+    position: relative
+}
+html.nintendo .pokedex-filter-height-list li,
+html.nintendo .pokedex-filter-weight-list li {
+    border-radius: 0
+}
+.pokedex-filter-height-list li.middle,
+.pokedex-filter-weight-list li.middle {
+    margin-left: 5.69%;
+    margin-right: 5.69%
+}
+.pokedex-filter-height-list li.highlight,
+.pokedex-filter-weight-list li.highlight {
+    background-color: #ee6b2f
+}
+.pokedex-filter-height-list li.highlight span,
+.pokedex-filter-weight-list li.highlight span {
+    color: #F2F2F2
+}
+.pokedex-filter-height-list span,
+.pokedex-filter-weight-list span {
+    color: #313131;
+    font-size: 300%;
+    line-height: 80px;
+    text-align: center;
+    width: 100%
+}
+.pokedex-filter-height-list span.icon_filter_height_large,
+.pokedex-filter-weight-list span.icon_filter_height_large {
+    font-size: 500%
+}
+@media (min-width: 1px) and (max-width: 460px) {
+    .pokedex-header .custom-select-wrapper {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%;
+        margin-top: 1em
+    }
+    html.touch .pokedex-header .styled-select {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%;
+        margin-top: 1em
+    }
+    html.touch .pokedex-header .styled-select:before {
+        font-size: 125%;
+        position: absolute;
+        top: 0.5em;
+        left: 0.75em
+    }
+    .pokedex-filter {
+        padding-bottom: 1.5em
+    }
+    .pokedex-filter-wrapper {
+        width: 100%
+    }
+    .pokedex-filter-wrapper h2,
+    .pokedex-filter-wrapper .filter-help {
+        clear: both;
+        width: 100%
+    }
+    .pokedex-filter-wrapper .filter-help {
+        margin-left: 0
+    }
+    .pokedex-filter-wrapper .filter-help span {
+        float: left;
+        margin-top: 0;
+        width: auto
+    }
+    .pokedex-filter-tw-list {
+        width: 100%
+    }
+    .pokedex-filter-tw-list li .pill {
+        margin-right: 1.5625%
+    }
+    .pokedex-filter-tw-list li:nth-child(even) .pill {
+        margin-left: 1.5625%
+    }
+    .pokedex-filter-tw-list li .type-filter,
+    .pokedex-filter-tw-list li .weakness-filter {
+        margin: 0 0.78125%
+    }
+    .range-filter-wrapper {
+        margin-bottom: 2em
+    }
+}
+@media (min-width: 461px) and (max-width: 720px) {
+    .pokedex-header .custom-select-wrapper {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%;
+        margin-top: 1em
+    }
+    html.touch .pokedex-header .styled-select {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%;
+        margin-top: 1em
+    }
+    html.touch .pokedex-header .styled-select:before {
+        font-size: 125%;
+        position: absolute;
+        top: 0.5em;
+        left: 0.75em
+    }
+    .pokedex-filter {
+        padding-bottom: 1.5em
+    }
+    .pokedex-filter-wrapper {
+        width: 100%
+    }
+    .pokedex-filter-wrapper h2,
+    .pokedex-filter-wrapper .filter-help {
+        clear: both;
+        width: 100%
+    }
+    .pokedex-filter-wrapper .filter-help {
+        margin-left: 0
+    }
+    .pokedex-filter-wrapper .filter-help span {
+        float: left;
+        margin-top: 0;
+        width: auto
+    }
+    .pokedex-filter-tw-list {
+        width: 100%
+    }
+    .pokedex-filter-tw-list li .pill {
+        margin-right: 1.5625%
+    }
+    .pokedex-filter-tw-list li:nth-child(even) .pill {
+        margin-left: 1.5625%
+    }
+    .pokedex-filter-tw-list li .type-filter,
+    .pokedex-filter-tw-list li .weakness-filter {
+        margin: 0 0.78125%
+    }
+    .range-filter-wrapper {
+        margin-bottom: 2em
+    }
+}
+.pokedex-results {
+    position: relative;
+    height: auto
+}
+.pokedex-results .loader.bottom {
+    bottom: 0
+}
+html.touch .pokedex-results .loader.bottom {
+    bottom: 30px
+}
+.pokedex-results .results {
+    float: left;
+    margin-right: -100%;
+    width: 85.49%;
+    margin-left: 7.2525%
+}
+.pokedex-results .results li {
+    display: block;
+    float: left;
+    position: relative;
+    margin: 0 0.78125% 50px;
+    width: 23.4375%
+}
+.pokedex-results .results li figure {
+    background: #F2F2F2;
+    float: left;
+    display: block;
+    position: relative;
+    border-radius: 5px;
+    width: 100%;
+    padding-top: 100%
+}
+html.nintendo .pokedex-results .results li figure {
+    border-radius: 0
+}
+.pokedex-results .results li figure img {
+    float: left;
+    width: 100%;
+    position: absolute;
+    top: 0
+}
+.pokedex-results .results li .pokemon-info {
+    clear: both;
+    position: relative;
+    top: -5px;
+    padding-left: 7.2525%
+}
+.pokedex-results .results li .pokemon-info .id {
+    font-family: "Flexo-Bold", arial, sans-serif;
+    color: #919191;
+    font-size: 80%
+}
+body.ru .pokedex-results .results li .pokemon-info .id {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: bold
+}
+.pokedex-results .results li .pokemon-info h5 {
+    font-family: "Flexo-Demi", arial, sans-serif;
+    color: #313131;
+    text-transform: none;
+    font-size: 145%;
+    margin-bottom: 5px
+}
+body.ru .pokedex-results .results li .pokemon-info h5 {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: bold
+}
+.pokedex-results .results li .pokemon-info .abilities span {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    border-radius: 3px;
+    line-height: 18px;
+    max-width: 110px;
+    margin: 0 1.5625% 0 0;
+    width: 38.4375%;
+    float: left;
+    text-transform: none;
+    font-size: 11px;
+    text-align: center
+}
+body.ru .pokedex-results .results li .pokemon-info .abilities span {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+html.nintendo .pokedex-results .results li .pokemon-info .abilities span {
+    border-radius: 0
+}
+.pokedex-results .no-results {
+    display: none
+}
+.pokedex-promo .banner {
+    min-height: 96px
+}
+#shuffle {
+    float: left;
+    margin-right: -100%;
+    width: 34.71%;
+    margin-top: 2em;
+    margin-left: 0.78125%
+}
+#shuffle .icon_refresh {
+    font-size: 150%
+}
+#shuffle+.styled-select {
+    float: left;
+    margin-right: -100%;
+    width: 34.71%;
+    border-radius: 5px;
+    float: right;
+    margin-right: 0.78125%;
+    margin-top: 2em
+}
+html.nintendo #shuffle+.styled-select {
+    border-radius: 0
+}
+#shuffle+.styled-select:before {
+    display: none;
+    font-size: 125%;
+    position: absolute;
+    top: 0.675em;
+    left: 0.75em
+}
+#shuffle+.styled-select i {
+    display: none
+}
+#shuffle+.custom-select-wrapper,
+html.touch #shuffle+.styled-select {
+    float: left;
+    margin-right: -100%;
+    width: 41.96%;
+    float: right;
+    margin-right: 0.78125%;
+    margin-top: 2em
+}
+#shuffle+.custom-select-wrapper i,
+html.touch #shuffle+.styled-select i {
+    display: block
+}
+@media (min-width: 721px) and (max-width: 1024px) {
+    .pokedex-results .results li .pokemon-info h5 {
+        font-size: 120%
+    }
+}
+@media (min-width: 1px) and (max-width: 460px) {
+    .pokedex-results .results li {
+        width: 48.4375%
+    }
+    .pokedex-results .results li .pokemon-info {
+        padding-left: 3.62625%
+    }
+    .pokedex-results .results li .pokemon-info h5 {
+        font-size: 115%
+    }
+    #shuffle {
+        padding: 0.75em 0 0.675em
+    }
+    #shuffle,
+    #shuffle+.custom-select-wrapper {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%;
+        clear: both;
+        margin-top: 1em
+    }
+    html.nintendo #shuffle+.styled-select,
+    html.touch #shuffle+.styled-select {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%;
+        clear: both;
+        margin-top: 1em
+    }
+}
+@media (min-width: 461px) and (max-width: 720px) {
+    .pokedex-results .results li {
+        width: 48.4375%
+    }
+    .pokedex-results .results li .pokemon-info {
+        padding-left: 3.62625%
+    }
+    .pokedex-results .results li .pokemon-info h5 {
+        font-size: 115%
+    }
+    #shuffle {
+        padding: 0.75em 0 0.675em
+    }
+    #shuffle,
+    #shuffle+.custom-select-wrapper {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%;
+        clear: both;
+        margin-top: 1em
+    }
+    html.nintendo #shuffle+.styled-select,
+    html.touch #shuffle+.styled-select {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%;
+        clear: both;
+        margin-top: 1em
+    }
+}
+.pokedex-pokemon-header {
+    background: #fff;
+    padding: 0;
+    position: relative;
+    max-width: 1280px;
+    width: 100%
+}
+.container>.section.pokedex-pokemon-header:first-child {
+    padding-top: 90px
+}
+.pokedex-pokemon-pagination-title {
+    bottom: 0;
+    float: left;
+    margin-right: -100%;
+    width: 58.0325%;
+    margin-left: 20.2%;
+    background-color: #fff;
+    position: absolute;
+    height: 51px
+}
+.pokedex-pokemon-pagination-title div {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    color: #212121;
+    float: left;
+    font-size: 225%;
+    margin-top: 0.5em;
+    text-align: center;
+    width: 100%;
+    word-break: break-word
+}
+body.ru .pokedex-pokemon-pagination-title div {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.pokedex-pokemon-pagination-title div span.pokemon-number {
+    color: #616161;
+    margin-left: 0.125em
+}
+.pokedex-pokemon-pagination-title:before,
+.pokedex-pokemon-pagination-title:after {
+    background: transparent url("../img/chrome/notches/notch-white-xxl.png") no-repeat 0 0;
+    bottom: 0;
+    content: " ";
+    position: absolute;
+    height: 52px;
+    width: 75px
+}
+.pokedex-pokemon-pagination-title:before {
+    left: -75px
+}
+.pokedex-pokemon-pagination-title:after {
+    background-position: right top;
+    right: -75px
+}
+.pokedex-pokemon-pagination {
+    background-color: #fff;
+    width: 100%
+}
+.pokedex-pokemon-pagination a {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #a4a4a4;
+    cursor: pointer;
+    display: block;
+    float: left;
+    width: 50%
+}
+html.csstransitions .pokedex-pokemon-pagination a {
+    -webkit-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s
+}
+.pokedex-pokemon-pagination a:hover {
+    background-color: #30a7d7
+}
+html.csstransitions .pokedex-pokemon-pagination a:hover {
+    -webkit-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s
+}
+.pokedex-pokemon-pagination a span.icon,
+.pokedex-pokemon-pagination a span.arrow-right.button:after,
+.pokedex-pokemon-pagination a body.custom-form-elements label.radio-as-toggle-button input+span.arrow-right:after,
+body.custom-form-elements label.radio-as-toggle-button .pokedex-pokemon-pagination a input+span.arrow-right:after,
+.pokedex-pokemon-pagination a span.arrow-left.button:before,
+.pokedex-pokemon-pagination a body.custom-form-elements label.radio-as-toggle-button input+span.arrow-left:before,
+body.custom-form-elements label.radio-as-toggle-button .pokedex-pokemon-pagination a input+span.arrow-left:before {
+    background-color: #fff;
+    border-radius: 20px;
+    color: #616161;
+    float: left;
+    font-size: 65%;
+    font-weight: bold;
+    height: 26px;
+    line-height: 275%;
+    margin: 0.5em 1.5em 0;
+    text-align: center;
+    width: 26px
+}
+html.nintendo .pokedex-pokemon-pagination a span.icon,
+html.nintendo .pokedex-pokemon-pagination a span.arrow-right.button:after,
+html.nintendo .pokedex-pokemon-pagination a body.custom-form-elements label.radio-as-toggle-button input+span.arrow-right:after,
+body.custom-form-elements label.radio-as-toggle-button html.nintendo .pokedex-pokemon-pagination a input+span.arrow-right:after,
+html.nintendo .pokedex-pokemon-pagination a span.arrow-left.button:before,
+html.nintendo .pokedex-pokemon-pagination a body.custom-form-elements label.radio-as-toggle-button input+span.arrow-left:before,
+body.custom-form-elements label.radio-as-toggle-button html.nintendo .pokedex-pokemon-pagination a input+span.arrow-left:before {
+    border-radius: 0
+}
+.pokedex-pokemon-pagination a span.pokemon-number,
+.pokedex-pokemon-pagination a span.pokemon-name {
+    font-family: "Flexo-Bold", arial, sans-serif;
+    color: #fff;
+    float: left;
+    font-size: 150%;
+    line-height: 162.5%;
+    text-transform: none
+}
+body.ru .pokedex-pokemon-pagination a span.pokemon-number,
+body.ru .pokedex-pokemon-pagination a span.pokemon-name {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: bold
+}
+.pokedex-pokemon-pagination a span.pokemon-name {
+    color: #616161;
+    margin: 0 0.5em
+}
+.pokedex-pokemon-pagination a.previous,
+.pokedex-pokemon-pagination a.next {
+    margin: 0
+}
+.pokedex-pokemon-pagination a.previous>div,
+.pokedex-pokemon-pagination a.next>div {
+    float: left;
+    padding: 1em 0 4em;
+    width: 100%;
+    max-width: 448px
+}
+.pokedex-pokemon-pagination a.previous>div .pokedex-pokemon-pagination-wrapper,
+.pokedex-pokemon-pagination a.next>div .pokedex-pokemon-pagination-wrapper {
+    float: left;
+    margin-right: -100%;
+    width: 78.24%;
+    margin-left: 10.8825%
+}
+@media (min-width: 721px) and (max-width: 9999px) {
+    .pokedex-pokemon-pagination a.previous>div .pokedex-pokemon-pagination-wrapper,
+    .pokedex-pokemon-pagination a.next>div .pokedex-pokemon-pagination-wrapper {
+        width: 96.875%;
+        margin: 0 1.5625%
+    }
+}
+@media (min-width: 1281px) and (max-width: 9999px) {
+    .pokedex-pokemon-pagination a.previous>div .pokedex-pokemon-pagination-wrapper,
+    .pokedex-pokemon-pagination a.next>div .pokedex-pokemon-pagination-wrapper {
+        width: 96.875%;
+        margin: 0 1.5625%
+    }
+}
+@media (min-width: 721px) and (max-width: 1024px) {
+    .pokedex-pokemon-pagination a.previous>div .pokedex-pokemon-pagination-wrapper,
+    .pokedex-pokemon-pagination a.next>div .pokedex-pokemon-pagination-wrapper {
+        float: left;
+        margin-right: -100%;
+        width: 78.24%;
+        margin-left: 10.8825%
+    }
+}
+.pokedex-pokemon-pagination a.previous {
+    border-right: 4px solid #fff
+}
+.pokedex-pokemon-pagination a.previous>div {
+    float: right;
+    margin-right: 0
+}
+.pokedex-pokemon-pagination a.next>div {
+    float: left;
+    margin-left: 0
+}
+.pokedex-pokemon-pagination a.next>div span {
+    float: right
+}
+.pokedex-pokemon-form {
+    overflow: visible;
+    padding-bottom: 50px
+}
+.pokedex-pokemon-form ul {
+    display: block;
+    text-align: center
+}
+.pokedex-pokemon-form li {
+    display: inline-block;
+    margin-top: 0.5em;
+    width: 23.82813%
+}
+.pokedex-pokemon-form li a {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+    float: left;
+    font-size: 105%;
+    margin: 0;
+    padding: 0.75em 5% 0.675em 5%;
+    width: 90%
+}
+.pokedex-pokemon-form .custom-select-wrapper,
+.pokedex-pokemon-form .styled-select {
+    float: left;
+    margin-right: -100%;
+    width: 41.96%;
+    margin-left: 29.0225%
+}
+#addToFavorites {
+    cursor: pointer;
+    display: none
+}
+#addToFavorites.icon_pokedex_added {
+    cursor: default
+}
+.pokedex-pokemon-profile,
+.pokedex-pokemon-details-right {
+    display: block;
+    float: left;
+    width: 100%
+}
+.pokedex-pokemon-profile {
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    position: relative
+}
+html.nintendo .pokedex-pokemon-profile {
+    border-radius: 0
+}
+.pokedex-pokemon-profile .profile-images img {
+    float: left;
+    display: none;
+    width: 100%
+}
+.pokedex-pokemon-profile .profile-images img.active {
+    display: block
+}
+.pokedex-pokemon-profile a {
+    font-family: "Flexo-Bold", arial, sans-serif;
+    background: #fff;
+    color: #212121;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 1em;
+    position: relative;
+    text-transform: none
+}
+body.ru .pokedex-pokemon-profile a {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: bold
+}
+.pokedex-pokemon-profile a:before {
+    background: transparent url("../img/chrome/notches/large-notch.png") no-repeat;
+    background-size: 76px 36px;
+    content: " ";
+    height: 30px;
+    left: -76px;
+    position: absolute;
+    top: 0;
+    width: 76px
+}
+.pokedex-pokemon-profile a i.icon,
+.pokedex-pokemon-profile a i.arrow-right.button:after,
+.pokedex-pokemon-profile a i.arrow-left.button:before,
+.pokedex-pokemon-profile a body.custom-form-elements select+i,
+body.custom-form-elements .pokedex-pokemon-profile a select+i {
+    font-size: 150%;
+    color: #a4a4a4;
+    line-height: 36px;
+    text-align: center;
+    width: 100%
+}
+.pokedex-pokemon-profile a:hover i.icon,
+.pokedex-pokemon-profile a:hover i.arrow-right.button:after,
+.pokedex-pokemon-profile a:hover i.arrow-left.button:before,
+.pokedex-pokemon-profile a:hover body.custom-form-elements select+i,
+body.custom-form-elements .pokedex-pokemon-profile a:hover select+i {
+    color: #30a7d7
+}
+.pokedex-pokemon-profile a:hover i.icon_pokedex_added {
+    color: #a4a4a4
+}
+.pokedex-pokemon-profile .notch-bottom-left {
+    float: left;
+    margin-right: -100%;
+    width: 12.95%;
+    cursor: pointer;
+    bottom: 0;
+    height: 30px;
+    left: 0;
+    margin-left: 0;
+    position: absolute;
+    z-index: 1
+}
+.pokedex-pokemon-profile .notch-bottom-left:after {
+    background: transparent url("../img/chrome/notches/large-notch.png") no-repeat;
+    background-size: 76px 36px;
+    height: 36px;
+    right: -76px;
+    width: 76px;
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH"
+}
+.pokedex-pokemon-profile .notch-bottom-left:before {
+    content: none
+}
+.pokedex-pokemon-profile .notch-bottom-left i.icon,
+.pokedex-pokemon-profile .notch-bottom-left i.arrow-right.button:after,
+.pokedex-pokemon-profile .notch-bottom-left i.arrow-left.button:before,
+.pokedex-pokemon-profile .notch-bottom-left body.custom-form-elements select+i,
+body.custom-form-elements .pokedex-pokemon-profile .notch-bottom-left select+i {
+    font-size: 150%;
+    color: #a4a4a4;
+    line-height: 36px;
+    text-align: center;
+    width: 100%
+}
+.pokedex-pokemon-profile .notch-bottom-left i.icon:hover,
+.pokedex-pokemon-profile .notch-bottom-left i.arrow-right.button:hover:after,
+.pokedex-pokemon-profile .notch-bottom-left i.arrow-left.button:hover:before,
+.pokedex-pokemon-profile .notch-bottom-left body.custom-form-elements select+i:hover,
+body.custom-form-elements .pokedex-pokemon-profile .notch-bottom-left select+i:hover {
+    color: #30a7d7
+}
+.pokedex-pokemon-attributes {
+    display: none
+}
+.pokedex-pokemon-attributes.active {
+    display: block
+}
+.pokedex-pokemon-attributes h3 {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    clear: both;
+    color: #212121;
+    float: left;
+    margin-top: 1.25em;
+    text-transform: none;
+    width: 100%
+}
+body.ru .pokedex-pokemon-attributes h3 {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.pokedex-pokemon-attributes ul {
+    clear: both;
+    float: left;
+    width: 100%
+}
+.pokedex-pokemon-attributes li {
+    float: left;
+    margin-right: -100%;
+    width: 32.29%;
+    border-radius: 5px;
+    margin: 0.5em 0 0 0;
+    padding: 0;
+    text-align: center
+}
+html.nintendo .pokedex-pokemon-attributes li {
+    border-radius: 0
+}
+.pokedex-pokemon-attributes li a {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    color: white;
+    display: block;
+    float: left;
+    line-height: 100%;
+    padding: 0.5em 0;
+    width: 100%
+}
+body.ru .pokedex-pokemon-attributes li a {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.pokedex-pokemon-attributes li a span {
+    display: inline-block;
+    position: relative
+}
+.pokedex-pokemon-attributes li .extra-damage {
+    border-radius: 8px;
+    background-color: #616161;
+    position: absolute;
+    top: 0;
+    right: -24px;
+    height: 16px;
+    vertical-align: middle;
+    width: 16px
+}
+html.nintendo .pokedex-pokemon-attributes li .extra-damage {
+    border-radius: 0
+}
+.pokedex-pokemon-attributes li .extra-damage:before {
+    content: "*";
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    left: 4px;
+    position: absolute;
+    top: 3px
+}
+.pokedex-pokemon-attributes li.middle {
+    margin-left: 1.5625%;
+    margin-right: 1.5625%
+}
+.pokedex-pokemon-details-right .version-descriptions p {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    color: #212121;
+    font-size: 112.5%;
+    line-height: 150%;
+    display: none
+}
+body.ru .pokedex-pokemon-details-right .version-descriptions p {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.pokedex-pokemon-details-right .version-descriptions p.active {
+    display: block
+}
+.pokedex-pokemon-details-right>h3 {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    color: #212121;
+    float: left;
+    font-size: 112.5%;
+    line-height: 150%;
+    margin: 1.125em 0 2em;
+    text-transform: none
+}
+body.ru .pokedex-pokemon-details-right>h3 {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.pokedex-pokemon-details-right .version-label {
+    font-family: "Flexo-Bold", arial, sans-serif;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 32px;
+    cursor: pointer;
+    float: left;
+    font-size: 112.5%;
+    height: 32px;
+    line-height: 32px;
+    margin: 0.75em 0 0.75em 0.5em;
+    text-transform: none;
+    text-align: center;
+    vertical-align: middle;
+    width: 32px
+}
+body.ru .pokedex-pokemon-details-right .version-label {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: bold
+}
+html.nintendo .pokedex-pokemon-details-right .version-label {
+    border-radius: 0
+}
+.pokedex-pokemon-details-right .version-label.version-x {
+    background-color: #0072b0
+}
+.pokedex-pokemon-details-right .version-label.version-x.active {
+    border-color: #17adff
+}
+.pokedex-pokemon-details-right .version-label.version-y {
+    background-color: #dd2d51
+}
+.pokedex-pokemon-details-right .version-label.version-y.active {
+    border-color: #eb859a
+}
+.pokedex-pokemon-details-right .pokemon-ability-info,
+.pokedex-pokemon-details-right .pokemon-ability-info-detail {
+    border-radius: 10px;
+    display: block;
+    float: left;
+    min-height: 100px;
+    position: relative;
+    width: 100%
+}
+html.nintendo .pokedex-pokemon-details-right .pokemon-ability-info,
+html.nintendo .pokedex-pokemon-details-right .pokemon-ability-info-detail {
+    border-radius: 0
+}
+.pokedex-pokemon-details-right .pokemon-ability-info {
+    display: none
+}
+.pokedex-pokemon-details-right .pokemon-ability-info.active {
+    display: block
+}
+.pokedex-pokemon-details-right .pokemon-ability-info .attribute-title {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    clear: both;
+    color: #fff;
+    float: left;
+    font-size: 100%;
+    margin: 1.25em 0 0 1.25em;
+    text-transform: none;
+    white-space: normal;
+    word-break: break-word
+}
+body.ru .pokedex-pokemon-details-right .pokemon-ability-info .attribute-title {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.pokedex-pokemon-details-right .pokemon-ability-info .attribute-value {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    clear: both;
+    color: #212121;
+    float: left;
+    font-size: 125%;
+    margin: 0.75em 0 0 1em;
+    white-space: normal;
+    word-break: break-word
+}
+body.ru .pokedex-pokemon-details-right .pokemon-ability-info .attribute-value {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.pokedex-pokemon-details-right .pokemon-ability-info .attribute-value .icon_male_symbol,
+.pokedex-pokemon-details-right .pokemon-ability-info .attribute-value .icon_female_symbol {
+    float: left;
+    font-size: 125%;
+    margin-bottom: 1em
+}
+.pokedex-pokemon-details-right .pokemon-ability-info .attribute-value .icon_female_symbol {
+    margin-left: 0.5em
+}
+.pokedex-pokemon-details-right .pokemon-ability-info .attribute-list {
+    clear: both;
+    float: left;
+    position: relative;
+    width: 100%
+}
+.pokedex-pokemon-details-right .pokemon-ability-info .attribute-list .attribute-value:after {
+    font-family: "Flexo-Bold", arial, sans-serif;
+    background: #fff;
+    border-radius: 16px;
+    color: #30a7d7;
+    content: "?";
+    font-size: 62.5%;
+    height: 16px;
+    line-height: 140%;
+    margin: 0.25em 0 0 0.75em;
+    position: absolute;
+    text-align: center;
+    width: 16px
+}
+body.ru .pokedex-pokemon-details-right .pokemon-ability-info .attribute-list .attribute-value:after {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: bold
+}
+html.nintendo .pokedex-pokemon-details-right .pokemon-ability-info .attribute-list .attribute-value:after {
+    border-radius: 0
+}
+.pokedex-pokemon-details-right .pokemon-ability-info-detail {
+    background-color: #313131;
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 3
+}
+.pokedex-pokemon-details-right .pokemon-ability-info-detail span.button-close {
+    font-family: "Flexo-Bold", arial, sans-serif;
+    background: #000 url("../img/chrome/dog-ears/dog-ear-bl-black.png") no-repeat left bottom;
+    border-radius: 0 10px 0 0;
+    cursor: pointer;
+    font-size: 87.5%;
+    padding: 1.25em 1.5em 0.75em 1.25em;
+    position: absolute;
+    right: 0;
+    text-transform: none;
+    top: 0
+}
+body.ru .pokedex-pokemon-details-right .pokemon-ability-info-detail span.button-close {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: bold
+}
+html.nintendo .pokedex-pokemon-details-right .pokemon-ability-info-detail span.button-close {
+    border-radius: 0
+}
+.pokedex-pokemon-details-right .pokemon-ability-info-detail span.button-close i {
+    font-size: 100%;
+    margin-right: 0.25em
+}
+.pokedex-pokemon-details-right .pokemon-ability-info-detail span.title {
+    font-family: "Flexo-Bold", arial, sans-serif;
+    clear: both;
+    color: #616161;
+    float: left;
+    font-size: 85%;
+    margin: 1.25em 2em;
+    text-transform: none
+}
+body.ru .pokedex-pokemon-details-right .pokemon-ability-info-detail span.title {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: bold
+}
+.pokedex-pokemon-details-right .pokemon-ability-info-detail h3 {
+    clear: both;
+    color: #fff;
+    float: left;
+    font-size: 150%;
+    margin: 0.25em 1em
+}
+.pokedex-pokemon-details-right .pokemon-ability-info-detail p {
+    clear: both;
+    color: #F2F2F2;
+    float: left;
+    font-size: 100%;
+    line-height: 125%;
+    margin: 0 1.5em 2.5em
+}
+.pokedex-pokemon-details-right .pokemon-stats-info {
+    background-color: #a4a4a4;
+    border-radius: 10px;
+    display: block;
+    float: left;
+    margin: 1em 0;
+    width: 100%;
+    display: none
+}
+html.nintendo .pokedex-pokemon-details-right .pokemon-stats-info {
+    border-radius: 0
+}
+.pokedex-pokemon-details-right .pokemon-stats-info.active {
+    display: block
+}
+.pokedex-pokemon-details-right .pokemon-stats-info h3 {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    clear: both;
+    color: #313131;
+    float: left;
+    font-size: 100%;
+    margin: 0.75em 1.5em 1.5em;
+    text-transform: none
+}
+body.ru .pokedex-pokemon-details-right .pokemon-stats-info h3 {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.pokedex-pokemon-details-right .pokemon-stats-info>ul {
+    background: blue;
+    clear: both;
+    display: block;
+    margin-bottom: 1.5em;
+    position: relative;
+    width: 100%
+}
+.pokedex-pokemon-details-right .pokemon-stats-info>ul>li {
+    float: left;
+    margin-right: -100%;
+    width: 12.95%;
+    display: inline-block;
+    margin: 0 1.5625% 1.25em 0
+}
+.pokedex-pokemon-details-right .pokemon-stats-info>ul>li.first {
+    margin-left: 7.2525%
+}
+.pokedex-pokemon-details-right .pokemon-stats-info>ul>li span {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: bold;
+    color: #212121;
+    float: left;
+    font-size: 62.5%;
+    text-align: center;
+    text-transform: none;
+    width: 100%
+}
+@media (min-width: 1281px) and (max-width: 9999px) {
+    .pokedex-pokemon-details-right .pokemon-stats-info>ul>li span {
+        font-size: 75%
+    }
+}
+.pokedex-pokemon-details-right .pokemon-stats-info .gauge {
+    background: #fff;
+    position: relative;
+    overflow: hidden
+}
+.pokedex-pokemon-details-right .pokemon-stats-info .gauge li {
+    background: transparent;
+    border-bottom: 0.25em solid #a4a4a4;
+    height: 0.5em;
+    width: 100%;
+    position: relative;
+    z-index: 2
+}
+.pokedex-pokemon-details-right .pokemon-stats-info .gauge li.meter {
+    background: #30a7d7;
+    border: none;
+    height: 120%;
+    position: absolute;
+    top: 100%;
+    z-index: 1
+}
+.pokedex-pokemon-details-right .info .coming-soon {
+    color: black;
+    margin-left: 2.5em;
+    margin-bottom: 5em;
+    clear: both;
+    float: left;
+    font-size: 95%
+}
+.pokedex-pokemon-share h3 {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    color: #a4a4a4;
+    font-size: 100%;
+    line-height: 125%;
+    margin-bottom: 0.5em;
+    text-transform: none
+}
+body.ru .pokedex-pokemon-share h3 {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+@media (min-width: 1px) and (max-width: 460px) {
+    .container>.section.pokedex-pokemon-header:first-child {
+        padding-top: 60px
+    }
+    .pokedex-pokemon-pagination-title {
+        float: left;
+        margin-right: -100%;
+        width: 72.5425%;
+        margin-left: 12.95%
+    }
+    .pokedex-pokemon-pagination-title div {
+        font-size: 175%;
+        word-break: break-all
+    }
+    .pokedex-pokemon-pagination a span.pokemon-number,
+    .pokedex-pokemon-pagination a span.pokemon-name {
+        font-size: 125%;
+        line-height: 175%
+    }
+    .pokedex-pokemon-pagination a.previous span.pokemon-number,
+    .pokedex-pokemon-pagination a.previous span.pokemon-name {
+        float: right
+    }
+    .pokedex-pokemon-pagination a.previous span.pokemon-name {
+        clear: both;
+        margin: 0
+    }
+    .pokedex-pokemon-pagination a.next span.pokemon-number,
+    .pokedex-pokemon-pagination a.next span.pokemon-name {
+        float: left
+    }
+    .pokedex-pokemon-pagination a.next span.pokemon-name {
+        clear: both;
+        margin: 0
+    }
+    .pokedex-pokemon-form,
+    .pokedex-pokemon-details,
+    .pokedex-pokemon-evolution {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%;
+        clear: both
+    }
+    .slider-widget {
+        clear: both
+    }
+    .pokedex-pokemon-form {
+        padding: 0
+    }
+    .pokedex-pokemon-form .custom-select-wrapper,
+    .pokedex-pokemon-form .styled-select {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%
+    }
+    .pokedex-pokemon-form li a {
+        font-size: 85%;
+        padding: 0.75em 0 0.675em 0;
+        width: 100%;
+        word-break: break-word
+    }
+    html.nintendo .pokedex-pokemon-form {
+        float: left;
+        margin-right: -100%;
+        width: 96.37%;
+        margin-left: 1.8125%
+    }
+    html.nintendo .pokedex-pokemon-form div,
+    html.nintendo .pokedex-pokemon-form ul {
+        margin: 0 !important;
+        width: 100% !important
+    }
+    html.nintendo .pokedex-pokemon-form li {
+        display: block !important;
+        float: left !important
+    }
+    .pokedex-pokemon-share {
+        width: 96.875%;
+        margin: 0 1.5625%;
+        clear: both
+    }
+    .pokedex-pokemon-attributes {
+        width: 96.875%;
+        margin: 0 1.5625%
+    }
+    .pokedex-pokemon-details-right {
+        width: 96.875%;
+        margin: 0 1.5625%;
+        padding-top: 1.2em
+    }
+    .pokedex-pokemon-details-right>p {
+        margin-top: 1em
+    }
+    .pokedex-pokemon-details-right .pokemon-stats-info>ul>li span {
+        font-size: 50%
+    }
+    .pokedex-pokemon-share h3,
+    .pokedex-pokemon-share .add-this {
+        margin-left: 1.5625%
+    }
+    .pokedex-pokemon-share .add-this {
+        clear: both;
+        margin-top: 0.5em
+    }
+    .pokemon-ability-info .column-7 {
+        float: left;
+        margin-right: -100%;
+        width: 49.22%
+    }
+    .pokemon-ability-info .column-7 ul li .attribute-title {
+        margin: 0.75em 0 0 0.75em
+    }
+    .pokemon-ability-info .column-7 ul li .attribute-value {
+        margin: 0.5em 0 0 0.5em
+    }
+    .pokemon-ability-info .push-7 {
+        margin-left: 49.22%
+    }
+    .pokemon-ability-info .push-7 ul li .attribute-title {
+        margin: 0.75em 0 0 0.25em
+    }
+    .pokemon-ability-info .push-7 ul li .attribute-value {
+        margin: 0.5em 0 0 0.125em
+    }
+}
+@media (min-width: 461px) and (max-width: 720px) {
+    .container>.section.pokedex-pokemon-header:first-child {
+        padding-top: 60px
+    }
+    .pokedex-pokemon-pagination-title {
+        float: left;
+        margin-right: -100%;
+        width: 72.5425%;
+        margin-left: 12.95%
+    }
+    .pokedex-pokemon-pagination-title div {
+        font-size: 175%;
+        word-break: break-all
+    }
+    .pokedex-pokemon-pagination a span.pokemon-number,
+    .pokedex-pokemon-pagination a span.pokemon-name {
+        font-size: 125%;
+        line-height: 175%
+    }
+    .pokedex-pokemon-pagination a.previous span.pokemon-number,
+    .pokedex-pokemon-pagination a.previous span.pokemon-name {
+        float: right
+    }
+    .pokedex-pokemon-pagination a.previous span.pokemon-name {
+        clear: both;
+        margin: 0
+    }
+    .pokedex-pokemon-pagination a.next span.pokemon-number,
+    .pokedex-pokemon-pagination a.next span.pokemon-name {
+        float: left
+    }
+    .pokedex-pokemon-pagination a.next span.pokemon-name {
+        clear: both;
+        margin: 0
+    }
+    .pokedex-pokemon-form,
+    .pokedex-pokemon-details,
+    .pokedex-pokemon-evolution {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%;
+        clear: both
+    }
+    .slider-widget {
+        clear: both
+    }
+    .pokedex-pokemon-form {
+        padding: 0
+    }
+    .pokedex-pokemon-form .custom-select-wrapper,
+    .pokedex-pokemon-form .styled-select {
+        float: left;
+        margin-right: -100%;
+        width: 85.49%;
+        margin-left: 7.2525%
+    }
+    .pokedex-pokemon-form li a {
+        font-size: 85%;
+        padding: 0.75em 0 0.675em 0;
+        width: 100%;
+        word-break: break-word
+    }
+    html.nintendo .pokedex-pokemon-form {
+        float: left;
+        margin-right: -100%;
+        width: 96.37%;
+        margin-left: 1.8125%
+    }
+    html.nintendo .pokedex-pokemon-form div,
+    html.nintendo .pokedex-pokemon-form ul {
+        margin: 0 !important;
+        width: 100% !important
+    }
+    html.nintendo .pokedex-pokemon-form li {
+        display: block !important;
+        float: left !important
+    }
+    .pokedex-pokemon-share {
+        width: 96.875%;
+        margin: 0 1.5625%;
+        clear: both
+    }
+    .pokedex-pokemon-attributes {
+        width: 96.875%;
+        margin: 0 1.5625%
+    }
+    .pokedex-pokemon-details-right {
+        width: 96.875%;
+        margin: 0 1.5625%;
+        padding-top: 1.2em
+    }
+    .pokedex-pokemon-details-right>p {
+        margin-top: 1em
+    }
+    .pokedex-pokemon-details-right .pokemon-stats-info>ul>li span {
+        font-size: 50%
+    }
+    .pokedex-pokemon-share h3,
+    .pokedex-pokemon-share .add-this {
+        margin-left: 1.5625%
+    }
+    .pokedex-pokemon-share .add-this {
+        clear: both;
+        margin-top: 0.5em
+    }
+    .pokemon-ability-info .column-7 {
+        float: left;
+        margin-right: -100%;
+        width: 49.22%
+    }
+    .pokemon-ability-info .column-7 ul li .attribute-title {
+        margin: 0.75em 0 0 0.75em
+    }
+    .pokemon-ability-info .column-7 ul li .attribute-value {
+        margin: 0.5em 0 0 0.5em
+    }
+    .pokemon-ability-info .push-7 {
+        margin-left: 49.22%
+    }
+    .pokemon-ability-info .push-7 ul li .attribute-title {
+        margin: 0.75em 0 0 0.25em
+    }
+    .pokemon-ability-info .push-7 ul li .attribute-value {
+        margin: 0.5em 0 0 0.125em
+    }
+}
+#auth-required-modal .modalBox {
+    width: 500px;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    border-radius: 5px;
+    padding: 10px 20px
+}
+#auth-required-modal .modalBox a {
+    clear: none
+}
+#auth-required-modal .modalBox a .login {
+    margin-left: 0
+}
+.pokedex-pokemon-evolution>div {
+    background: transparent url("../img/chrome/body_gray_bg.png");
+    border-radius: 5px;
+    position: relative
+}
+html.nintendo .pokedex-pokemon-evolution>div {
+    border-radius: 0
+}
+.pokedex-pokemon-evolution>div h2 {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500;
+    color: #fff;
+    margin: 1em 0 0 1em;
+    text-transform: none
+}
+.pokedex-pokemon-evolution>div p {
+    color: #fff;
+    margin: 0.5em 1.325em
+}
+.pokedex-pokemon-evolution>div .evolution-profile>li {
+    float: left;
+    margin-right: -100%;
+    width: 20.2%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    position: relative
+}
+.pokedex-pokemon-evolution>div .evolution-profile>li:after {
+    content: "\f105";
+    font-size: 300%;
+    position: absolute
+}
+.pokedex-pokemon-evolution>div .evolution-profile>li.last:after {
+    content: none
+}
+.pokedex-pokemon-evolution>div .evolution-profile>li img {
+    -webkit-box-shadow: 0 4px 4px 0px #212121;
+    -ms-box-shadow: 0 4px 4px 0px #212121;
+    -moz-box-shadow: 0 4px 4px 0px #212121;
+    -o-box-shadow: 0 4px 4px 0px #212121;
+    box-shadow: 0 4px 4px 0px #212121;
+    background-color: #616161;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    max-width: 150px;
+    width: 100%
+}
+html.nintendo .pokedex-pokemon-evolution>div .evolution-profile>li img {
+    border-radius: 0
+}
+.pokedex-pokemon-evolution>div .evolution-profile>li h3 {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    clear: both;
+    color: #fff;
+    float: left;
+    margin: 0.75em 0;
+    text-align: center;
+    text-transform: none;
+    width: 100%
+}
+body.ru .pokedex-pokemon-evolution>div .evolution-profile>li h3 {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+.pokedex-pokemon-evolution>div .evolution-profile>li h3 span {
+    font-family: "Flexo-Regular", arial, sans-serif;
+    color: #a4acaf
+}
+body.ru .pokedex-pokemon-evolution>div .evolution-profile>li h3 span {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: normal
+}
+html.nintendo .pokedex-pokemon-evolution>div .evolution-profile>li {
+    margin-top: 1em
+}
+html.nintendo .pokedex-pokemon-evolution>div .evolution-profile>li:before,
+html.nintendo .pokedex-pokemon-evolution>div .evolution-profile>li:after {
+    content: none !important;
+    display: none !important
+}
+.pokedex-pokemon-evolution>div .evolution-attributes {
+    display: block;
+    float: left;
+    text-align: center;
+    width: 100%
+}
+.pokedex-pokemon-evolution>div .evolution-attributes>li {
+    font-family: "Flexo-Medium", arial, sans-serif;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 75%;
+    padding: 0.25em 0;
+    text-align: center;
+    text-transform: none;
+    width: 48.4375%;
+    word-break: break-all
+}
+body.ru .pokedex-pokemon-evolution>div .evolution-attributes>li {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500
+}
+html.nintendo .pokedex-pokemon-evolution>div .evolution-attributes>li {
+    border-radius: 0
+}
+.pokedex-pokemon-evolution>div .evolution-attributes>li:first-child {
+    float: left
+}
+.pokedex-pokemon-evolution>div .evolution-attributes>li:last-child {
+    float: right
+}
+.pokedex-pokemon-evolution>div .evolution-attributes>li:first-child:last-child {
+    float: none
+}
+.pokedex-pokemon-evolution.evolution-one .evolution-profile>li {
+    float: left;
+    margin-right: -100%;
+    width: 41.96%;
+    margin-left: 29.0225%
+}
+.pokedex-pokemon-evolution.evolution-one .evolution-profile>li:after {
+    content: none
+}
+.pokedex-pokemon-evolution.evolution-two .evolution-profile>li.first {
+    margin-left: 21.7625%
+}
+.pokedex-pokemon-evolution.evolution-two .evolution-profile>li.first:after {
+    margin-top: 30%;
+    right: -50%;
+    top: 0
+}
+.pokedex-pokemon-evolution.evolution-two .evolution-profile>li.last {
+    margin-left: 58.0325%
+}
+.pokedex-pokemon-evolution.evolution-three .evolution-profile>li:after,
+.pokedex-pokemon-evolution.evolution-five .evolution-profile>li:after,
+.pokedex-pokemon-evolution.evolution-six .evolution-profile>li:after {
+    right: -40%;
+    top: 25%
+}
+.pokedex-pokemon-evolution.evolution-three .evolution-profile>li.first,
+.pokedex-pokemon-evolution.evolution-five .evolution-profile>li.first,
+.pokedex-pokemon-evolution.evolution-six .evolution-profile>li.first {
+    margin-left: 7.2525%
+}
+.pokedex-pokemon-evolution.evolution-three .evolution-profile>li.middle,
+.pokedex-pokemon-evolution.evolution-five .evolution-profile>li.middle,
+.pokedex-pokemon-evolution.evolution-six .evolution-profile>li.middle {
+    margin-left: 39.9025%
+}
+.pokedex-pokemon-evolution.evolution-three .evolution-profile>li.last,
+.pokedex-pokemon-evolution.evolution-five .evolution-profile>li.last,
+.pokedex-pokemon-evolution.evolution-six .evolution-profile>li.last {
+    margin-left: 72.5425%
+}
+.pokedex-pokemon-evolution.evolution-four .evolution-profile>li.first {
+    margin-left: 3.6225%;
+    margin-top: 8em
+}
+.pokedex-pokemon-evolution.evolution-four .evolution-profile>li.first:after {
+    right: -40%;
+    top: 30%
+}
+.pokedex-pokemon-evolution.evolution-four .evolution-profile>li.last {
+    float: left;
+    margin-right: -100%;
+    width: 70.98%;
+    margin-left: 30.8325%
+}
+.pokedex-pokemon-evolution.evolution-four .evolution-profile>li.last>ul {
+    float: left;
+    margin-right: -100%;
+    width: 92.75%;
+    margin-left: 7.2525%
+}
+.pokedex-pokemon-evolution.evolution-four .evolution-profile>li.last>ul>li {
+    float: left;
+    margin-right: -100%;
+    width: 20.2%;
+    margin-right: 2.06%;
+    margin-bottom: 5em
+}
+.pokedex-pokemon-evolution.evolution-four .evolution-profile>li.last>ul>li img {
+    max-width: 80px
+}
+.pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first {
+    margin-top: 8em
+}
+.pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first:after,
+.pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:after {
+    top: -25%
+}
+.pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first:before,
+.pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:before {
+    content: "\f105";
+    font-size: 300%;
+    position: absolute;
+    right: -40%;
+    top: 85%
+}
+.pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:before {
+    top: 62%
+}
+.pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:after {
+    top: 12%
+}
+.pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle>ul,
+.pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last>ul {
+    float: left;
+    margin-right: -100%;
+    width: 92.75%;
+    margin-left: 7.2525%
+}
+.pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle>ul>li,
+.pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last>ul>li {
+    margin-bottom: 5em;
+    width: 100%
+}
+.pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.first,
+.pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle {
+    margin-top: 8em
+}
+.pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle:after {
+    top: -25%
+}
+.pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle:before {
+    content: "\f105";
+    font-size: 300%;
+    position: absolute;
+    right: -40%;
+    top: 85%
+}
+.pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last>ul {
+    float: left;
+    margin-right: -100%;
+    width: 92.75%;
+    margin-left: 7.2525%
+}
+.pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last>ul>li {
+    margin-bottom: 5em;
+    width: 100%
+}
+.pokedex-pokemon-evolution.evolution-seven .evolution-profile>li.first {
+    margin-left: 10.8825%;
+    margin-top: 8em
+}
+.pokedex-pokemon-evolution.evolution-seven .evolution-profile>li.first:after {
+    right: -40%;
+    top: 30%
+}
+.pokedex-pokemon-evolution.evolution-seven .evolution-profile>li.last {
+    float: left;
+    margin-right: -100%;
+    width: 63.73%;
+    margin-left: 38.0825%
+}
+.pokedex-pokemon-evolution.evolution-seven .evolution-profile>li.last>ul {
+    float: left;
+    margin-right: -100%;
+    width: 92.75%;
+    margin-left: 7.2525%
+}
+.pokedex-pokemon-evolution.evolution-seven .evolution-profile>li.last>ul>li {
+    margin: 0 auto;
+    width: 50%
+}
+.pokedex-pokemon-evolution.evolution-seven .evolution-profile>li.last>ul>li a {
+    float: left
+}
+.pokedex-pokemon-evolution.evolution-seven .evolution-profile>li.last>ul>li ul {
+    margin-bottom: 2em
+}
+.pokedex-pokemon-evolution.evolution-seven .evolution-profile>li.last>ul>li img {
+    max-width: 150px
+}
+.pokedex-pokemon-evolution.evolution-eight .evolution-profile>li.first {
+    margin-left: 3.6225%;
+    margin-top: 2em
+}
+.pokedex-pokemon-evolution.evolution-eight .evolution-profile>li.first:after {
+    right: -40%;
+    top: 30%
+}
+.pokedex-pokemon-evolution.evolution-eight .evolution-profile>li.last {
+    float: left;
+    margin-right: -100%;
+    width: 70.98%;
+    margin-left: 30.8325%
+}
+.pokedex-pokemon-evolution.evolution-eight .evolution-profile>li.last>ul {
+    float: left;
+    margin-right: -100%;
+    width: 92.75%;
+    margin-left: 7.2525%
+}
+.pokedex-pokemon-evolution.evolution-eight .evolution-profile>li.last>ul>li {
+    float: left;
+    margin-right: -100%;
+    width: 27.46%;
+    margin-right: 2.06%;
+    margin-top: 2em
+}
+.pokedex-pokemon-evolution.evolution-eight .evolution-profile>li.last>ul>li img {
+    max-width: 100px
+}
+.pokedex-pokemon-evolution.evolution-nine .evolution-profile>li.first {
+    margin-left: 3.6225%;
+    margin-top: 8em
+}
+.pokedex-pokemon-evolution.evolution-nine .evolution-profile>li.first:after {
+    right: -40%;
+    top: 30%
+}
+.pokedex-pokemon-evolution.evolution-nine .evolution-profile>li.last {
+    float: left;
+    margin-right: -100%;
+    width: 70.98%;
+    margin-left: 30.8325%
+}
+.pokedex-pokemon-evolution.evolution-nine .evolution-profile>li.last>ul {
+    float: left;
+    margin-right: -100%;
+    width: 92.75%;
+    margin-left: 7.2525%
+}
+.pokedex-pokemon-evolution.evolution-nine .evolution-profile>li.last>ul>li {
+    float: left;
+    margin-right: -100%;
+    width: 41.96%;
+    margin-right: 2.06%;
+    margin-bottom: 2em
+}
+.pokedex-pokemon-evolution.evolution-nine .evolution-profile>li.last>ul>li img {
+    max-width: 100px
+}
+@media (min-width: 1px) and (max-width: 460px) {
+    .pokedex-pokemon-evolution>div .evolution-profile>li {
+        clear: both;
+        margin-top: 0;
+        margin-bottom: 0
+    }
+    .pokedex-pokemon-evolution>div .evolution-profile>li img {
+        max-width: 100px
+    }
+    .pokedex-pokemon-evolution>div .evolution-profile>li:after {
+        clear: both;
+        display: inline-block;
+        margin-top: 0.5em;
+        position: static;
+        text-align: center;
+        width: 100%
+    }
+    .pokedex-pokemon-evolution>div .evolution-profile>li.last {
+        margin-bottom: 2em
+    }
+    .pokedex-pokemon-evolution>div .evolution-profile>li.last:after {
+        content: none
+    }
+    .pokedex-pokemon-evolution.evolution-one>div .evolution-profile>li.first {
+        margin-bottom: 2em
+    }
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li {
+        margin-top: 0
+    }
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.last {
+        float: left;
+        margin-right: -100%;
+        width: 49.22%;
+        margin-left: 25.3925%
+    }
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.last:after {
+        content: "\f103";
+        margin-top: 0.5em
+    }
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.last:after {
+        content: none
+    }
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.last li img,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.last li img,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.last li img,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last li img,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last li img,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.last li img,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last li img,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.last li img {
+        max-width: 100px
+    }
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.first {
+        margin-top: 0
+    }
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.last {
+        margin: 0;
+        width: 100%
+    }
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.last>ul,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.last>ul,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last>ul,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.last>ul {
+        margin: 0;
+        width: 100%
+    }
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.last>ul>li,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.last>ul>li,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last>ul>li,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.last>ul>li {
+        float: left;
+        margin: 0 1.5625% 2em 1.5625%;
+        width: 46.875%
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first:before,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:before {
+        content: "\f103";
+        bottom: 0;
+        clear: none;
+        display: inline-block;
+        margin-top: 1em;
+        right: -25%;
+        text-align: center;
+        top: auto;
+        width: 50%
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:after {
+        clear: none;
+        margin-left: -25%;
+        width: 50%
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:before {
+        right: 0
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:after {
+        margin-left: 0
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last {
+        margin: 0;
+        width: 100%
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle>ul,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last>ul {
+        margin: 0;
+        width: 100%
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle>ul>li,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last>ul>li {
+        float: left;
+        margin: 0 1.5625% 2em 1.5625%;
+        width: 46.875%
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle>ul>li img,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last>ul>li img {
+        max-width: 80px
+    }
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle {
+        margin-top: 0.5em
+    }
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle:before {
+        content: "\f103";
+        bottom: 0;
+        clear: none;
+        display: inline-block;
+        margin-top: 0.5em;
+        right: -25%;
+        text-align: center;
+        top: auto;
+        width: 50%
+    }
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle:after {
+        clear: none;
+        margin-left: -25%;
+        width: 50%
+    }
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last {
+        margin: 0;
+        width: 100%
+    }
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last>ul {
+        margin: 0;
+        width: 100%
+    }
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last>ul>li {
+        float: left;
+        margin: 0 1.5625% 2em 1.5625%;
+        width: 46.875%
+    }
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last>ul>li img {
+        max-width: 80px
+    }
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last>ul {
+        margin-bottom: 2em
+    }
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last>ul>li:last-child {
+        float: none;
+        margin: 0 auto;
+        width: 46.875%
+    }
+}
+@media (min-width: 461px) and (max-width: 720px) {
+    .pokedex-pokemon-evolution>div .evolution-profile>li {
+        clear: both;
+        margin-top: 0;
+        margin-bottom: 0
+    }
+    .pokedex-pokemon-evolution>div .evolution-profile>li img {
+        max-width: 100px
+    }
+    .pokedex-pokemon-evolution>div .evolution-profile>li:after {
+        clear: both;
+        display: inline-block;
+        margin-top: 0.5em;
+        position: static;
+        text-align: center;
+        width: 100%
+    }
+    .pokedex-pokemon-evolution>div .evolution-profile>li.last {
+        margin-bottom: 2em
+    }
+    .pokedex-pokemon-evolution>div .evolution-profile>li.last:after {
+        content: none
+    }
+    .pokedex-pokemon-evolution.evolution-one>div .evolution-profile>li.first {
+        margin-bottom: 2em
+    }
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li {
+        margin-top: 0
+    }
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.last {
+        float: left;
+        margin-right: -100%;
+        width: 49.22%;
+        margin-left: 25.3925%
+    }
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.middle:after,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.last:after {
+        content: "\f103";
+        margin-top: 0.5em
+    }
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last:after,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.last:after {
+        content: none
+    }
+    .pokedex-pokemon-evolution.evolution-two>div .evolution-profile>li.last li img,
+    .pokedex-pokemon-evolution.evolution-three>div .evolution-profile>li.last li img,
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.last li img,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last li img,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last li img,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.last li img,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last li img,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.last li img {
+        max-width: 100px
+    }
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.first,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.first {
+        margin-top: 0
+    }
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.last {
+        margin: 0;
+        width: 100%
+    }
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.last>ul,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.last>ul,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last>ul,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.last>ul {
+        margin: 0;
+        width: 100%
+    }
+    .pokedex-pokemon-evolution.evolution-four>div .evolution-profile>li.last>ul>li,
+    .pokedex-pokemon-evolution.evolution-seven>div .evolution-profile>li.last>ul>li,
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last>ul>li,
+    .pokedex-pokemon-evolution.evolution-nine>div .evolution-profile>li.last>ul>li {
+        float: left;
+        margin: 0 1.5625% 2em 1.5625%;
+        width: 46.875%
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first:before,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:before {
+        content: "\f103";
+        bottom: 0;
+        clear: none;
+        display: inline-block;
+        margin-top: 1em;
+        right: -25%;
+        text-align: center;
+        top: auto;
+        width: 50%
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.first:after,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:after {
+        clear: none;
+        margin-left: -25%;
+        width: 50%
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:before {
+        right: 0
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle:after {
+        margin-left: 0
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last {
+        margin: 0;
+        width: 100%
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle>ul,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last>ul {
+        margin: 0;
+        width: 100%
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle>ul>li,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last>ul>li {
+        float: left;
+        margin: 0 1.5625% 2em 1.5625%;
+        width: 46.875%
+    }
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.middle>ul>li img,
+    .pokedex-pokemon-evolution.evolution-five>div .evolution-profile>li.last>ul>li img {
+        max-width: 80px
+    }
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle {
+        margin-top: 0.5em
+    }
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle:before {
+        content: "\f103";
+        bottom: 0;
+        clear: none;
+        display: inline-block;
+        margin-top: 0.5em;
+        right: -25%;
+        text-align: center;
+        top: auto;
+        width: 50%
+    }
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.middle:after {
+        clear: none;
+        margin-left: -25%;
+        width: 50%
+    }
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last {
+        margin: 0;
+        width: 100%
+    }
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last>ul {
+        margin: 0;
+        width: 100%
+    }
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last>ul>li {
+        float: left;
+        margin: 0 1.5625% 2em 1.5625%;
+        width: 46.875%
+    }
+    .pokedex-pokemon-evolution.evolution-six>div .evolution-profile>li.last>ul>li img {
+        max-width: 80px
+    }
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last>ul {
+        margin-bottom: 2em
+    }
+    .pokedex-pokemon-evolution.evolution-eight>div .evolution-profile>li.last>ul>li:last-child {
+        float: none;
+        margin: 0 auto;
+        width: 46.875%
+    }
+}

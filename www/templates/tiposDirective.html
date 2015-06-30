@@ -1,0 +1,5 @@
+<div id="{{htmlId}}">
+  <ul class="pktipos">
+    <li class="button button-small pktipo-{{type.id}}" ng-repeat="type in types" ng-click="pokemonPorTipo(type.id)">{{type.identifier}}<i class="icon ion-asterisk"ng-show="type.multiplier == 4"></i></li>
+  </ul>
+</div>

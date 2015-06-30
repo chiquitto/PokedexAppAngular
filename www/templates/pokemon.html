@@ -1,0 +1,21 @@
+<ion-view view-title="#{{pokemon.id|leadingZero:3}} {{pokemon.identifier}}">
+  <ion-content id="pokemonCtrl" class="container">
+    <div id="figure">
+      <img ng-src="img/poke/{{pokemon.id|leadingZero:3}}.png">
+    </div>
+
+    <div id="types">
+      <h3>Type</h3>
+      <tipos html-id="tipo" types="pokemon.types"></tipos>
+    </div>
+
+    <div id="weaknesses">
+      <h3>Weaknesses</h3>
+      <tipos html-id="weaknesses" types="pokemon.weaknesses"></tipos>
+    </div>
+
+    <p id="texto">Golem live up on mountains. If there is a large earthquake, these Pokémon will come rolling down off the mountains en masse to the foothills below.</p>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

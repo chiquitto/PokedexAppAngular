@@ -1,0 +1,11 @@
+<ion-view view-title="Moves">
+  <ion-content id="movesCtrl">
+    
+    <ion-list>
+      <ion-item ng-repeat="move in moves" ng-click="verMove(move)">
+        {{move.identifier}}
+      </ion-item>
+    </ion-list>
+    
+  </ion-content>
+</ion-view>
