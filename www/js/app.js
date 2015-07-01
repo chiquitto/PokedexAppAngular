@@ -1,25 +1,5 @@
 var db = null;
 
-var types = ',normal,fighting,flying,poison,ground,rock,bug,ghost,steel,fire,water,grass,electric,psychic,ice,dragon,dark,fairy'.split(',');
-
-var pokemons = [];
-var moves = [];
-
-for (var i = 1; i <= 20; i++) {
-    pokemons.push({
-        id: i,
-        identifier: 'Pokemon ' + i
-    });
-    moves.push({
-        id: i,
-        identifier: 'Move ' + i,
-        type_id: mt_rand(1, 18),
-        power: mt_rand(5, 24) * 5,
-        accuracy: mt_rand(6, 20) * 5,
-        pp: mt_rand(1, 8) * 5,
-    });
-}
-
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules

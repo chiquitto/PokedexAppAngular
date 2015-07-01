@@ -33,3 +33,10 @@
 #pokemonCtrl #texto {
     margin: 1.2em 0;
 }
+
+#pokemonMoveCtrl table th {
+    font-weight: bold;
+}
+#pokemonMoveCtrl table {
+    width: 100%;
+}

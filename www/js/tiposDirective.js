@@ -1,6 +1,8 @@
 app.directive('tipos', function() {
     var linkFunction = function(scope, element, attributes) {
         //scope.id = attributes.htmlId.trim();
+        //scope.types = 
+        //console.log(attributes);
     };
 
     return {
@@ -15,7 +17,7 @@ app.directive('tipos', function() {
         templateUrl: 'templates/tiposDirective.html',
         scope: {
             htmlId: '@',
-            types: '=',
+            types: '&',
         },
         link: linkFunction
     };

@@ -1,36 +1,57 @@
-<ion-view view-title="POKEMON Moves">
+<ion-view view-title="#{{pokemon.id|leadingZero:3}} {{pokemon.identifier}} Moves">
   <ion-content scroll="false" id="pokemonMoveCtrl">
 
-    <tab-slide-box>
+    <tab-slide-box tab="0">
       <div class="tsb-icons">
         <div class="tsb-ic-wrp">
-          <ion-scroll direction="x" class="row">
-            <div class="col"><a href="javascript:;">Level up</a></div>
-            <div class="col"><a href="javascript:;">Egg</a></div>
-            <div class="col"><a href="javascript:;">TM/HM</a></div>
-            <div class="col"><a href="javascript:;">Tutor 1</a></div>
+          <ion-scroll direction="x">
+            <a href="javascript:;">Level up</a>
+            <a href="javascript:;">Egg</a>
+            <a href="javascript:;">TM/HM</a>
+            <a href="javascript:;">Tutor 1</a>
           </ion-scroll>
         </div>
       </div>
       <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
         <ion-slide>
           <h3>Level up</h3>
-          
-          lv move-name type class power accuracy
+
+          <table>
+            <thead>
+              <tr>
+                <th>Lv.</th>
+                <th>Move</th>
+                <th>Type</th>
+                <th>Class</th>
+                <th>Power</th>
+                <th>Acc.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="move in pokemon.lvMoves">
+                <td>lv</td>
+                <td>{{move.identifier}}</td>
+                <td><span class="button button-small pktipo-{{move.type.id}}">{{move.type.identifier}}</span></td>
+                <td>class</td>
+                <td>{{move.power}}</td>
+                <td>{{move.accuracy}}</td>
+              </tr>
+            </tbody>
+          </table>
         </ion-slide>
         <ion-slide>
           <h3>Egg</h3>
-          
+
           move-name type class power accuracy
         </ion-slide>
         <ion-slide>
           <h3>TM/HM</h3>
-          
+
           item move-name type class power accuracy
         </ion-slide>
         <ion-slide>
-          <h3>Tutor 1</h3>
-          
+          <h3>Tutor</h3>
+
           move-name type class power accuracy
         </ion-slide>
       </ion-slide-box>

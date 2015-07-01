@@ -3,10 +3,10 @@
     <ion-list>
       <ion-item ng-repeat="pokemon in pokemons" ng-click="verPokemon(pokemon)">
         
-        <img ng-src="img/poke-min/{{pokemon.id}}.png">
+        <img ng-src="img/poke-min/{{pokemon.getId()}}.png">
         <p>
-          <strong>{{pokemon.identifier}}</strong>
-          <span class="number">#{{pokemon.id|leadingZero:3}}</span>
+          <strong>{{pokemon.getIdentifier()}}</strong>
+          <span class="number">#{{pokemon.getId()|leadingZero:3}}</span>
         </p>
         
       </ion-item>

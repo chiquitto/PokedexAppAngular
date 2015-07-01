@@ -1,20 +1,20 @@
-<ion-view view-title="#{{pokemon.id|leadingZero:3}} {{pokemon.identifier}}">
+<ion-view view-title="#{{pokemon.getId()|leadingZero:3}} {{pokemon.getIdentifier()}}">
   <ion-content id="pokemonCtrl" class="container">
     <div id="figure">
-      <img ng-src="img/poke/{{pokemon.id|leadingZero:3}}.png">
+      <img ng-src="img/poke/{{pokemon.getId()|leadingZero:3}}.png">
     </div>
 
     <div id="types">
       <h3>Type</h3>
-      <tipos html-id="tipo" types="pokemon.types"></tipos>
+      <tipos html-id="tipo" types="pokemon.getTypes"></tipos>
     </div>
 
     <div id="weaknesses">
       <h3>Weaknesses</h3>
-      <tipos html-id="weaknesses" types="pokemon.weaknesses"></tipos>
+      <!--<tipos html-id="weaknesses" types="pokemon.weaknesses"></tipos>-->
     </div>
-    
-    <button class="button button-block button-positive" ng-click="viewMoves(pokemon.id)">
+
+    <button class="button button-block button-positive" ng-click="viewMoves(pokemon.getId())">
       <i class="icon ion-nuclear"></i> Moves
     </button>
 
