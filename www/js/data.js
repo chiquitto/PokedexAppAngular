@@ -34,7 +34,7 @@ var Pokedex = function () {
 
     this.init = function () {
         var i;
-        
+
         for (i = 1; i <= 30; i++) {
             pokemons.push(new Pokemon(i, 'Pokemon ' + i));
 
@@ -48,7 +48,7 @@ var Pokedex = function () {
                 damage_class_id: mt_rand(1, 3),
             });
         }
-        
+
         for (i = 1; i < types.length; i++) {
             types[i] = new Type(types[i].id, types[i].identifier);
         }
@@ -70,56 +70,62 @@ var Pokedex = function () {
 };
 
 var Pokemon = function (idArg, identifierArg) {
-    var id;
-    var identifier;
+    this.id = null;
+    this.identifier = null;
     /* Types of pokemon */
-    var types;
+    this.types = null;
 
     this.init = function () {
-        id = idArg;
-        identifier = identifierArg;
+        this.id = idArg;
+        this.identifier = identifierArg;
     };
 
     this.getId = function () {
-        return id;
+        return this.id;
     };
 
     this.getIdentifier = function () {
-        return identifier;
+        return this.identifier;
     };
 
     this.getTypes = function () {
-        if (!types) {
-            var i2;
-            types = [];
-            for (var i = 0; i < 2; i++) {
-                i2 = mt_rand(1, 18);
-                types.push(pokedex.getType(i2));
-            }
+        if (!this.types) {
+            this.loadTypes();
         }
-        
-        return types;
+
+        return this.types;
     };
-    
+
+    this.loadTypes = function () {
+        var i2;
+        this.types = [];
+        for (var i = 0; i < 2; i++) {
+            i2 = mt_rand(1, 18);
+            this.types.push(pokedex.getType(i2));
+        }
+    }
+
     this.init();
 };
 
 var Type = function (idArg, identifierArg) {
-    var id;
-    var identifier;
-    
+    this.id = null;
+    this.identifier = null;
+
     this.init = function () {
-        id = idArg;
-        identifier = identifierArg;
+        this.id = idArg;
+        this.identifier = identifierArg;
     };
 
     this.getId = function () {
-        return id;
+        return this.id;
     };
 
     this.getIdentifier = function () {
-        return identifier;
+        return this.identifier;
     };
+    
+    this.init();
 }
 
 var pokedex = new Pokedex();

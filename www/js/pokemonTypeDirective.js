@@ -1,4 +1,4 @@
-app.directive('tipos', function() {
+app.directive('pokemonType', function() {
     var linkFunction = function(scope, element, attributes) {
         //scope.id = attributes.htmlId.trim();
         //scope.types = 
@@ -7,15 +7,16 @@ app.directive('tipos', function() {
 
     return {
         controller: function($scope, $state) {
-            
+            $scope.pokemonPorTipo = function(id) {
+                $state.go('app.pokemonsType', {typeId:id});
+            };
         },
         restrict: 'E',
         replace: true,
         transclude: true,
-        templateUrl: 'templates/tiposDirective.html',
+        templateUrl: 'templates/pokemonTypeDirective.html',
         scope: {
-            htmlId: '@',
-            types: '=',
+            type: '=',
         },
         link: linkFunction
     };
