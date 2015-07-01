@@ -13,7 +13,7 @@ app.directive('pokemonType', function() {
         },
         restrict: 'E',
         replace: true,
-        transclude: true,
+        //transclude: true,
         templateUrl: 'templates/pokemonTypeDirective.html',
         scope: {
             type: '=',

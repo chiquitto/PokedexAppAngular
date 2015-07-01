@@ -74,6 +74,7 @@ var Pokemon = function (idArg, identifierArg) {
     this.identifier = null;
     /* Types of pokemon */
     this.types = null;
+    this.weaknesses = null;
 
     this.init = function () {
         this.id = idArg;
@@ -96,12 +97,32 @@ var Pokemon = function (idArg, identifierArg) {
         return this.types;
     };
 
+    this.getWeaknesses = function () {
+        if (!this.weaknesses) {
+            this.loadWeaknesses();
+        }
+
+        return this.weaknesses;
+    };
+
     this.loadTypes = function () {
         var i2;
         this.types = [];
         for (var i = 0; i < 2; i++) {
             i2 = mt_rand(1, 18);
             this.types.push(pokedex.getType(i2));
+        }
+    }
+    this.loadWeaknesses = function () {
+        var i2;
+        this.weaknesses = [];
+        for (var i = 0; i < 5; i++) {
+            i2 = mt_rand(1, 18);
+            
+            type = clone(pokedex.getType(i2));
+            type.multiplier = mt_rand(1, 2) * 2;
+            
+            this.weaknesses.push(type);
         }
     }
 
@@ -124,7 +145,7 @@ var Type = function (idArg, identifierArg) {
     this.getIdentifier = function () {
         return this.identifier;
     };
-    
+
     this.init();
 }
 
