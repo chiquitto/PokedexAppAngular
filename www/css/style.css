@@ -1,39 +1,41 @@
+.scroll-content {
+    background: #0288d1;
+}
+
+.bar.bar-stable {
+    background: #0288d1;
+}
+.bar.bar-stable .title,
+.bar-stable .button.button-clear {
+    color: #FFFFFF;
+}
+
+/*.tabbed-slidebox .tsb-icons {
+    background-color: transparent;
+    margin: 0;
+}
+.tabbed-slidebox .tsb-icons:after {
+    display: none;
+}
+.tabbed-slidebox .tsb-icons .scroll a {
+    color: #FFF;
+    border-bottom-color: #0288d1;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0;
+    width: 24vw;
+}
+.scroll {
+    width: 100%;
+}
+.tabbed-slidebox .tsb-icons a {
+    -webkit-transform: none;
+}
+.tabbed-slidebox .tsb-icons .scroll a.active {
+    border-bottom-color: #FFF;
+    font-size: 1.5rem;
+}*/
+
 .container {
     padding: 0 2.5vw;
-}
-
-#pokemonsCtrl .item {
-    height: 96px;
-    position: relative;
-}
-#pokemonsCtrl .item p {
-    font-size: 1.2rem;
-    padding: 12px 0 0 110px;
-}
-#pokemonsCtrl .item p strong {
-    display: block;
-    font-size: 2rem;
-    margin-bottom: 0.2em;
-}
-#pokemonsCtrl .item img {
-    left: 10px;
-    position: absolute;
-    top: 0;
-}
-
-#pokemonCtrl #figure {
-    margin: 10px 0;
-    text-align: center;
-}
-#pokemonCtrl #figure img {
-    max-height: 30vh;
-    max-width: 100%;
-}
-
-#pokemonCtrl #types h3,
-#pokemonCtrl #weaknesses h3 {
-    margin-top: 15px;
-}
-#pokemonCtrl #texto {
-    margin: 1.2em 0;
 }

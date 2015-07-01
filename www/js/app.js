@@ -26,7 +26,7 @@ for (var i = 1; i <= 20; i++) {
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-app = angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova']);
+app = angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova', 'tabSlideBox']);
 
 app.run(function ($ionicPlatform, $cordovaSQLite) {
     $ionicPlatform.ready(function () {

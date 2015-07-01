@@ -1,14 +1,16 @@
 <ion-view view-title="Pokemons">
   <ion-content id="pokemonsCtrl">
-    <ul class="list">
-      <li ng-repeat="pokemon in pokemons" ng-click="verPokemon(pokemon)" class="item">
+    <ion-list>
+      <ion-item ng-repeat="pokemon in pokemons" ng-click="verPokemon(pokemon)">
+        
         <img ng-src="img/poke-min/{{pokemon.id}}.png">
         <p>
           <strong>{{pokemon.identifier}}</strong>
           <span class="number">#{{pokemon.id|leadingZero:3}}</span>
         </p>
-      </li>
-    </ul>
+        
+      </ion-item>
+    </ion-list>
     
   </ion-content>
 </ion-view>

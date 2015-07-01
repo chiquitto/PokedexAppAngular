@@ -1,5 +1,40 @@
 <ion-view view-title="POKEMON Moves">
-  <ion-content id="pokemonMoveCtrl">
+  <ion-content scroll="false" id="pokemonMoveCtrl">
+
+    <tab-slide-box>
+      <div class="tsb-icons">
+        <div class="tsb-ic-wrp">
+          <ion-scroll direction="x" class="row">
+            <div class="col"><a href="javascript:;">Level up</a></div>
+            <div class="col"><a href="javascript:;">Egg</a></div>
+            <div class="col"><a href="javascript:;">TM/HM</a></div>
+            <div class="col"><a href="javascript:;">Tutor 1</a></div>
+          </ion-scroll>
+        </div>
+      </div>
+      <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+        <ion-slide>
+          <h3>Level up</h3>
+          
+          lv move-name type class power accuracy
+        </ion-slide>
+        <ion-slide>
+          <h3>Egg</h3>
+          
+          move-name type class power accuracy
+        </ion-slide>
+        <ion-slide>
+          <h3>TM/HM</h3>
+          
+          item move-name type class power accuracy
+        </ion-slide>
+        <ion-slide>
+          <h3>Tutor 1</h3>
+          
+          move-name type class power accuracy
+        </ion-slide>
+      </ion-slide-box>
+    </tab-slide-box>
 
   </ion-content>
 </ion-view>
