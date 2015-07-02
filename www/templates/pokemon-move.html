@@ -16,43 +16,114 @@
         <ion-slide>
           <h3>Level up</h3>
 
-          <table>
-            <thead>
-              <tr>
-                <th>Lv.</th>
-                <th>Move</th>
-                <th>Type</th>
-                <th>Class</th>
-                <th>Power</th>
-                <th>Acc.</th>
+          <div class="container">
+            <table id="movesLv">
+              <thead>
+                <tr>
+                  <th class="lv">Lv.</th>
+                  <th class="move">Move</th>
+                  <th class="type">Type</th>
+                  <th class="class">Class</th>
+                  <th class="power">Power</th>
+                  <th class="acc">Acc.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
+                  <td class="lv">{{move.getLevel()}}</td>
+                  <td class="move">{{move.identifier}}</td>
+                  <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
+              <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
+              <td class="power">{{move.power}}</td>
+              <td class="acc">{{move.accuracy}}%</td>
               </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
-                <td>{{move.getLevel()}}</td>
-                <td>{{move.identifier}}</td>
-                <td><pokemon-type type="move.getType()"></pokemon-type></td>
-                <td>class</td>
-                <td>{{move.power}}</td>
-                <td>{{move.accuracy}}</td>
-              </tr>
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
+
         </ion-slide>
         <ion-slide>
           <h3>Egg</h3>
 
-          move-name type class power accuracy
+          <div class="container">
+            <table id="movesEgg">
+              <thead>
+                <tr>
+                  <th class="move">Move</th>
+                  <th class="type">Type</th>
+                  <th class="class">Class</th>
+                  <th class="power">Power</th>
+                  <th class="acc">Acc.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
+                  <td class="move">{{move.identifier}}</td>
+                  <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
+              <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
+              <td class="power">{{move.power}}</td>
+              <td class="acc">{{move.accuracy}}%</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          
         </ion-slide>
         <ion-slide>
           <h3>TM/HM</h3>
 
-          item move-name type class power accuracy
+          <div class="container">
+            <table id="movesItem">
+              <thead>
+                <tr>
+                  <th class="tmhm">Item</th>
+                  <th class="move">Move</th>
+                  <th class="type">Type</th>
+                  <th class="class">Class</th>
+                  <th class="power">Power</th>
+                  <th class="acc">Acc.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
+                  <td class="tmhm">TM 01</td>
+                  <td class="move">{{move.identifier}}</td>
+                  <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
+              <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
+              <td class="power">{{move.power}}</td>
+              <td class="acc">{{move.accuracy}}%</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          
         </ion-slide>
         <ion-slide>
           <h3>Tutor</h3>
 
-          move-name type class power accuracy
+          <div class="container">
+            <table id="movesTutor">
+              <thead>
+                <tr>
+                  <th class="move">Move</th>
+                  <th class="type">Type</th>
+                  <th class="class">Class</th>
+                  <th class="power">Power</th>
+                  <th class="acc">Acc.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
+                  <td class="move">{{move.identifier}}</td>
+                  <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
+              <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
+              <td class="power">{{move.power}}</td>
+              <td class="acc">{{move.accuracy}}%</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          
         </ion-slide>
       </ion-slide-box>
     </tab-slide-box>

@@ -25,7 +25,6 @@
     max-height: 30vh;
     max-width: 100%;
 }
-
 #pokemonCtrl #types h3,
 #pokemonCtrl #weaknesses h3 {
     margin-top: 15px;
@@ -34,9 +33,38 @@
     margin: 1.2em 0;
 }
 
+#pokemonMoveCtrl table {
+    table-layout: fixed;
+    width: 100%;
+}
+#pokemonMoveCtrl table td,
+#pokemonMoveCtrl table th {
+    font-size: 1rem;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+}
 #pokemonMoveCtrl table th {
     font-weight: bold;
 }
-#pokemonMoveCtrl table {
-    width: 100%;
+#pokemonMoveCtrl table .lv {
+    width: 7%;
+}
+#pokemonMoveCtrl table .move {
+    
+}
+#pokemonMoveCtrl table .type {
+    text-align: center;
+    width: 70px;
+}
+#pokemonMoveCtrl table .class {
+    text-align: center;
+    width: 50px;
+}
+#pokemonMoveCtrl table .power {
+    width: 14%;
+}
+#pokemonMoveCtrl table .acc {
+    max-width: 40px;
+    width: 10%;
 }

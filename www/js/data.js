@@ -58,6 +58,10 @@ var Pokedex = function () {
     this.getMove = function (id) {
         return moves[id];
     };
+    
+    this.getMoveDamageClass = function(id) {
+        return moveDamageClasses[id];
+    }
 
     this.getPokemon = function (id) {
         return pokemons[id];
@@ -77,6 +81,8 @@ var Pokedex = function () {
 var Move = function (idArg, identifierArg) {
     this.id = null;
     this.identifier = null;
+    
+    this.damageClass = null;
     this.type = null;
 
     this.type_id = null;
@@ -94,6 +100,15 @@ var Move = function (idArg, identifierArg) {
         return this.accuracy;
     };
 
+    this.getDamageClass = function () {
+        if (!this.damageClass) {
+            this.loadDamageClass();
+        }
+        
+        console.log(this.damageClass);
+        return this.damageClass;
+    };
+    
     this.getDamageClassId = function () {
         return this.damage_class_id;
     };
@@ -126,6 +141,10 @@ var Move = function (idArg, identifierArg) {
         return this.type_id;
     };
 
+    this.loadDamageClass = function () {
+        this.damageClass = pokedex.getMoveDamageClass(this.damage_class_id);
+    }
+    
     this.loadType = function () {
         this.type = pokedex.getType(this.type_id);
     }

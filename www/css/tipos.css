@@ -8,21 +8,19 @@
     margin: 0.5vh 1.33% 0.5vh 0;
     width: 32%;
 }
-.pktipos>li>i.icon:before {
-    background-color: #616161;
-    border-radius: 50%;
+
+.pktipo {
+    border: 1px solid #aaa;
+    border-radius: 2px;
     color: #FFF;
-    display: block;
-    font-size: 0.9em;
-    font-weight: bold;
-    line-height: 1.6em;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    right: 10%;
+    font-family: Lato, Ubuntu, 'Trebuchet MS', Helvetica, Arial, FreeSans, sans-serif;
+    font-size: 1rem;
+    display: inline-block;
+    line-height: 1;
+    padding: 3px 5px;
     text-align: center;
-    top: 15%;
-    width: 1.6em;
+    text-shadow: 1px 1px 1px #333333;
+    width: 100%;
 }
 
 .pktipo-7 {
@@ -96,4 +94,19 @@
 .pktipo-11 {
     background: linear-gradient(180deg, #4592c4 50%, #4592c4 50%);
     color: #fff
+}
+
+.dmTipo {
+    background-image: url(../img/icons-damage-class.png);
+    background-position: left top;
+    background-repeat: none;
+    display: inline-block;
+    height: 18px;
+    width: 41px;
+}
+.dmTipo-1 {
+    background-position: 0 -36px;
+}
+.dmTipo-3 {
+    background-position: 0 -18px;
 }

@@ -10,3 +10,6 @@ http://appcrawlr.com/ios-apps/best-free-apps-pokedex
 https://github.com/litehelpers/Cordova-sqlite-storage
 
 http://pokemondb.net/pokedex/tyrantrum
+
+# estilos dos tipos
+http://pokemondb.net/move/all
