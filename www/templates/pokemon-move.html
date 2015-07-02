@@ -28,10 +28,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="move in pokemon.lvMoves">
-                <td>lv</td>
+              <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
+                <td>{{move.getLevel()}}</td>
                 <td>{{move.identifier}}</td>
-                <td><span class="button button-small pktipo-{{move.type.id}}">{{move.type.identifier}}</span></td>
+                <td><pokemon-type type="move.getType()"></pokemon-type></td>
                 <td>class</td>
                 <td>{{move.power}}</td>
                 <td>{{move.accuracy}}</td>

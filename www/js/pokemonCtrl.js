@@ -12,8 +12,6 @@ app.controller('PokemonCtrl', function ($scope, $stateParams, $state, $ionicHist
     var id = $stateParams.id;
 
     $scope.pokemon = pokedex.getPokemon(id);
-    //$scope.pokemon.loadTypes();
-    //$scope.pokemon.loadWeaknesses();
 
 });
 
