@@ -30,6 +30,7 @@ var Pokedex = function () {
         {id: 16, identifier: 'dragon'},
         {id: 17, identifier: 'dark'},
         {id: 18, identifier: 'fairy'},
+        {id: 19, identifier: 'curse'},
     ];
 
     this.init = function () {
@@ -61,7 +62,11 @@ var Pokedex = function () {
     
     this.getMoveDamageClass = function(id) {
         return moveDamageClasses[id];
-    }
+    };
+    
+    this.getMoves = function () {
+        return moves;
+    };
 
     this.getPokemon = function (id) {
         return pokemons[id];

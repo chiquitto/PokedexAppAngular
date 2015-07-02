@@ -7,14 +7,18 @@
     <div id="types">
       <h3>Type</h3>
       <ul class="pktipos">
-        <pokemon-type ng-repeat="type in pokemon.getTypes() track by $index" type="type"></pokemon-type>
+        <li ng-repeat="type in pokemon.getTypes() track by $index">
+          <pokemon-type type="type"></pokemon-type>
+        </li>
       </ul>
     </div>
 
     <div id="weaknesses">
       <h3>Weaknesses</h3>
       <ul class="pktipos">
-        <pokemon-type ng-repeat="type in pokemon.getWeaknesses() track by $index" type="type"></pokemon-type>
+        <li ng-repeat="type in pokemon.getWeaknesses() track by $index">
+          <pokemon-type type="type"></pokemon-type>
+        </li>
       </ul>
       <!-- <i class="icon ion-asterisk"ng-show="type.multiplier == 4"></i> -->
     </div>

@@ -1,3 +1,19 @@
+#movesCtrl .item {
+    position: relative;
+}
+#movesCtrl .move {
+    position: absolute;
+    right: 56px;
+    top: 16px;
+    width: 65px;
+}
+#movesCtrl .damageClass {
+    position: absolute;
+    right: 10px;
+    top: 19px;
+    width: 41px;
+}
+
 #pokemonsCtrl .item {
     height: 96px;
     position: relative;
@@ -29,6 +45,15 @@
 #pokemonCtrl #weaknesses h3 {
     margin-top: 15px;
 }
+#pokemonCtrl .pktipos {
+    overflow: hidden;
+    width: 100%;
+}
+#pokemonCtrl .pktipos>li {
+    float: left;
+    margin: 0.5vh 1.33% 0.5vh 0;
+    width: 32%;
+}
 #pokemonCtrl #texto {
     margin: 1.2em 0;
 }
@@ -51,15 +76,22 @@
     width: 7%;
 }
 #pokemonMoveCtrl table .move {
-    
+    padding: 5px 0 5px 3px;
 }
 #pokemonMoveCtrl table .type {
     text-align: center;
     width: 70px;
 }
 #pokemonMoveCtrl table .class {
+    line-height: 0;
+    position: relative;
     text-align: center;
     width: 50px;
+}
+#pokemonMoveCtrl table .class a {
+    left: 2px;
+    position: absolute;
+    top: 5px;
 }
 #pokemonMoveCtrl table .power {
     width: 14%;
