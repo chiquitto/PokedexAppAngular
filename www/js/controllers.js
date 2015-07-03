@@ -1,4 +1,4 @@
-appController = angular.module('starter.controllers', []);
+appController = angular.module('starter.controllers', ['ngMaterial']);
 
 appController.controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
 

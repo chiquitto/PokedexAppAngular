@@ -58,6 +58,9 @@
     margin: 1.2em 0;
 }
 
+#pokemonMoveCtrl md-tabs {
+    height: 100%;
+}
 #pokemonMoveCtrl table {
     table-layout: fixed;
     width: 100%;
