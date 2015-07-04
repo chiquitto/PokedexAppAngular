@@ -1,33 +1,66 @@
-<ion-view view-title="#{{pokemon.getId() | leadingZero:3}} {{pokemon.getIdentifier()}}">
+<ion-view view-title="Pokemon detail">
   <ion-content id="pokemonCtrl" class="container">
     <div id="figure">
       <img ng-src="img/poke/{{pokemon.getId() | leadingZero:3}}.png">
     </div>
 
+    <h2 id="name">
+      #{{pokemon.getId() | leadingZero:3}} {{pokemon.getIdentifier()}}
+    </h2>
+
     <div id="types">
-      <h3>Type</h3>
       <ul class="pktipos">
         <li ng-repeat="type in pokemon.getTypes() track by $index">
-          <pokemon-type type="type"></pokemon-type>
+        <pokemon-type type="type"></pokemon-type>
         </li>
       </ul>
     </div>
 
-    <div id="weaknesses">
+    <!-- <p id="texto">Golem live up on mountains. If there is a large earthquake, these Pokémon will come rolling down off the mountains en masse to the foothills below.</p> -->
+
+    <!--<div id="weaknesses">
       <h3>Weaknesses</h3>
       <ul class="pktipos">
         <li ng-repeat="type in pokemon.getWeaknesses() track by $index">
           <pokemon-type type="type"></pokemon-type>
         </li>
       </ul>
-      <!-- <i class="icon ion-asterisk"ng-show="type.multiplier == 4"></i> -->
+    </div>-->
+
+    <div id="baseStats">
+      <h4>Base stats</h4>
+      
+      <table>
+        <tr ng-repeat="stat in ['hp', 'attack', 'defense', 'spcAttack', 'spcDefense', 'speed']">
+          <td class="stat" ng-init="stat = pokemon.getBaseStats().getStat(stat)">{{stat.getIdentifier()}}</td>
+          <td class="value">{{stat.getBase()}}</td>
+          <td class="graph"><md-progress-linear md-mode="determinate" value="{{stat.getBase100Max()}}"></md-progress-linear></td>
+          <td class="minmax">500 ~ 500</td>
+        </tr>
+      </table>
     </div>
 
-    <button class="button button-block button-positive" ng-click="viewMoves(pokemon.getId())">
-      <i class="icon ion-nuclear"></i> Moves
-    </button>
+    <div id="weaknesses">
+      <h4>Damage taken</h4>
+      Damage taken here
+    </div>
 
-    <p id="texto">Golem live up on mountains. If there is a large earthquake, these Pokémon will come rolling down off the mountains en masse to the foothills below.</p>
+    <div id="evolutions">
+      <h4>Evolutions</h4>
+      Damage taken here
+    </div>
+
+    <div id="evolutions">
+      <h4>Locations</h4>
+      Damage taken here
+    </div>
+
+    <div id="moves">
+      <h4>Moves</h4>
+      <button class="button button-block button-positive" ng-click="viewMoves(pokemon.getId())">
+        <i class="icon ion-nuclear"></i> Moves
+      </button>
+    </div>
 
     </ion-list>
   </ion-content>

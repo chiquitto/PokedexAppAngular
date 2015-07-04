@@ -198,6 +198,7 @@ var Pokemon = function (idArg, identifierArg) {
     this.id = null;
     this.identifier = null;
     this.movesLv = null;
+    this.stats = null;
     /* Types of pokemon */
     this.types = null;
     this.weaknesses = null;
@@ -215,13 +216,21 @@ var Pokemon = function (idArg, identifierArg) {
         return this.identifier;
     };
 
+    this.getBaseStats = function () {
+        if (!this.baseStats) {
+            this.loadBaseStats();
+        }
+
+        return this.baseStats;
+    };
+
     this.getMovesLv = function () {
         if (!this.movesLv) {
             this.loadMovesLv();
         }
 
         return this.movesLv;
-    }
+    };
 
     this.getTypes = function () {
         if (!this.types) {
@@ -237,6 +246,16 @@ var Pokemon = function (idArg, identifierArg) {
         }
 
         return this.weaknesses;
+    };
+    
+    this.loadBaseStats = function() {
+        this.baseStats = new Stats();
+        this.baseStats.setHp(new StatBaseHp(mt_rand(1,51) * 5));
+        this.baseStats.setAttack(new StatBaseAttack(mt_rand(1,38) * 5));
+        this.baseStats.setDefense(new StatBaseDefense(mt_rand(1,38) * 5));
+        this.baseStats.setSpcAttack(new StatBaseSpcAttack(mt_rand(1,38) * 5));
+        this.baseStats.setSpcDefense(new StatBaseSpcDefense(mt_rand(1,38) * 5));
+        this.baseStats.setSpeed(new StatBaseSpeed(mt_rand(1,38) * 5));
     };
 
     this.loadMovesLv = function () {
@@ -268,7 +287,7 @@ var Pokemon = function (idArg, identifierArg) {
     }
 
     this.loadWeaknesses = function () {
-        var i2;
+        var i2, type;
         this.weaknesses = [];
         for (var i = 0; i < 5; i++) {
             i2 = mt_rand(1, 18);
@@ -279,6 +298,155 @@ var Pokemon = function (idArg, identifierArg) {
             this.weaknesses.push(type);
         }
     }
+
+    this.init();
+};
+
+var StatBase = function(base) {
+    this.base = base;
+    this.maxBase = 190;
+    this.identifier = '';
+    this.id = 0;
+
+    this.getBase = function () {
+        return this.base;
+    };
+    
+    this.getBase100Max = function () {
+        return Math.ceil(this.base / this.maxBase * 100);
+    };
+
+    this.getMaxBase = function () {
+        return this.maxBase;
+    };
+
+    this.getIdentifier = function () {
+        return this.identifier;
+    };
+
+    this.setBase = function (base) {
+        this.base = base;
+    };
+};
+
+var StatBaseHp = function () {
+    StatBase.apply(this, arguments);
+
+    this.maxBase = 255;
+    this.id = 1;
+    this.identifier = 'Hp';
+}
+// StatBaseHp.prototype = StatBase.prototype;
+// StatBaseHp.prototype.constructor = StatBaseHp;
+
+var StatBaseAttack = function () {
+    StatBase.apply(this, arguments);
+    
+    this.id = 2;
+    this.identifier = 'Attack';
+}
+// StatBaseAttack.prototype = StatBase.prototype;
+// StatBaseAttack.prototype.constructor = StatBaseAttack;
+
+var StatBaseDefense = function () {
+    StatBase.apply(this, arguments);
+    
+    this.id = 3;
+    this.identifier = 'Defense';
+}
+// StatBaseDefense.prototype = StatBase.prototype;
+// StatBaseDefense.prototype.constructor = StatBaseDefense;
+
+var StatBaseSpcAttack = function () {
+    StatBase.apply(this, arguments);
+    
+    this.id = 4;
+    this.identifier = 'Sp.Atk';
+}
+// StatBaseSpcAttack.prototype = StatBase.prototype;
+// StatBaseSpcAttack.prototype.constructor = StatBaseSpcAttack;
+
+var StatBaseSpcDefense = function () {
+    StatBase.apply(this, arguments);
+    
+    this.id = 5;
+    this.identifier = 'Sp.Def';
+}
+// StatBaseSpcDefense.prototype = StatBase.prototype;
+// StatBaseSpcDefense.prototype.constructor = StatBaseSpcDefense;
+
+var StatBaseSpeed = function () {
+    StatBase.apply(this, arguments);
+    
+    this.id = 6;
+    this.identifier = 'Speed';
+}
+// StatBaseSpeed.prototype = StatBase.prototype;
+// StatBaseSpeed.prototype.constructor = StatBaseSpeed;
+
+var Stats = function () {
+    this.hp = null;
+    this.attack = null;
+    this.defense = null;
+    this.spcAttack = null;
+    this.spcDefense = null;
+    this.speed = null;
+
+    this.init = function () {
+        
+    };
+
+    this.getHp = function () {
+        return this.hp;
+    };
+
+    this.getAttack = function () {
+        return this.attack;
+    };
+
+    this.getDefense = function () {
+        return this.defense;
+    };
+
+    this.getSpcAttack = function () {
+        return this.spcAttack;
+    };
+
+    this.getSpcDefense = function () {
+        return this.spcDefense;
+    };
+
+    this.getSpeed = function () {
+        return this.speed;
+    };
+    
+    this.getStat = function (stat) {
+        return this[stat];
+    };
+    
+    this.setHp = function (hp) {
+        this.hp = hp;
+    };
+    
+    this.setAttack = function (attack) {
+        this.attack = attack;
+    };
+    
+    this.setDefense = function (defense) {
+        this.defense = defense;
+    };
+    
+    this.setSpcAttack = function (spcAttack) {
+        this.spcAttack = spcAttack;
+    };
+    
+    this.setSpcDefense = function (spcDefense) {
+        this.spcDefense = spcDefense;
+    };
+    
+    this.setSpeed = function (speed) {
+        this.speed = speed;
+    };
 
     this.init();
 };
