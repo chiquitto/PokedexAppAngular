@@ -77,6 +77,14 @@
     white-space:nowrap;
     width: 60px;
 }
+#pokemonCtrl #weaknesses table {
+    border: 1px solid #CCCCCC;
+}
+#pokemonCtrl #weaknesses td {
+    border: 1px solid #CCCCCC;
+    padding: 2px;
+    text-align: center;
+}
 
 #pokemonMoveCtrl md-tabs {
     height: 100%;

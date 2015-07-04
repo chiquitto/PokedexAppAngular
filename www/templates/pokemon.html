@@ -1,12 +1,12 @@
 <ion-view view-title="Pokemon detail">
   <ion-content id="pokemonCtrl" class="container">
-    <div id="figure">
+    <!--<div id="figure">
       <img ng-src="img/poke/{{pokemon.getId() | leadingZero:3}}.png">
-    </div>
+    </div>-->
 
-    <h2 id="name">
+    <!--<h2 id="name">
       #{{pokemon.getId() | leadingZero:3}} {{pokemon.getIdentifier()}}
-    </h2>
+    </h2>-->
 
     <div id="types">
       <ul class="pktipos">
@@ -27,7 +27,7 @@
       </ul>
     </div>-->
 
-    <div id="baseStats">
+    <!--<div id="baseStats">
       <h4>Base stats</h4>
       
       <table>
@@ -38,11 +38,26 @@
           <td class="minmax">500 ~ 500</td>
         </tr>
       </table>
-    </div>
+    </div>-->
 
     <div id="weaknesses">
       <h4>Damage taken</h4>
-      Damage taken here
+
+      <ion-scroll zooming="false" direction="x">
+        <table>
+          <thead>
+            <tr>
+              <td ng-repeat="type in efficaciesInDefense"><pokemon-type abbr="1" type="type.type"></pokemon-type></td>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td ng-repeat="type in efficaciesInDefense">{{type.damage_factor}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </ion-scroll>
+
     </div>
 
     <div id="evolutions">

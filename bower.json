@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "ngCordova": "~0.1.17-alpha",
-    "angular-material": "~0.10.0"
+    "angular-material": "~0.10.0",
+    "underscore": "~1.8.3"
   }
 }

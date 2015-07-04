@@ -12,6 +12,12 @@ app.controller('PokemonCtrl', function ($scope, $stateParams, $state, $ionicHist
     var id = $stateParams.id;
 
     $scope.pokemon = pokedex.getPokemon(id);
+    
+    $scope.efficaciesInDefense = $scope.pokemon.calcEfficaciesInDefense();
+    
+    _.map($scope.efficaciesInDefense, function(item) {
+        item.type = pokedex.getType(item.damage_type_id);
+    })
 
 });
 
