@@ -1,3 +1,37 @@
+.pokemon {
+    height: 66px;
+    position: relative;
+}
+.pokemon.selected {
+    background-color: #FFFFAA;
+    border: 1px solid #FFFF66;
+}
+.pokemon p {
+    font-size: 1rem;
+    padding: 0 0 0 66px;
+}
+.pokemon p strong {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 0.2em;
+}
+.pokemon .img {
+    background-color: #FFF;
+    border: 2px solid #CCCCCC;
+    border-radius: 50%;
+    height: 56px;
+    left: 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 5px;
+    width: 56px;
+}
+.pokemon img {
+    height: 66px;
+    margin: -5px 0 0 -5px;
+    width: 66px;
+}
+
 #movesCtrl .item {
     position: relative;
 }
@@ -14,35 +48,13 @@
     width: 41px;
 }
 
-#pokemonsCtrl .item {
-    height: 96px;
-    position: relative;
-}
-#pokemonsCtrl .item p {
-    font-size: 1.2rem;
-    padding: 12px 0 0 110px;
-}
-#pokemonsCtrl .item p strong {
-    display: block;
-    font-size: 2rem;
-    margin-bottom: 0.2em;
-}
-#pokemonsCtrl .item img {
-    left: 10px;
-    position: absolute;
-    top: 0;
-}
-
 #pokemonCtrl #figure {
     margin: 10px 0;
     text-align: center;
 }
 #pokemonCtrl #figure img {
-    border: 2px solid #CCCCCC;
-    border-radius: 50%;
     max-height: 30vh;
     max-width: 70%;
-    overflow: hidden;
 }
 #pokemonCtrl .pktipos {
     overflow: hidden;
@@ -84,6 +96,12 @@
     border: 1px solid #CCCCCC;
     padding: 2px;
     text-align: center;
+}
+#pokemonCtrl #evolutions md-list {
+    padding: 0;
+}
+#pokemonCtrl #evolutions md-list-item {
+    padding: 0;
 }
 
 #pokemonMoveCtrl md-tabs {

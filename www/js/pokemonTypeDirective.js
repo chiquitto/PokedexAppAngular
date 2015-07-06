@@ -14,7 +14,7 @@ app.directive('pokemonType', function() {
     return {
         controller: function($scope, $state) {
             $scope.pokemonPorTipo = function(id) {
-                $state.go('app.pokemonsType', {typeId:id});
+                $state.go('app.type', {typeId:id});
             };
         },
         restrict: 'E',

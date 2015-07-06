@@ -47,14 +47,14 @@ var Pokedex = function () {
             moves.push(tmp);
         }
 
-        for (i = 1; i <= 30; i++) {
+        for (i = 1; i <= 151; i++) {
             pokemons.push(new Pokemon(i, 'Pokemon ' + i));
         }
 
         for (i = 1; i < types.length; i++) {
             types[i] = new Type(types[i]);
         }
-        
+
         _.map(type_efficacy, function (item) {
             item.damage_factor = item.damage_factor / 100;
         });
@@ -230,11 +230,11 @@ MoveLv.prototype.constructor = MoveLv;   // Set constructor back to Robot
 var Pokemon = function (idArg, identifierArg) {
     this.id = null;
     this.identifier = null;
+    this.evolutions = null;
     this.movesLv = null;
     this.stats = null;
     /* Types of pokemon */
     this.types = null;
-    this.weaknesses = null;
 
     this.init = function () {
         this.id = idArg;
@@ -249,7 +249,15 @@ var Pokemon = function (idArg, identifierArg) {
         return this.identifier;
     };
 
-    this.calcEfficaciesInDefense = function () {
+    this.getBaseStats = function () {
+        if (!this.baseStats) {
+            this.loadBaseStats();
+        }
+
+        return this.baseStats;
+    };
+
+    this.getEfficaciesInDefense = function () {
         if (!this.efficaciesInDefense) {
             this.efficaciesInDefense = pokedex.calcEfficaciesInDefense(this.getTypes());
         }
@@ -257,12 +265,12 @@ var Pokemon = function (idArg, identifierArg) {
         return this.efficaciesInDefense;
     };
 
-    this.getBaseStats = function () {
-        if (!this.baseStats) {
-            this.loadBaseStats();
+    this.getEvolutions = function () {
+        if (!this.evolutions) {
+            this.loadEvolutions();
         }
 
-        return this.baseStats;
+        return this.evolutions;
     };
 
     this.getMovesLv = function () {
@@ -281,14 +289,6 @@ var Pokemon = function (idArg, identifierArg) {
         return this.types;
     };
 
-    this.getWeaknesses = function () {
-        if (!this.weaknesses) {
-            this.loadWeaknesses();
-        }
-
-        return this.weaknesses;
-    };
-
     this.loadBaseStats = function () {
         this.baseStats = new Stats();
         this.baseStats.setHp(new StatBaseHp(mt_rand(1, 51) * 5));
@@ -297,6 +297,17 @@ var Pokemon = function (idArg, identifierArg) {
         this.baseStats.setSpcAttack(new StatBaseSpcAttack(mt_rand(1, 38) * 5));
         this.baseStats.setSpcDefense(new StatBaseSpcDefense(mt_rand(1, 38) * 5));
         this.baseStats.setSpeed(new StatBaseSpeed(mt_rand(1, 38) * 5));
+    };
+
+    this.loadEvolutions = function () {
+        this.evolutions = [];
+
+        var tmp = _.findWhere(pokemon_species, {id: this.getId()});
+        tmp = _.where(pokemon_species, {evolution_chain_id: tmp.evolution_chain_id});
+
+        this.evolutions = _.map(tmp, function (item) {
+            return new PokemonEvolution(item);
+        });
     };
 
     this.loadMovesLv = function () {
@@ -317,7 +328,7 @@ var Pokemon = function (idArg, identifierArg) {
 
             this.movesLv.push(move);
         }
-    }
+    };
 
     this.loadTypes = function () {
         var i2;
@@ -325,20 +336,52 @@ var Pokemon = function (idArg, identifierArg) {
         for (var i = 0; i < 2; i++) {
             this.types.push(pokedex.getType(mt_rand(1, 18)));
         }
-    }
+    };
 
-    this.loadWeaknesses = function () {
-        var i2, type;
-        this.weaknesses = [];
-        for (var i = 0; i < 5; i++) {
-            i2 = mt_rand(1, 18);
+    this.init();
+};
 
-            type = clone(pokedex.getType(i2));
-            type.multiplier = mt_rand(1, 2) * 2;
+var PokemonEvolution = function (pokemonEvolution) {
 
-            this.weaknesses.push(type);
-        }
-    }
+    //var id, identifier, generation_id, evolves_from_species_id, evolution_chain_id, color_id, shape_id, habitat_id, gender_rate, capture_rate, base_happiness, is_baby, hatch_counter, has_gender_differences, growth_rate_id, forms_switchable, order, conquest_order;
+
+    this.id = null;
+    this.evolves_from_species_id = null;
+    this.evolution_chain_id = null;
+
+    this.init = function () {
+        this.setId(pokemonEvolution.id);
+        this.setEvolvesFromSpeciesId(pokemonEvolution.evolves_from_species_id);
+        this.setEvolutionChainId(pokemonEvolution.evolution_chain_id);
+    };
+
+    this.getEvolvesFromSpeciesId = function () {
+        return this.evolves_from_species_id;
+    };
+
+    this.getEvolutionChainId = function () {
+        return this.evolution_chain_id;
+    };
+
+    this.getId = function () {
+        return this.id;
+    };
+
+    this.getPokemon = function () {
+        return pokedex.getPokemon(this.getId())
+    };
+
+    this.setEvolvesFromSpeciesId = function (evolves_from_species_id) {
+        this.evolves_from_species_id = evolves_from_species_id;
+    };
+
+    this.setEvolutionChainId = function (evolution_chain_id) {
+        this.evolution_chain_id = evolution_chain_id;
+    };
+
+    this.setId = function (id) {
+        this.id = id;
+    };
 
     this.init();
 };

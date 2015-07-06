@@ -1,12 +1,12 @@
 <ion-view view-title="Pokemon detail">
   <ion-content id="pokemonCtrl" class="container">
-    <!--<div id="figure">
+    <div id="figure">
       <img ng-src="img/poke/{{pokemon.getId() | leadingZero:3}}.png">
-    </div>-->
+    </div>
 
-    <!--<h2 id="name">
+    <h2 id="name">
       #{{pokemon.getId() | leadingZero:3}} {{pokemon.getIdentifier()}}
-    </h2>-->
+    </h2>
 
     <div id="types">
       <ul class="pktipos">
@@ -18,16 +18,7 @@
 
     <!-- <p id="texto">Golem live up on mountains. If there is a large earthquake, these Pokémon will come rolling down off the mountains en masse to the foothills below.</p> -->
 
-    <!--<div id="weaknesses">
-      <h3>Weaknesses</h3>
-      <ul class="pktipos">
-        <li ng-repeat="type in pokemon.getWeaknesses() track by $index">
-          <pokemon-type type="type"></pokemon-type>
-        </li>
-      </ul>
-    </div>-->
-
-    <!--<div id="baseStats">
+    <div id="baseStats">
       <h4>Base stats</h4>
       
       <table>
@@ -38,7 +29,7 @@
           <td class="minmax">500 ~ 500</td>
         </tr>
       </table>
-    </div>-->
+    </div>
 
     <div id="weaknesses">
       <h4>Damage taken</h4>
@@ -62,13 +53,22 @@
 
     <div id="evolutions">
       <h4>Evolutions</h4>
-      Damage taken here
+
+      <md-list layout-padding>
+        <md-list-item ng-repeat="evolution in pokemon.getEvolutions() track by $index" class="pokemon" ng-class="{selected: (evolution.getPokemon().getId() == pokemon.getId())}" ng-click="verPokemon(evolution.getPokemon())">
+          <div class="img"><img ng-src="img/poke-min/{{evolution.getPokemon().getId()}}.png"></div>
+          <p>
+            <strong>{{evolution.getPokemon().getIdentifier()}}</strong>
+          </p>
+        </md-list-item>
+      </md-list>
+
     </div>
 
-    <div id="evolutions">
+    <!--<div id="locations">
       <h4>Locations</h4>
       Damage taken here
-    </div>
+    </div>-->
 
     <div id="moves">
       <h4>Moves</h4>

@@ -1,0 +1,11 @@
+<ion-view view-title="Types">
+  <ion-content id="typesCtrl">
+    
+    <ion-list>
+      <ion-item ng-repeat="type in types" ng-click="verType(type.id)">
+        {{type.getIdentifier()}}
+      </ion-item>
+    </ion-list>
+    
+  </ion-content>
+</ion-view>

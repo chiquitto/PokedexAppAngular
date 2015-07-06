@@ -43,19 +43,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         }
     });
 
-    /**
-     * @todo Fazer o filtro
-     */
-    $stateProvider.state('app.pokemonsType', {
-        url: "/pokemons/:typeId",
-        views: {
-            'menuContent': {
-                templateUrl: "templates/pokemons.html",
-                controller: 'PokemonsCtrl'
-            }
-        }
-    });
-
     $stateProvider.state('app.pokemon', {
         url: "/pokemon/:id",
         views: {
@@ -85,6 +72,27 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     });
+
+    $stateProvider.state('app.types', {
+        url: "/types",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/types.html",
+                controller: 'TypesCtrl'
+            }
+        }
+    });
+    
+    $stateProvider.state('app.type', {
+        url: "/type/:typeId",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/type.html",
+                controller: 'TypeCtrl'
+            }
+        }
+    });
+    
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/pokemons');
 });
