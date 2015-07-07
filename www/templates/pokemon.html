@@ -26,11 +26,11 @@
           <td class="stat" ng-init="stat = pokemon.getBaseStats().getStat(stat)">{{stat.getIdentifier()}}</td>
           <td class="value">{{stat.getBase()}}</td>
           <td class="graph"><md-progress-linear md-mode="determinate" value="{{stat.getBase100Max()}}"></md-progress-linear></td>
-          <td class="minmax">500 ~ 500</td>
+          <td class="minmax">{{stat.getMinStat()}} ~ {{stat.getMaxStat()}}</td>
         </tr>
       </table>
       
-      <!-- The ranges shown on the right are for a level 100 Pokémon. Maximum values are based on a beneficial nature, 252 EVs, 31 IVs; minimum values are based on a hindering nature, 0 EVs, 0 IVs. -->
+      <p>The ranges shown on the right are for a level 100 Pokémon. Maximum values are based on a beneficial nature, 252 EVs, 31 IVs; minimum values are based on a hindering nature, 0 EVs, 0 IVs.</p>
     </div>
 
     <div id="weaknesses">

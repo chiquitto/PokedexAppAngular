@@ -88,14 +88,29 @@ var Pokedex = function () {
 
         return efficaciesInDefense;
     };
-    
-    this.calcStat = function (stat, lv, base, iv, ev, nature) {
-        // http://pycosites.com/pkmn/stat.js
-        // Math.floor(Math.floor((((iv+(2*base[stat])+(ev/4)+100)*lvl)/100)+10)*nat);
-        Math.floor(Math.floor((((iv+(2*base[stat])+(ev/4))*lvl)/100)+5)*nat)
+
+    /**
+     * @link http://www.marriland.com/tools/stat-calculator
+     * @link http://bulbapedia.bulbagarden.net/wiki/Stats#Example_2
+     * 
+     * @param {int} level Level of pokemon
+     * @param {int} ev Effort value of stat
+     * @param {int} iv Individual value of stat
+     * @param {int} base Base stat
+     * @param {int} nature Nature of stat (Use -1 for -10%, 1 for +10%, 0 for ignore)
+     * @param {boolean} isHp Calc stat as HP Stat if true
+     */
+    this.calcStat = function (level, ev, iv, base, nature, isHp) {
+        var k, stat;
+        if (isHp) {
+            k = (iv + (2 * base) + Math.floor(ev / 4) + 100) * level;
+            stat = Math.floor(k / 100) + 10;
+        } else {
+            k = (iv + (2 * base) + (ev / 4)) * level;
+            stat = (Math.floor(k / 100) + 5) * (nature * 0.1 + 1);
+        }
         
-        //(((82 * 2) + iv + (ev/4)) * (lv / 100)) + 5
-        //(((82 * 2) + 31 + Math.floor(0/4)) * (50 / 100)) + 5
+        return Math.floor(stat);
     };
 
     this.getMove = function (id) {
@@ -310,6 +325,13 @@ var Pokemon = function (idArg, identifierArg) {
         this.baseStats.setSpcAttack(new StatBaseSpcAttack(mt_rand(1, 38) * 5));
         this.baseStats.setSpcDefense(new StatBaseSpcDefense(mt_rand(1, 38) * 5));
         this.baseStats.setSpeed(new StatBaseSpeed(mt_rand(1, 38) * 5));
+
+        // this.baseStats.setHp(new StatBaseHp(80));
+        // this.baseStats.setAttack(new StatBaseAttack(82));
+        // this.baseStats.setDefense(new StatBaseDefense(83));
+        // this.baseStats.setSpcAttack(new StatBaseSpcAttack(100));
+        // this.baseStats.setSpcDefense(new StatBaseSpcDefense(100));
+        // this.baseStats.setSpeed(new StatBaseSpeed(80));
     };
 
     this.loadEvolutions = function () {
@@ -415,6 +437,14 @@ var StatBase = function (base) {
 
     this.getMaxBase = function () {
         return this.maxBase;
+    };
+
+    this.getMaxStat = function () {
+        return pokedex.calcStat(100, 252, 31, this.getBase(), 1, (this.getIdentifier() == 'Hp'));
+    };
+
+    this.getMinStat = function () {
+        return pokedex.calcStat(100, 0, 0, this.getBase(), -1, (this.getIdentifier() == 'Hp'));
     };
 
     this.getIdentifier = function () {
