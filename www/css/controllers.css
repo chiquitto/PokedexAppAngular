@@ -149,3 +149,16 @@
     max-width: 40px;
     width: 10%;
 }
+
+#typeCtrl .pktipos {
+    overflow: hidden;
+}
+#typeCtrl .pktipos li {
+    float: left;
+    margin: 0 0 1vmin 0;
+    width: 32%;
+}
+#typeCtrl .pktipos li:nth-child(3n+2) {
+    margin-left: 1%;
+    margin-right: 1%;
+}

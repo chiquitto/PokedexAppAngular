@@ -87,7 +87,16 @@ var Pokedex = function () {
          });*/
 
         return efficaciesInDefense;
-    }
+    };
+    
+    this.calcStat = function (stat, lv, base, iv, ev, nature) {
+        // http://pycosites.com/pkmn/stat.js
+        // Math.floor(Math.floor((((iv+(2*base[stat])+(ev/4)+100)*lvl)/100)+10)*nat);
+        Math.floor(Math.floor((((iv+(2*base[stat])+(ev/4))*lvl)/100)+5)*nat)
+        
+        //(((82 * 2) + iv + (ev/4)) * (lv / 100)) + 5
+        //(((82 * 2) + 31 + Math.floor(0/4)) * (50 / 100)) + 5
+    };
 
     this.getMove = function (id) {
         return moves[id];
@@ -111,6 +120,10 @@ var Pokedex = function () {
 
     this.getType = function (id) {
         return types[id];
+    };
+
+    this.getTypes = function () {
+        return types;
     };
 
     this.init();
@@ -539,6 +552,9 @@ var Type = function (type) {
     this.id = null;
     this.identifier = null;
     this.identifierAbbr = null;
+    this.immunities = null;
+    this.resistances = null;
+    this.weaknesses = null;
 
     var typeIsto = this;
 
@@ -550,7 +566,7 @@ var Type = function (type) {
 
     this.calcEfficacyInDefense = function () {
         return _.filter(type_efficacy, function (data) {
-            return (data.target_type_id == typeIsto.id);
+            return (data.target_type_id == typeIsto.getId());
         });
     };
 
@@ -564,6 +580,62 @@ var Type = function (type) {
 
     this.getIdentifierAbbr = function () {
         return this.identifierAbbr;
+    };
+
+    this.getImmunities = function () {
+        if (!this.immunities) {
+            this.loadImmunities();
+        }
+        return this.immunities;
+    };
+
+    this.getResistances = function () {
+        if (!this.resistances) {
+            this.loadResistances();
+        }
+        return this.resistances;
+    };
+
+    this.getWeaknesses = function () {
+        if (!this.weaknesses) {
+            this.loadWeaknesses();
+        }
+        return this.weaknesses;
+    };
+
+    this.loadImmunities = function () {
+        var tmp = _.filter(type_efficacy, function (item) {
+            return (item.target_type_id == typeIsto.getId())
+                    && (item.damage_factor == 0)
+                    ;
+        });
+
+        this.immunities = _.map(tmp, function (item) {
+            return pokedex.getType(item.damage_type_id);
+        });
+    };
+
+    this.loadResistances = function () {
+        var tmp = _.filter(type_efficacy, function (item) {
+            return (item.target_type_id == typeIsto.getId())
+                    && (item.damage_factor < 1)
+                    && (item.damage_factor > 0)
+                    ;
+        });
+
+        this.resistances = _.map(tmp, function (item) {
+            return pokedex.getType(item.damage_type_id);
+        });
+    };
+
+    this.loadWeaknesses = function () {
+        var tmp = _.filter(type_efficacy, function (item) {
+            return (item.target_type_id == typeIsto.getId()) && (item.damage_factor > 1);
+        });
+
+        this.weaknesses = _.map(tmp, function (item) {
+            return pokedex.getType(item.damage_type_id);
+        });
     };
 
     this.init();

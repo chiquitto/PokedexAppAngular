@@ -1,15 +1,21 @@
-Imagens
+# imagens
 http://veekun.com/dex/downloads
 
+# pokedex
 http://www.smogon.com/dex/xy/pokemon/
+http://pokemondb.net/pokedex/tyrantrum
 
+# screen
 http://m.downloadatoz.com/apps/com.mikhail.pokedex,1266496/screenshots.html
 
+# calculadora
+http://www.marriland.com/tools/stat-calculator
+
+# apps
 http://appcrawlr.com/ios-apps/best-free-apps-pokedex
 
+# sqlite
 https://github.com/litehelpers/Cordova-sqlite-storage
-
-http://pokemondb.net/pokedex/tyrantrum
 
 # estilos dos tipos
 http://pokemondb.net/move/all
