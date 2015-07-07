@@ -171,7 +171,6 @@ var Move = function (idArg, identifierArg) {
             this.loadDamageClass();
         }
 
-        console.log(this.damageClass);
         return this.damageClass;
     };
 

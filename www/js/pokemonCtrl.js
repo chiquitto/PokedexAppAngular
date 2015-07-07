@@ -4,13 +4,13 @@ app.controller('PokemonCtrl', function ($scope, $stateParams, $state, $ionicHist
      disableAnimate: false,
      disableBack: true
      });*/
-
+    
     $scope.viewMoves = function (id) {
         $state.go('app.pokemonMove', {id: id});
     };
     
     $scope.verPokemon = function (pokemon) {
-        $state.go('app.pokemon', {id: pokemon.getId()});
+        $state.go('app.pokemon', {id: pokemon.getId()}, 'replace');
     };
     
     var id = $stateParams.id;

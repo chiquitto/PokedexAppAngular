@@ -19,13 +19,13 @@ app.run(function ($ionicPlatform, $cordovaSQLite) {
             // org.apache.cordova.statusbar required
             StatusBar.styleDefault();
         }
-
+        
     });
 
 });
 
 app.config(function ($stateProvider, $urlRouterProvider) {
-
+    
     $stateProvider.state('app', {
         url: "/app",
         abstract: true,
