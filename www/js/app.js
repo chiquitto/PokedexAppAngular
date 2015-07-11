@@ -44,7 +44,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     });
 
     $stateProvider.state('app.pokemon', {
-        url: "/pokemon/:id",
+        url: "/pokemon/:pokeId",
         views: {
             'menuContent': {
                 templateUrl: "templates/pokemon.html",
@@ -54,7 +54,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     });
 
     $stateProvider.state('app.pokemonMove', {
-        url: "/pokemon/:id/move",
+        url: "/pokemon/:pokeId/move",
         views: {
             'menuContent': {
                 templateUrl: "templates/pokemon-move.html",

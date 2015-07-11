@@ -1,5 +1,5 @@
 app.controller('PokemonMoveCtrl', function ($scope, $stateParams, $state, $ionicHistory, $mdSidenav) {
-    var id = $stateParams.id;
+    var id = $stateParams.pokeId;
 
     $scope.pokemon = pokedex.getPokemon(id);
 

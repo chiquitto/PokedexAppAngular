@@ -12,9 +12,9 @@ app.directive('pokemonType', function() {
     };
 
     return {
-        controller: function($scope, $state) {
+        controller: function($scope, stateGoto) {
             $scope.viewType = function(id) {
-                $state.go('app.type', {typeId:id});
+                stateGoto.type({typeId:id});
             };
         },
         restrict: 'E',

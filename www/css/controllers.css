@@ -6,6 +6,9 @@
     background-color: #FFFFAA;
     border: 1px solid #FFFF66;
 }
+.pokemon a {
+    text-decoration: none;
+}
 .pokemon p {
     font-size: 1rem;
     padding: 0 0 0 66px;

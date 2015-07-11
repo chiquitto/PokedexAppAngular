@@ -20,16 +20,16 @@
 
     <div id="baseStats">
       <h4>Base stats</h4>
-      
+
       <table>
         <tr ng-repeat="stat in ['hp', 'attack', 'defense', 'spcAttack', 'spcDefense', 'speed']">
           <td class="stat" ng-init="stat = pokemon.getBaseStats().getStat(stat)">{{stat.getIdentifier()}}</td>
           <td class="value">{{stat.getBase()}}</td>
           <td class="graph"><md-progress-linear md-mode="determinate" value="{{stat.getBase100Max()}}"></md-progress-linear></td>
-          <td class="minmax">{{stat.getMinStat()}} ~ {{stat.getMaxStat()}}</td>
+        <td class="minmax">{{stat.getMinStat()}} ~ {{stat.getMaxStat()}}</td>
         </tr>
       </table>
-      
+
       <p>The ranges shown on the right are for a level 100 Pokémon. Maximum values are based on a beneficial nature, 252 EVs, 31 IVs; minimum values are based on a hindering nature, 0 EVs, 0 IVs.</p>
     </div>
 
@@ -58,10 +58,10 @@
 
       <md-list layout-padding>
         <md-list-item ng-repeat="evolution in pokemon.getEvolutions() track by $index" class="pokemon" ng-class="{selected: (evolution.getPokemon().getId() == pokemon.getId())}" ng-click="verPokemon(evolution.getPokemon())">
-          <div class="img"><img ng-src="img/poke-min/{{evolution.getPokemon().getId()}}.png"></div>
-          <p>
-            <strong>{{evolution.getPokemon().getIdentifier()}}</strong>
-          </p>
+            <div class="img"><img ng-src="img/poke-min/{{evolution.getPokemon().getId()}}.png"></div>
+            <p>
+              <strong>{{evolution.getPokemon().getIdentifier()}}</strong>
+            </p>
         </md-list-item>
       </md-list>
 
