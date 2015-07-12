@@ -1,7 +1,7 @@
 /**
  * @link https://gist.github.com/taivo/fd08f6c960aacc11af6f
  */
-angular.module('starter')
+app
 .directive('tabsSwipable', ['$ionicGesture', function($ionicGesture){
 	//
 	// make ionTabs swipable. leftswipe -> nextTab, rightswipe -> prevTab

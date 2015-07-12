@@ -17,7 +17,8 @@ app.factory('stateGoto', ['$state', function ($state) {
                 // historyRoot: true,
                 //});
 
-                $state.go('app.pokemon', {pokeId: o.pokeId}, {location: 'replace'});
+                //$state.go('app.pokemon', {pokeId: o.pokeId}, {location: 'replace'});
+                $state.go('app.pokemon', {pokeId: o.pokeId});
             },
             pokemonMoves: function (o) {
                 $state.go('app.pokemonMove', {pokeId: o.pokeId});

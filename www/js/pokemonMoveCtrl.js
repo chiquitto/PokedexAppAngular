@@ -1,4 +1,4 @@
-app.controller('PokemonMoveCtrl', function ($scope, $stateParams, $state, $ionicHistory, $mdSidenav) {
+app.controller('PokemonMoveCtrl', ['$scope', '$stateParams', '$state', '$ionicHistory', '$mdSidenav', function ($scope, $stateParams, $state, $ionicHistory, $mdSidenav, tabsSwipable) {
     var id = $stateParams.pokeId;
 
     $scope.pokemon = pokedex.getPokemon(id);
@@ -14,5 +14,5 @@ app.controller('PokemonMoveCtrl', function ($scope, $stateParams, $state, $ionic
 
     
 
-});
+}]);
 
