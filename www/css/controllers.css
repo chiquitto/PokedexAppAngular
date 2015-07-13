@@ -119,23 +119,24 @@
 }
 #pokemonMoveCtrl table td,
 #pokemonMoveCtrl table th {
-    font-size: 1rem;
+    font-size: 0.9rem;
     overflow: hidden;
     text-align: left;
     white-space: nowrap;
 }
 #pokemonMoveCtrl table th {
     font-weight: bold;
+    font-size: 0.8rem;
 }
 #pokemonMoveCtrl table .lv {
-    width: 7%;
+    width: 11%;
 }
 #pokemonMoveCtrl table .move {
     padding: 5px 0 5px 3px;
 }
 #pokemonMoveCtrl table .type {
     text-align: center;
-    width: 70px;
+    width: 55px;
 }
 #pokemonMoveCtrl table .class {
     line-height: 0;
@@ -154,6 +155,9 @@
 #pokemonMoveCtrl table .acc {
     max-width: 40px;
     width: 10%;
+}
+#pokemonMoveCtrl .pktipo {
+    font-size: 0.8rem;
 }
 
 #typeCtrl .pktipos {

@@ -1,84 +1,121 @@
 <ion-view view-title="Pokemon detail">
-  <ion-content id="pokemonCtrl" class="container">
-    <div id="figure">
-      <img ng-src="img/poke/{{pokemon.getId() | leadingZero:3}}.png">
-    </div>
+  <ion-content id="pokemonCtrl">
 
-    <h2 id="name">
-      #{{pokemon.getId() | leadingZero:3}} {{pokemon.getIdentifier()}}
-    </h2>
+    <md-tabs md-stretch-tabs="never" md-dynamic-height md-selected="selectedIndex">
+      <md-tab label="Basic">
+        <md-content class="container" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()">
+          <div id="figure">
+            <img ng-src="img/poke/{{pokemon.getId() | leadingZero:3}}.png">
+          </div>
 
-    <div id="types">
-      <ul class="pktipos">
-        <li ng-repeat="type in pokemon.getTypes() track by $index">
-        <pokemon-type type="type"></pokemon-type>
-        </li>
-      </ul>
-    </div>
+          <h2 id="name">
+            #{{pokemon.getId() | leadingZero
+                      :3}} {{pokemon.getIdentifier()}}
+          </h2>
+        </md-content>
+      </md-tab>
+      <md-tab label="Stats">
+        <md-content id="baseStats" class="container" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()">
+          <h4>Base stats</h4>
 
-    <!-- <p id="texto">Golem live up on mountains. If there is a large earthquake, these Pokémon will come rolling down off the mountains en masse to the foothills below.</p> -->
-
-    <div id="baseStats">
-      <h4>Base stats</h4>
-
-      <table>
-        <tr ng-repeat="stat in ['hp', 'attack', 'defense', 'spcAttack', 'spcDefense', 'speed']">
-          <td class="stat" ng-init="stat = pokemon.getBaseStats().getStat(stat)">{{stat.getIdentifier()}}</td>
-          <td class="value">{{stat.getBase()}}</td>
-          <td class="graph"><md-progress-linear md-mode="determinate" value="{{stat.getBase100Max()}}"></md-progress-linear></td>
-        <td class="minmax">{{stat.getMinStat()}} ~ {{stat.getMaxStat()}}</td>
-        </tr>
-      </table>
-
-      <p>The ranges shown on the right are for a level 100 Pokémon. Maximum values are based on a beneficial nature, 252 EVs, 31 IVs; minimum values are based on a hindering nature, 0 EVs, 0 IVs.</p>
-    </div>
-
-    <div id="weaknesses">
-      <h4>Damage taken</h4>
-
-      <ion-scroll zooming="false" direction="x">
-        <table>
-          <thead>
-            <tr>
-              <td ng-repeat="type in efficaciesInDefense"><pokemon-type abbr="1" type="type.type"></pokemon-type></td>
-          </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td ng-repeat="type in efficaciesInDefense">{{type.damage_factor}}</td>
+          <table>
+            <tr ng-repeat="stat in ['hp', 'attack', 'defense', 'spcAttack', 'spcDefense', 'speed']">
+              <td class="stat" ng-init="stat = pokemon.getBaseStats().getStat(stat)">{{stat.getIdentifier()}}</td>
+              <td class="value">{{stat.getBase()}}</td>
+              <td class="graph"><md-progress-linear md-mode="determinate" value="{{stat.getBase100Max()}}"></md-progress-linear></td>
+            <td class="minmax">{{stat.getMinStat()}} ~ {{stat.getMaxStat()}}</td>
             </tr>
-          </tbody>
-        </table>
-      </ion-scroll>
+          </table>
 
-    </div>
+          <p>The ranges shown on the right are for a level 100 Pokémon. Maximum values are based on a beneficial nature, 252 EVs, 31 IVs; minimum values are based on a hindering nature, 0 EVs, 0 IVs.</p>
+        </md-content>
+      </md-tab>
 
-    <div id="evolutions">
-      <h4>Evolutions</h4>
+      <md-tab label="Evo">
+        <md-content class="container" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()">
 
-      <md-list layout-padding>
-        <md-list-item ng-repeat="evolution in pokemon.getEvolutions() track by $index" class="pokemon" ng-class="{selected: (evolution.getPokemon().getId() == pokemon.getId())}" ng-click="verPokemon(evolution.getPokemon())">
-            <div class="img"><img ng-src="img/poke-min/{{evolution.getPokemon().getId()}}.png"></div>
-            <p>
-              <strong>{{evolution.getPokemon().getIdentifier()}}</strong>
-            </p>
-        </md-list-item>
-      </md-list>
+          <md-list layout-padding>
+            <md-list-item ng-repeat="evolution in pokemon.getEvolutions() track by $index" class="pokemon" ng-class="{selected: (evolution.getPokemon().getId() == pokemon.getId())}" ng-click="verPokemon(evolution.getPokemon())">
+              <div class="img"><img ng-src="img/poke-min/{{evolution.getPokemon().getId()}}.png"></div>
+              <p>
+                <strong>{{evolution.getPokemon().getIdentifier()}}</strong>
+              </p>
+            </md-list-item>
+          </md-list>
 
-    </div>
+        </md-content>
+      </md-tab>
 
-    <!--<div id="locations">
-      <h4>Locations</h4>
-      Damage taken here
-    </div>-->
+      <md-tab label="Moves">
+        <md-content id="pokemonMoveCtrl" class="container" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()">
 
-    <div id="moves">
-      <h4>Moves</h4>
-      <button class="button button-block button-positive" ng-click="viewMoves(pokemon.getId())">
-        <i class="icon ion-nuclear"></i> Moves
-      </button>
-    </div>
+          <table id="movesLv">
+            <thead>
+              <tr>
+                <th class="lv">Lv.</th>
+                <th class="move">Move</th>
+                <th class="type">Type</th>
+                <th class="class">Class</th>
+                <th class="power">Power</th>
+                <th class="acc">Acc.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
+                <td class="lv">{{move.getLevel()}}</td>
+                <td class="move">{{move.identifier}}</td>
+                <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
+                <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
+                <td class="power">{{move.power}}</td>
+                <td class="acc">{{move.accuracy}}%</td>
+              </tr>
+              
+              <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
+                <td class="lv">TM00</td>
+                <td class="move">{{move.identifier}}</td>
+                <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
+                <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
+                <td class="power">{{move.power}}</td>
+                <td class="acc">{{move.accuracy}}%</td>
+              </tr>
+              
+              <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
+                <td class="lv">egg</td>
+                <td class="move">{{move.identifier}}</td>
+                <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
+                <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
+                <td class="power">{{move.power}}</td>
+                <td class="acc">{{move.accuracy}}%</td>
+              </tr>
+              
+              <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
+                <td class="lv">tutor</td>
+                <td class="move">{{move.identifier}}</td>
+                <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
+                <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
+                <td class="power">{{move.power}}</td>
+                <td class="acc">{{move.accuracy}}%</td>
+              </tr>
+              
+            </tbody>
+          </table>
 
-    </ion-list>
+        </md-content>
+      </md-tab>
+
+      <!--<md-tab label="Training">
+        <md-content class="container" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()">
+
+        </md-content>
+      </md-tab>-->
+
+      <!--<md-tab label="Catch">
+        <md-content class="container" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()">
+
+        </md-content>
+      </md-tab>-->
+
+    </md-tabs>
+
   </ion-content>
 </ion-view>

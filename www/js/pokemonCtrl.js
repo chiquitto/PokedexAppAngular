@@ -1,6 +1,20 @@
 app.controller('PokemonCtrl', ['$scope', '$stateParams', 'stateGoto',
     function ($scope, $stateParams, stateGoto) {
 
+        $scope.selectedIndex = 0;
+        $scope.onSwipeLeft = function (ev) {
+            if ($scope.selectedIndex == 5) {
+                return;
+            }
+            $scope.selectedIndex++;
+        };
+        $scope.onSwipeRight = function (ev) {
+            if ($scope.selectedIndex == 0) {
+                return;
+            }
+            $scope.selectedIndex--;
+        };
+
         $scope.viewMoves = function (id) {
             stateGoto.pokemonMoves({pokeId: id});
         };
