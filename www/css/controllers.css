@@ -59,42 +59,7 @@
     max-height: 30vh;
     max-width: 70%;
 }
-#pokemonCtrl .pktipos {
-    overflow: hidden;
-    width: 100%;
-}
-#pokemonCtrl .pktipos>li {
-    float: left;
-    margin: 0.5vh 1.33% 0.5vh 0;
-    width: 32%;
-}
-#pokemonCtrl #baseStats table {
-    table-layout: fixed;
-    width: 100%;
-}
-#pokemonCtrl #baseStats td {
-    font-size: 0.8rem;
-}
-#pokemonCtrl #baseStats table .stat {
-    font-weight: bold;
-    width: 55px;
-}
-#pokemonCtrl #baseStats table .value {
-    width: 27px;
-}
-#pokemonCtrl #baseStats table .graph {
-    padding: 0 3px;
-}
-#pokemonCtrl #baseStats table .graph md-progress-linear {
-    margin-bottom: 6px;
-}
-#pokemonCtrl #baseStats table .minmax {
-    white-space:nowrap;
-    width: 60px;
-}
-#pokemonCtrl #baseStats p {
-    font-size: 0.8em;
-}
+
 #pokemonCtrl #weaknesses table {
     border: 1px solid #CCCCCC;
 }
@@ -110,54 +75,99 @@
     padding: 0;
 }
 
-#pokemonMoveCtrl md-tabs {
+#pokemonTabMoveCtrl md-tabs {
     height: 100%;
 }
-#pokemonMoveCtrl table {
+#pokemonTabMoveCtrl table {
     table-layout: fixed;
     width: 100%;
 }
-#pokemonMoveCtrl table td,
-#pokemonMoveCtrl table th {
+#pokemonTabMoveCtrl table td,
+#pokemonTabMoveCtrl table th {
     font-size: 0.9rem;
     overflow: hidden;
     text-align: left;
     white-space: nowrap;
 }
-#pokemonMoveCtrl table th {
+#pokemonTabMoveCtrl table th {
     font-weight: bold;
     font-size: 0.8rem;
 }
-#pokemonMoveCtrl table .lv {
+#pokemonTabMoveCtrl table .lv {
     width: 11%;
 }
-#pokemonMoveCtrl table .move {
+#pokemonTabMoveCtrl table .move {
     padding: 5px 0 5px 3px;
 }
-#pokemonMoveCtrl table .type {
+#pokemonTabMoveCtrl table .type {
     text-align: center;
     width: 55px;
 }
-#pokemonMoveCtrl table .class {
+#pokemonTabMoveCtrl table .class {
     line-height: 0;
     position: relative;
     text-align: center;
     width: 50px;
 }
-#pokemonMoveCtrl table .class a {
+#pokemonTabMoveCtrl table .class a {
     left: 2px;
     position: absolute;
     top: 5px;
 }
-#pokemonMoveCtrl table .power {
-    width: 14%;
+#pokemonTabMoveCtrl table .power {
+    width: 12%;
 }
-#pokemonMoveCtrl table .acc {
+#pokemonTabMoveCtrl table .acc {
     max-width: 40px;
     width: 10%;
 }
-#pokemonMoveCtrl .pktipo {
+#pokemonTabMoveCtrl .pktipo {
     font-size: 0.8rem;
+}
+#pokemonTabStatCtrl table {
+    table-layout: fixed;
+    width: 100%;
+}
+#pokemonTabStatCtrl td {
+    font-size: 0.8rem;
+}
+#pokemonTabStatCtrl table .stat {
+    font-weight: bold;
+    width: 55px;
+}
+#pokemonTabStatCtrl table .value {
+    width: 27px;
+}
+#pokemonTabStatCtrl table .graph {
+    padding: 0 3px;
+}
+#pokemonTabStatCtrl table .graph md-progress-linear {
+    margin-bottom: 6px;
+}
+#pokemonTabStatCtrl table .minmax {
+    white-space:nowrap;
+    width: 60px;
+}
+#pokemonTabStatCtrl p {
+    font-size: 0.9em;
+}
+#pokemonTabStatCtrl md-progress-linear:not([md-mode=indeterminate]) {
+    height: 10px;
+}
+#pokemonTabStatCtrl md-progress-linear:not([md-mode=indeterminate]) .md-container,
+#pokemonTabStatCtrl md-progress-linear:not([md-mode=indeterminate]) .md-bar {
+    height: 100%;
+}
+
+#pokemonTabTypeCtrl .pktipos {
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+#pokemonTabTypeCtrl .pktipos li {
+    display: inline-block;
+    margin: 0.5vh 1.33% 0.5vh 0;
+    width: 32%;
 }
 
 #typeCtrl .pktipos {

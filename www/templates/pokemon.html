@@ -1,22 +1,56 @@
-<ion-view view-title="Pokemon detail">
+<ion-view view-title="#{{pokemon.getId() | leadingZero:3}} {{pokemon.getIdentifier()}}">
   <ion-content id="pokemonCtrl">
 
     <md-tabs md-stretch-tabs="never" md-dynamic-height md-selected="selectedIndex">
-      
+
       <md-tab label="Basic">
         <md-content class="container" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()" ng-controller="PokemonTabBasicCtrl">
           <div id="figure">
             <img ng-src="img/poke/{{pokemon.getId() | leadingZero:3}}.png">
           </div>
 
-          <h2 id="name">
+          <!--<h2 id="name">
             #{{pokemon.getId() | leadingZero:3}} {{pokemon.getIdentifier()}}
-          </h2>
+          </h2>-->
+          
+          <h4>Abilities</h4>
+          
+          <ul>
+            <li ng-repeat="abilitie in pokemon.getAbilities()"><strong>{{abilitie.getIdentifier()}}</strong>: {{abilitie.getDescription()}}</li>
+          </ul>
+          
+          <h4>Description</h4>
+          
+          <p>{{pokemon.getDescription()}}</p>
+          
         </md-content>
       </md-tab>
-      
+
+      <md-tab label="Type">
+        <md-content id="pokemonTabTypeCtrl" class="container" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()" ng-controller="PokemonTabTypeCtrl">
+          
+          <h4>Pokemon type</h4>
+
+          <ul class="pktipos">
+            <li ng-repeat="type in pokemon.getTypes() track by $index">
+            <pokemon-type type="type"></pokemon-type>
+            </li>
+          </ul>
+
+          <h4>Weaknesses</h4>
+          
+          <ul class="pktipos">
+            <li ng-repeat="type in efficaciesInDefense">
+            <pokemon-type type="type.type"></pokemon-type>
+            {{type.damage_factor}}x
+            </li>
+          </ul>
+
+        </md-content>
+      </md-tab>
+
       <md-tab label="Stats">
-        <md-content id="baseStats" class="container" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()" ng-controller="PokemonTabStatCtrl">
+        <md-content id="pokemonTabStatCtrl" class="container" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()" ng-controller="PokemonTabStatCtrl">
           <h4>Base stats</h4>
 
           <table>
@@ -34,7 +68,7 @@
 
       <md-tab label="Evo">
         <md-content class="container" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()" ng-controller="PokemonTabEvolutionCtrl">
-          
+
           <md-list layout-padding>
             <md-list-item ng-repeat="evolution in pokemon.getEvolutions() track by $index" class="pokemon" ng-class="{selected: (evolution.getPokemon().getId() == pokemon.getId())}" ng-click="verPokemon(evolution.getPokemon())">
               <div class="img"><img ng-src="img/poke-min/{{evolution.getPokemon().getId()}}.png"></div>
@@ -48,7 +82,7 @@
       </md-tab>
 
       <md-tab label="Moves">
-        <md-content id="pokemonMoveCtrl" class="container" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()" ng-controller="PokemonTabMoveCtrl">
+        <md-content id="pokemonTabMoveCtrl" class="container" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()" ng-controller="PokemonTabMoveCtrl">
 
           <table id="movesLv">
             <thead>
@@ -66,38 +100,38 @@
                 <td class="lv">{{move.getLevel()}}</td>
                 <td class="move">{{move.identifier}}</td>
                 <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
-                <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
-                <td class="power">{{move.power}}</td>
-                <td class="acc">{{move.accuracy}}%</td>
-              </tr>
-              
-              <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
-                <td class="lv">TM00</td>
-                <td class="move">{{move.identifier}}</td>
-                <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
-                <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
-                <td class="power">{{move.power}}</td>
-                <td class="acc">{{move.accuracy}}%</td>
-              </tr>
-              
-              <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
-                <td class="lv">egg</td>
-                <td class="move">{{move.identifier}}</td>
-                <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
-                <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
-                <td class="power">{{move.power}}</td>
-                <td class="acc">{{move.accuracy}}%</td>
-              </tr>
-              
-              <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
-                <td class="lv">tutor</td>
-                <td class="move">{{move.identifier}}</td>
-                <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
-                <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
-                <td class="power">{{move.power}}</td>
-                <td class="acc">{{move.accuracy}}%</td>
-              </tr>
-              
+            <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
+            <td class="power">{{move.power}}</td>
+            <td class="acc">{{move.accuracy}}%</td>
+            </tr>
+
+            <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
+              <td class="lv">TM00</td>
+              <td class="move">{{move.identifier}}</td>
+              <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
+            <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
+            <td class="power">{{move.power}}</td>
+            <td class="acc">{{move.accuracy}}%</td>
+            </tr>
+
+            <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
+              <td class="lv">egg</td>
+              <td class="move">{{move.identifier}}</td>
+              <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
+            <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
+            <td class="power">{{move.power}}</td>
+            <td class="acc">{{move.accuracy}}%</td>
+            </tr>
+
+            <tr ng-repeat="move in pokemon.getMovesLv() track by $index">
+              <td class="lv">tutor</td>
+              <td class="move">{{move.identifier}}</td>
+              <td class="type"><pokemon-type type="move.getType()"></pokemon-type></td>
+            <td class="class"><move-damage-class damage-class="move.getDamageClass()"></move-damage-class></td>
+            <td class="power">{{move.power}}</td>
+            <td class="acc">{{move.accuracy}}%</td>
+            </tr>
+
             </tbody>
           </table>
 

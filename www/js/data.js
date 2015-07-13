@@ -1,4 +1,6 @@
 var Pokedex = function () {
+    var abilities = [null];
+    
     var moveDamageClasses = [
         null,
         {id: 1, identifier: 'status'},
@@ -109,10 +111,18 @@ var Pokedex = function () {
             k = (iv + (2 * base) + (ev / 4)) * level;
             stat = (Math.floor(k / 100) + 5) * (nature * 0.1 + 1);
         }
-        
+
         return Math.floor(stat);
     };
 
+    this.getAbilitie = function (id) {
+        if (!abilities[id]) {
+            abilities[id] = new Abilitie(id, 'Abilitie ' + id);
+            abilities[id].setDescription('Minions ' + id + 'ipsum wiiiii hahaha tank yuuu! Uuuhhh po kass pepete chasy po kass para tú la bodaaa.');
+        }
+        return abilities[id];
+    };
+    
     this.getMove = function (id) {
         return moves[id];
     };
@@ -143,6 +153,35 @@ var Pokedex = function () {
 
     this.init();
 };
+
+var Abilitie = function (idArg, identifierArg) {
+    this.id = null;
+    this.identifier = null;
+    this.description = null;
+
+    this.init = function () {
+        this.id = idArg;
+        this.identifier = identifierArg;
+    };
+
+    this.getId = function () {
+        return this.id;
+    };
+
+    this.getIdentifier = function () {
+        return this.identifier;
+    };
+
+    this.getDescription = function () {
+        return this.description;
+    };
+
+    this.setDescription = function (description) {
+        this.description = description;
+    };
+
+    this.init();
+}
 
 var Move = function (idArg, identifierArg) {
     this.id = null;
@@ -235,7 +274,7 @@ var Move = function (idArg, identifierArg) {
     };
 
     this.init();
-}
+};
 
 var MoveLv = function (idArg, identifierArg) {
     Move.apply(this, arguments);
@@ -249,7 +288,7 @@ var MoveLv = function (idArg, identifierArg) {
     this.setLevel = function (level) {
         this.level = level;
     };
-}
+};
 
 MoveLv.prototype = Move.prototype;        // Set prototype to Person's
 MoveLv.prototype.constructor = MoveLv;   // Set constructor back to Robot
@@ -257,6 +296,8 @@ MoveLv.prototype.constructor = MoveLv;   // Set constructor back to Robot
 var Pokemon = function (idArg, identifierArg) {
     this.id = null;
     this.identifier = null;
+    this.abilities = null;
+    this.description = null;
     this.evolutions = null;
     this.movesLv = null;
     this.stats = null;
@@ -276,12 +317,28 @@ var Pokemon = function (idArg, identifierArg) {
         return this.identifier;
     };
 
+    this.getAbilities = function () {
+        if (!this.abilities) {
+            this.loadAbilities();
+        }
+
+        return this.abilities;
+    };
+
     this.getBaseStats = function () {
         if (!this.baseStats) {
             this.loadBaseStats();
         }
 
         return this.baseStats;
+    };
+
+    this.getDescription = function () {
+        if (!this.description) {
+            this.loadDescription();
+        }
+
+        return this.description;
     };
 
     this.getEfficaciesInDefense = function () {
@@ -316,6 +373,16 @@ var Pokemon = function (idArg, identifierArg) {
         return this.types;
     };
 
+    this.loadAbilities = function () {
+        this.abilities = [];
+        var i, max;
+
+        max = mt_rand(1, 2);
+        for (i = 0; i < max; i++) {
+            this.abilities.push(pokedex.getAbilitie(mt_rand(1, 50)));
+        }
+    };
+
     this.loadBaseStats = function () {
         this.baseStats = new Stats();
         this.baseStats.setHp(new StatBaseHp(mt_rand(1, 51) * 5));
@@ -331,6 +398,10 @@ var Pokemon = function (idArg, identifierArg) {
         // this.baseStats.setSpcAttack(new StatBaseSpcAttack(100));
         // this.baseStats.setSpcDefense(new StatBaseSpcDefense(100));
         // this.baseStats.setSpeed(new StatBaseSpeed(80));
+    };
+
+    this.loadDescription = function () {
+        this.description = 'Minions ipsum wiiiii hahaha tank yuuu! Uuuhhh po kass pepete chasy po kass para tú la bodaaa. Chasy bee do bee do bee do belloo! Poulet tikka masala wiiiii potatoooo. Chasy poopayee potatoooo para tú wiiiii uuuhhh pepete daa bee do bee do bee do bananaaaa. Underweaaar pepete para tú jeje aaaaaah aaaaaah potatoooo me want bananaaa! Para tú. Jeje gelatooo tank yuuu! Underweaaar hahaha poulet tikka masala daa. Hana dul sae ti aamoo! Hana dul sae para tú jeje tulaliloo daa.';
     };
 
     this.loadEvolutions = function () {
