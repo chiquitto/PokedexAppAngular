@@ -53,16 +53,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         }
     });
 
-    $stateProvider.state('app.pokemonMove', {
-        url: "/pokemon/:pokeId/move",
-        views: {
-            'menuContent': {
-                templateUrl: "templates/pokemon-move.html",
-                controller: 'PokemonMoveCtrl'
-            }
-        }
-    });
-
     $stateProvider.state('app.moves', {
         url: "/moves",
         views: {
